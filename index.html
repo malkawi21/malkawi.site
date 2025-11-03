@@ -2,99 +2,222 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohannad Muhana | ASP.NET Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional: Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #0d6efd;
+      color: white;
+      padding: 1rem 0;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    #hero {
+      background: linear-gradient(to right, #0d6efd, #0dcaf0);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    section.section {
+      padding: 60px 0;
+    }
+    h3 {
+      border-left: 4px solid #0d6efd;
+      padding-left: 10px;
+      margin-bottom: 30px;
+    }
+    footer {
+      background: #f8f9fa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">&lt;Mohannad_Muhana /&gt;</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand" href="#hero">&lt;Mohannad_Muhana /&gt;</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
+  <!-- Hero -->
   <section id="hero">
-    <div class="hero-content">
-      <h2>ASP.NET Developer | Industrial IoT & Real-Time Systems</h2>
-      <p>Building scalable backends and real-time industrial automation systems with C#, ASP.NET Core, and SQL Server.</p>
-      <a class="btn" href="mailto:mohannad.muhana@gmail.com">Contact Me</a>
+    <div class="container">
+      <h2 class="display-5 fw-bold">ASP.NET Developer | Industrial IoT & Real-Time Systems</h2>
+      <p class="lead mt-3">Building scalable backends and real-time industrial automation systems with C#, ASP.NET Core, and SQL Server.</p>
     </div>
   </section>
 
-  <section id="about" class="section">
+  <!-- About -->
+  <section id="about" class="section container">
     <h3>// About Me</h3>
-    <p>
-      Results-driven .NET developer specializing in backend development and industrial automation web systems. 
-      Experienced in ASP.NET Core, C#, and SQL Server—delivering scalable APIs for real-time data acquisition, 
-      monitoring, and control. Passionate about bridging industrial hardware and web technologies to create 
-      robust and maintainable systems.
+    <p class="lead">
+      Results-driven .NET developer specializing in backend development and industrial automation web systems.
+      Experienced in ASP.NET Core, C#, and SQL Server—delivering scalable APIs for real-time data acquisition,
+      monitoring, and control.
     </p>
   </section>
 
-  <section id="skills" class="section">
-    <h3>// Technical Skills</h3>
-    <div class="skills-grid">
-      <div><h4>Languages & Frameworks</h4><p>C#, ASP.NET Core, Web API, Entity Framework, LINQ, Python, Angular</p></div>
-      <div><h4>Databases</h4><p>SQL Server, MySQL, Redis</p></div>
-      <div><h4>Tools & Tech</h4><p>Git, SignalR, REST APIs, Web Sockets, Message Queuing, Multithreading</p></div>
-      <div><h4>Concepts</h4><p>Real-Time Processing, SCADA Integration, Data Synchronization, Industrial Protocols (Modbus)</p></div>
-      <div><h4>Hardware Integration</h4><p>Sensors, Meters, Inverters, Solar Tracking Systems, PLC Communication</p></div>
-      <div><h4>Server Administration</h4><p>Windows & Linux environments, deployment automation, backups</p></div>
+  <!-- Skills -->
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h3>// Technical Skills</h3>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Languages & Frameworks</h5>
+              <p>C#, ASP.NET Core, Web API, Entity Framework, LINQ, Python, Angular</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Databases</h5>
+              <p>SQL Server, MySQL, Redis</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Tools & Tech</h5>
+              <p>Git, SignalR, REST APIs, WebSockets, Queuing, Multithreading</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Concepts</h5>
+              <p>Real-Time Processing, SCADA Integration, Data Synchronization, Modbus</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Hardware Integration</h5>
+              <p>Sensors, Meters, Inverters, Solar Tracking, PLC Communication</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Server Administration</h5>
+              <p>Windows & Linux servers, deployments, backups</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <!-- Projects -->
+  <section id="projects" class="section container">
     <h3>// Highlighted Projects</h3>
-    <div class="project">
-      <h4>Real-Time Multi-Site Data Sync & Alarm Management System</h4>
-      <p>High-performance ASP.NET Core API for ingesting industrial data streams from 10+ sites with 100% data integrity, Redis caching, and real-time alarm dashboards.</p>
-    </div>
-    <div class="project">
-      <h4>PMM Tracker Controller</h4>
-      <p>Backend controller for solar tracking systems integrating sensors and actuators for real-time panel adjustments.</p>
-    </div>
-    <div class="project">
-      <h4>Modbus Tester & Port Forwarder</h4>
-      <p>Developed testing tools for validating and routing Modbus communications through serial/UDP interfaces, enabling seamless device integration.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5>Real-Time Multi-Site Data Sync</h5>
+            <p>High-performance API for ingesting industrial data streams with Redis caching and real-time dashboards.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5>PMM Tracker Controller</h5>
+            <p>Backend for solar tracking systems integrating sensors and actuators for real-time adjustments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5>Modbus Tester & Port Forwarder</h5>
+            <p>Testing tools for Modbus validation and routing across serial and UDP interfaces.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="experience" class="section">
-    <h3>// Experience</h3>
-    <h4>Israr Engineering LLC – Amman, Jordan</h4>
-    <p><strong>.NET Developer | Sep 2022 – Present</strong></p>
-    <ul>
-      <li>Architected distributed data acquisition systems integrating SCADA components with ASP.NET Core APIs.</li>
-      <li>Built real-time alarm management APIs improving response times by 40%.</li>
-      <li>Implemented message queuing and parallel processing to ensure reliability and throughput.</li>
-      <li>Managed deployment pipelines on Windows and Linux servers.</li>
-    </ul>
+  <!-- Experience -->
+  <section id="experience" class="section bg-light">
+    <div class="container">
+      <h3>// Experience</h3>
+      <h4>Israr Engineering LLC – Amman, Jordan</h4>
+      <p><strong>.NET Developer | Sep 2022 – Present</strong></p>
+      <ul>
+        <li>Architected distributed data acquisition systems integrating SCADA with ASP.NET Core APIs.</li>
+        <li>Built real-time alarm management APIs improving response times by 40%.</li>
+        <li>Implemented message queuing and parallel processing to improve throughput.</li>
+        <li>Managed deployment pipelines on Windows and Linux servers.</li>
+      </ul>
+    </div>
   </section>
 
-  <section id="education" class="section">
+  <!-- Education -->
+  <section id="education" class="section container">
     <h3>// Education</h3>
     <p><strong>Bachelor of Computer Science</strong> — University of Jordan, Amman, Jordan</p>
   </section>
 
-  <section id="contact" class="section">
-  <h3>// Contact</h3>
-  <p>Email: <a href="mailto:mohannad.muhana@gmail.com">mohannad.muhana@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/mohannadmuhana/" target="_blank">linkedin.com/in/mohannadmuhana</a></p>
-  <p>Phone: <a href="tel:+962798576145">+962 7 9857 6145</a></p>
-  <p>WhatsApp: <a href="https://wa.me/962798576145" target="_blank">Chat on WhatsApp</a></p>
-  <p>Location: Amman, Jordan</p>
-</section>
-  
+  <!-- Contact -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h3>// Contact</h3>
+      <ul class="list-unstyled">
+        <li><i class="bi bi-envelope-fill"></i> <a href="mailto:mohannad.muhana@gmail.com">mohannad.muhana@gmail.com</a></li>
+        <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/mohannadmuhana/" target="_blank">linkedin.com/in/mohannadmuhana</a></li>
+        <li><i class="bi bi-telephone-fill"></i> <a href="tel:+962798576145">+962 7 9857 6145</a></li>
+        <li><i class="bi bi-whatsapp"></i> <a href="https://wa.me/962798576145" target="_blank">Chat on WhatsApp</a></li>
+        <li><i class="bi bi-geo-alt-fill"></i> Amman, Jordan</li>
+      </ul>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Mohannad Muhana — Built with ❤️ using HTML, CSS, and JS</p>
+    <p>© 2025 Mohannad Muhana — Built with ❤️ using Bootstrap</p>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
