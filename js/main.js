@@ -21,25 +21,25 @@ const projects = [
   {
     title: "PMM Port Forwarder",
     desc: "Serial-to-UDP forwarding utility for PMM systems.",
-    images: ["Portforwarder01.png","Portforwarder02.png"],
+    images: ["Portforwarder01.PNG","Portforwarder02.PNG"],
     type: "tools"
   },
   {
     title: "Modbus Tester (Pool & Slave)",
     desc: "Diagnostic and simulation utility for Modbus networks, supporting both master and slave modes with live data monitoring and command testing.",
-    images: ["modbusMaster01.png", "modbusMaster02.png", "modbusMaster03.png", "modbusMaster02.png", "Slave01.png", "Slave02.png"],
+    images: ["modbusMaster01.PNG", "modbusMaster02.PNG", "modbusMaster03.PNG", "modbusMaster02.PNG", "Slave01.PNG", "Slave02.PNG"],
     type: "tools"
   },
   {
     title: "PMM Product Configurator",
     desc: "Unified configuration tool for PMM hardware — allows control, installation, and parameter management of all company devices from a single interface.",
-    images: ["Config01.png", "Config02.png" , "Config03.png", "Config04.png"],
+    images: ["Config01.PNG", "Config02.PNG" , "Config03.PNG", "Config04.PNG"],
     type: "software"
   },
   {
     title: "PMM Tracker Controller",
     desc: "A control and monitoring application for solar tracking systems — manages panel positioning, real-time status updates, and performance optimization for solar farms.",
-    images: ["Tracker01.png", "Tracker02.png", "Tracker03.png", "Tracker04.png", "Solar-tracking-system.webp"],
+    images: ["Tracker01.PNG", "Tracker02.PNG", "Tracker03.PNG", "Tracker04.PNG", "Solar-tracking-system.webp"],
     type: "energy"
   }
 ];
