@@ -87,3 +87,48 @@ footer {
 .dark-mode footer {
   background: #1e1e1e;
 }
+
+
+/* --- Fix light sections in Dark Mode --- */
+/* --- Dark Mode Fixes for Light Sections --- */
+.dark-mode .bg-light {
+  background-color: #1e1e1e !important; /* darken light sections */
+  color: #f1f1f1 !important;            /* ensure readable text */
+}
+
+/* Ensure all text in dark mode remains visible */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode li,
+.dark-mode span {
+  color: #f1f1f1 !important;
+}
+
+/* Links in dark mode */
+.dark-mode a {
+  color: #0dcaf0;
+}
+.dark-mode a:hover {
+  color: #66e3ff;
+}
+
+/* Cards inside dark sections */
+.dark-mode .card {
+  background-color: #242424 !important;
+  color: #ddd !important;
+  border: 1px solid #333;
+}
+
+/* Footer and navbar harmony */
+.dark-mode footer {
+  background-color: #1e1e1e !important;
+  color: #ccc !important;
+}
+.dark-mode header {
+  background-color: #212529 !important;
+}
