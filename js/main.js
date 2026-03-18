@@ -16,7 +16,7 @@
       {
         title: "Hotel Booking System",
         desc: "Complete reservation system with room availability calendar, online payments, admin dashboard, automated email confirmations, and customer management.",
-        images: ["images/hotel1.jpg","images/hotel2.PNG"],
+        images: ["images/hotel1.jpg","images/hotel2.png"],
         type: "web"
       },
       {
