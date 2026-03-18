@@ -1,134 +1,213 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1e1e2f;
+  --card-bg: #ffffff;
+  --navbar-bg: #1e1e2f;
+  --footer-bg: #1e1e2f;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0,0,0,0.1);
+}
+
+body.dark-mode {
+  --bg-color: #1a1a2c;
+  --text-color: #f0f0f0;
+  --card-bg: #2a2a3a;
+  --navbar-bg: #0f0f1a;
+  --footer-bg: #0f0f1a;
+  --border-color: #2a2a3a;
+  --shadow-color: rgba(0,0,0,0.3);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-  transition: background 0.3s, color 0.3s;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* Navbar */
 header {
-  background: #0d6efd;
-  color: white;
-  padding: 1rem 0;
+  background-color: var(--navbar-bg);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
 .navbar-brand {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  opacity: 0.8;
 }
 
+/* Sections */
+.section {
+  padding: 5rem 0;
+}
+
+/* Hero */
 #hero {
-  background: linear-gradient(to right, #0d6efd, #0dcaf0);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  padding: 6rem 0;
   text-align: center;
-  padding: 100px 20px;
 }
 
-section.section {
-  padding: 60px 0;
-}
-
-h3 {
-  border-left: 4px solid #0d6efd;
-  padding-left: 10px;
-  margin-bottom: 30px;
-}
-
-footer {
-  background: #f8f9fa;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Project Cards */
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s, box-shadow 0.2s;
   overflow: hidden;
 }
-.project-card:hover {
+.card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px var(--shadow-color) !important;
 }
 
+/* Service Icons */
+.service-icon {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 1rem;
+}
+
+/* Project Gallery */
 .project-img {
-  object-fit: cover;
   width: 100%;
   height: 100%;
-  border-bottom: 2px solid #0d6efd;
+  object-fit: cover;
+  transition: transform 0.3s;
 }
-
-.thumb {
+.project-img:hover {
+  transform: scale(1.05);
+}
+.gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 5px 0;
+  scrollbar-width: thin;
+}
+.gallery-thumbs::-webkit-scrollbar {
+  height: 4px;
+}
+.gallery-thumbs::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.gallery-thumbs .thumb {
   width: 50px;
   height: 50px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-right: 4px;
+  border-radius: 4px;
   cursor: pointer;
   opacity: 0.8;
   transition: opacity 0.2s;
+  border: 1px solid var(--border-color);
 }
-.thumb:hover {
+.gallery-thumbs .thumb:hover {
   opacity: 1;
 }
 
-/* Dark Mode */
-.dark-mode {
-  background: #121212;
-  color: #f1f1f1;
+/* Filter Buttons */
+.filter-btn {
+  margin: 0 5px 10px 5px;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: all 0.2s;
 }
-.dark-mode header {
-  background: #212529;
+.filter-btn.active {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
 }
-.dark-mode .card {
-  background: #1e1e1e;
-  color: #ddd;
-}
-.dark-mode footer {
-  background: #1e1e1e;
-}
-
-
-/* --- Fix light sections in Dark Mode --- */
-/* --- Dark Mode Fixes for Light Sections --- */
-.dark-mode .bg-light {
-  background-color: #1e1e1e !important; /* darken light sections */
-  color: #f1f1f1 !important;            /* ensure readable text */
+.filter-btn:hover {
+  transform: translateY(-2px);
 }
 
-/* Ensure all text in dark mode remains visible */
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6,
-.dark-mode p,
-.dark-mode li,
-.dark-mode span {
-  color: #f1f1f1 !important;
+/* Tech Badges */
+.tech-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: transform 0.2s;
+  font-size: 0.9rem;
+}
+.tech-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+.tech-badge i {
+  margin-right: 5px;
 }
 
-/* Links in dark mode */
-.dark-mode a {
-  color: #0dcaf0;
-}
-.dark-mode a:hover {
-  color: #66e3ff;
+/* Badge colors */
+.tech-badge.bg-primary { background: #0d6efd; color: white; }
+.tech-badge.bg-success { background: #198754; color: white; }
+.tech-badge.bg-danger { background: #dc3545; color: white; }
+.tech-badge.bg-warning { background: #ffc107; color: black; }
+.tech-badge.bg-info { background: #0dcaf0; color: black; }
+.tech-badge.bg-secondary { background: #6c757d; color: white; }
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
 }
 
-/* Cards inside dark sections */
-.dark-mode .card {
-  background-color: #242424 !important;
-  color: #ddd !important;
-  border: 1px solid #333;
+/* Dark Mode Toggle */
+#darkModeToggle {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+#darkModeToggle:hover {
+  transform: scale(1.1);
 }
 
-/* Footer and navbar harmony */
-.dark-mode footer {
-  background-color: #1e1e1e !important;
-  color: #ccc !important;
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+  #hero {
+    padding: 4rem 0;
+  }
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+  .tech-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
 }
-.dark-mode header {
-  background-color: #212529 !important;
+
+/* Animations */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
 }
