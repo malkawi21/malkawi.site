@@ -1,498 +1,465 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mohannad Muhana | Full-Stack Web & Mobile Development Agency</title>
-  <link rel="icon" type="image/png" sizes="64x64" href="images/icons8-it-64.png">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- AOS (Scroll Animations) -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- GLightbox (Image Viewer) -->
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="meta.title">Mohannad Muhana | Full-Stack Web &amp; Mobile Development Agency</title>
+<link href="images/icons8-it-64.png" rel="icon" sizes="64x64" type="image/png"/>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- AOS (Scroll Animations) -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<!-- GLightbox (Image Viewer) -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet"/>
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet"/><link href="css/i18n.css" rel="stylesheet"/>
 </head>
 <body>
+<!-- Navbar -->
+<header class="site-header">
+<nav class="navbar navbar-expand-lg navbar-dark py-3">
+<div class="container">
+<a class="navbar-brand" href="#hero">
+        &lt;Mohannad_Muhana /&gt;
+      </a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<ul class="navbar-nav align-items-center">
+<li class="nav-item"><a class="nav-link" data-i18n="nav.about" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" data-i18n="nav.services" href="#services">Services</a></li>
+<li class="nav-item"><a class="nav-link" data-i18n="nav.projects" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" data-i18n="nav.experience" href="#experience">Experience</a></li>
+<li class="nav-item"><a class="nav-link" data-i18n="nav.education" href="#education">Education</a></li>
+<li class="nav-item"><a class="nav-link" data-i18n="nav.contact" href="#contact">Contact</a></li>
+<li class="nav-item ms-lg-3 mt-3 mt-lg-0"><button aria-label="Toggle dark mode" class="btn btn-outline-light" id="darkModeToggle" type="button"><i class="bi bi-moon"></i></button></li><li class="nav-item ms-lg-2 mt-3 mt-lg-0"><button class="btn btn-outline-light" data-i18n="language.switchToArabic" id="languageToggle" type="button">AR</button></li></ul>
 
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark container">
-      <a class="navbar-brand" href="#hero">&lt;Mohannad_Muhana /&gt;</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <!-- <li class="nav-item ms-3">
-            <button id="darkModeToggle" class="btn btn-outline-light btn-sm">
-              <i class="bi bi-moon"></i>
-            </button>
-          </li> -->
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section id="hero">
-    <div class="container">
-      <span class="badge bg-light text-dark mb-3" data-aos="fade-up">Full-Stack Developer | Agency Lead | Automation Specialist</span>
-      <h2 class="display-4 fw-bold" data-aos="fade-up" data-aos-delay="100">
+</div>
+</div>
+</nav>
+</header>
+<!-- Hero -->
+<section class="hero-section" id="hero">
+<div class="container hero-content">
+<span class="badge bg-light text-dark mb-3" data-aos="fade-up" data-i18n="hero.badge">Full-Stack Developer | Flutter Team Lead | Digital Solutions Architect</span>
+<h2 class="display-4 fw-bold" data-aos="fade-up" data-aos-delay="100" data-i18n-html="hero.title">
         Complete Digital Solutions <span class="text-warning">From Code to Cloud</span>
-      </h2>
-      <p class="lead mt-4" data-aos="fade-up" data-aos-delay="200">
+</h2>
+<p class="lead mt-4 mx-auto" data-aos="fade-up" data-aos-delay="200" data-i18n-html="hero.description">
         Hi, I'm <strong>Mohannad Muhana</strong> — I lead a team of developers building 
         <span class="fw-bold">web applications, mobile apps, and industrial systems</span>. 
         From development to deployment, I provide complete solutions for your business.
       </p>
-    <div class="mt-4" data-aos="fade-up" data-aos-delay="250">
-    <p><i class="bi bi-check-circle-fill text-warning me-2"></i>Web Development</p>
-    <p><i class="bi bi-check-circle-fill text-warning me-2"></i>Industrial Real-Time Applications (Automation)</p>
-    <p><i class="bi bi-check-circle-fill text-warning me-2"></i>Desktop Applications</p>
-    <p><i class="bi bi-check-circle-fill text-warning me-2"></i>Mobile App Development (Flutter Team)</p>
-    <p><i class="bi bi-check-circle-fill text-warning me-2"></i>Domain Registration & Hosting Services</p>
+<div class="mt-4" data-aos="fade-up" data-aos-delay="250">
+<p data-i18n-html="hero.features.web"><i class="bi bi-check-circle-fill text-warning me-2"></i>Web Development</p>
+<p data-i18n-html="hero.features.automation"><i class="bi bi-check-circle-fill text-warning me-2"></i>Industrial Real-Time Applications (Automation)</p>
+<p data-i18n-html="hero.features.desktop"><i class="bi bi-check-circle-fill text-warning me-2"></i>Desktop Applications</p>
+<p data-i18n-html="hero.features.mobile"><i class="bi bi-check-circle-fill text-warning me-2"></i>Mobile App Development (Flutter Team)</p>
+<p data-i18n-html="hero.features.hosting"><i class="bi bi-check-circle-fill text-warning me-2"></i>Domain Registration &amp; Hosting Services</p>
 </div>
-      <div class="mt-5" data-aos="fade-up" data-aos-delay="300">
-        <a href="#projects" class="btn btn-light btn-lg me-3">View My Work</a>
-        <a href="#contact" class="btn btn-outline-light btn-lg">Let's Talk</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section container">
-    <h3 class="mb-4">// About Me & My Team</h3>
-    <div class="row">
-      <div class="col-lg-8" data-aos="fade-right">
-        <p class="lead">
-          I'm a <strong>.NET & Laravel developer</strong> with a unique blend of skills — I create modern web applications, 
+<div class="mt-5" data-aos="fade-up" data-aos-delay="300">
+<a class="btn btn-light btn-lg me-3" data-i18n="buttons.viewWork" href="#projects">View My Work</a>
+<a class="btn btn-outline-light btn-lg" data-i18n="buttons.letsTalk" href="#contact">Let's Talk</a>
+</div>
+</div>
+</section>
+<!-- About -->
+<section class="section" id="about"><div class="container">
+<h3 class="mb-4" data-i18n="about.heading">// About Me</h3>
+<div class="row gy-4">
+<div class="col-lg-8" data-aos="fade-up">
+<p class="lead" data-i18n-html="about.intro">
+          I'm a <strong>.NET &amp; Laravel developer</strong> with a unique blend of skills — I create modern web applications, 
           lead a Flutter mobile team, AND build systems that connect to industrial equipment.
         </p>
-        <p>
+<p data-i18n="about.solutionsIntro">
           With over 4 years of experience and a dedicated team, I offer end-to-end solutions:
         </p>
-        <ul class="list-unstyled">
-          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Full-stack web applications (ASP.NET Core & Laravel)</li>
-          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Cross-platform mobile apps with Flutter (iOS & Android)</li>
-          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Domain registration and hosting setup</li>
-          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Complete digital transformation for your business</li>
-        </ul>
-        <p>
+<ul class="list-unstyled">
+<li class="mb-2" data-i18n-html="about.points.web"><i class="bi bi-check-circle-fill text-success me-2"></i>Full-stack web applications (ASP.NET Core &amp; Laravel)</li>
+<li class="mb-2" data-i18n-html="about.points.mobile"><i class="bi bi-check-circle-fill text-success me-2"></i>Cross-platform mobile apps with Flutter (iOS &amp; Android)</li>
+<li class="mb-2" data-i18n-html="about.points.domain"><i class="bi bi-check-circle-fill text-success me-2"></i>Domain registration and hosting setup</li>
+<li class="mb-2" data-i18n-html="about.points.digital"><i class="bi bi-check-circle-fill text-success me-2"></i>Complete digital transformation for your business</li>
+</ul>
+<p data-i18n-html="about.final">
           Whether you need a <strong>website, mobile app, or complete industrial system</strong> — 
           I have the team and expertise to deliver.
         </p>
-      </div>
-      <div class="col-lg-4" data-aos="fade-left">
-        <div class="card shadow-sm p-4">
-          <h5 class="card-title">Quick Facts</h5>
-          <ul class="list-unstyled">
-            <li class="mb-3"><i class="bi bi-code-slash me-2 text-primary"></i>4+ years experience</li>
-            <li class="mb-3"><i class="bi bi-briefcase me-2 text-primary"></i>30+ projects delivered</li>
-            <li class="mb-3"><i class="bi bi-phone me-2 text-primary"></i>Flutter mobile team</li>
-            <li class="mb-3"><i class="bi bi-cloud me-2 text-primary"></i>Hosting & domains</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section bg-light">
-    <div class="container">
-      <h3 class="mb-5 text-center">// Complete Digital Solutions</h3>
-      
-      <!-- Technology Stack Badges -->
-      <div class="text-center mb-5" data-aos="fade-up">
-        <span class="tech-badge bg-primary text-white me-2 mb-2">.NET / C#</span>
-        <span class="tech-badge bg-danger text-white me-2 mb-2">Laravel / PHP</span>
-        <span class="tech-badge bg-info text-white me-2 mb-2">Flutter</span>
-        <span class="tech-badge bg-success text-white me-2 mb-2">ASP.NET Core</span>
-        <span class="tech-badge bg-warning text-dark me-2 mb-2">MySQL</span>
-        <span class="tech-badge bg-secondary text-white me-2 mb-2">SQL Server</span>
-      </div>
-      
-      <div class="row g-4">
-        <!-- Web Development (expanded with Laravel) -->
-        <div class="col-md-4" data-aos="fade-up">
-          <div class="card h-100 shadow-sm p-4 text-center">
-            <i class="bi bi-browser-chrome service-icon"></i>
-            <h4 class="mb-3">Web Applications</h4>
-            <p class="text-muted">
+</div>
+<div class="col-lg-4" data-aos="fade-up">
+<div class="card shadow-sm p-4">
+<h5 class="card-title" data-i18n="about.quickFacts.title">Quick Facts</h5>
+<ul class="list-unstyled">
+<li class="mb-3" data-i18n-html="about.quickFacts.experience"><i class="bi bi-code-slash me-2 text-primary"></i>4+ Years of Professional Experience</li>
+<li class="mb-3" data-i18n-html="about.quickFacts.projects"><i class="bi bi-briefcase me-2 text-primary"></i>30+ Successful Projects Delivered</li>
+<li class="mb-3" data-i18n-html="about.quickFacts.flutter"><i class="bi bi-phone me-2 text-primary"></i>Flutter Team Leadership</li>
+<li class="mb-3" data-i18n-html="about.quickFacts.hosting"><i class="bi bi-cloud me-2 text-primary"></i>End-to-End Hosting Solutions</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section>
+<!-- Services -->
+<section class="section bg-light" id="services">
+<div class="container">
+<h3 class="mb-5 text-center" data-i18n="services.heading">// Complete Digital Solutions</h3>
+<!-- Technology Stack Badges -->
+<div class="text-center mb-5" data-aos="fade-up">
+<span class="tech-badge bg-primary text-white me-2 mb-2">.NET / C#</span>
+<span class="tech-badge bg-danger text-white me-2 mb-2">Laravel / PHP</span>
+<span class="tech-badge bg-info text-white me-2 mb-2">Flutter</span>
+<span class="tech-badge bg-success text-white me-2 mb-2">ASP.NET Core</span>
+<span class="tech-badge bg-warning text-dark me-2 mb-2">MySQL</span>
+<span class="tech-badge bg-secondary text-white me-2 mb-2">SQL Server</span>
+</div>
+<div class="row g-4">
+<!-- Web Development (expanded with Laravel) -->
+<div class="col-md-4" data-aos="fade-up">
+<div class="card h-100 shadow-sm p-4 text-center">
+<i class="bi bi-browser-chrome service-icon"></i>
+<h4 class="mb-3" data-i18n="services.web.title">Web Applications</h4>
+<p class="text-muted" data-i18n-html="services.web.description">
               Custom web applications built with <strong>ASP.NET Core</strong> or <strong>Laravel PHP</strong>. 
               From business portals to e-commerce platforms, I build what you need.
             </p>
-            <div class="mt-3">
-              <span class="tech-badge small">.NET</span>
-              <span class="tech-badge small">Laravel</span>
-              <span class="tech-badge small">Bootstrap</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Mobile Development (NEW) -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card h-100 shadow-sm p-4 text-center border-warning">
-            <i class="bi bi-phone service-icon text-warning"></i>
-            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">NEW</span>
-            <h4 class="mb-3">Mobile Apps (Flutter)</h4>
-            <p class="text-muted">
+<div class="mt-3">
+<span class="tech-badge small">.NET</span>
+<span class="tech-badge small">Laravel</span>
+<span class="tech-badge small">Bootstrap</span>
+</div>
+</div>
+</div>
+<!-- Mobile Development (NEW) -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+<div class="card h-100 shadow-sm p-4 text-center border-warning">
+<i class="bi bi-phone service-icon text-warning"></i>
+<span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3" data-i18n="common.new">NEW</span>
+<h4 class="mb-3" data-i18n="services.mobile.title">Mobile Apps (Flutter)</h4>
+<p class="text-muted" data-i18n-html="services.mobile.description">
               I lead a dedicated Flutter team that builds beautiful, cross-platform mobile apps for 
               <strong>iOS and Android</strong> from a single codebase.
             </p>
-            <div class="mt-3">
-              <span class="tech-badge small">Flutter</span>
-              <span class="tech-badge small">Dart</span>
-              <span class="tech-badge small">Firebase</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Hosting & Domains (NEW) -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="card h-100 shadow-sm p-4 text-center border-success">
-            <i class="bi bi-cloud-check service-icon text-success"></i>
-            <span class="badge bg-success text-white position-absolute top-0 end-0 m-3">NEW</span>
-            <h4 class="mb-3">Hosting & Domains</h4>
-            <p class="text-muted">
+<div class="mt-3">
+<span class="tech-badge small">Flutter</span>
+<span class="tech-badge small">Dart</span>
+<span class="tech-badge small">Firebase</span>
+</div>
+</div>
+</div>
+<!-- Hosting & Domains (NEW) -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+<div class="card h-100 shadow-sm p-4 text-center border-success">
+<i class="bi bi-cloud-check service-icon text-success"></i>
+<span class="badge bg-success text-white position-absolute top-0 end-0 m-3" data-i18n="common.new">NEW</span>
+<h4 class="mb-3" data-i18n="services.hosting.title">Hosting &amp; Domains</h4>
+<p class="text-muted" data-i18n-html="services.hosting.description">
               Full hosting solutions including <strong>domain registration, SSL certificates, 
               and server setup</strong>. I handle everything from code to cloud.
             </p>
-            <div class="mt-3">
-              <span class="tech-badge small">cPanel</span>
-              <span class="tech-badge small">SSL</span>
-              <span class="tech-badge small">Linux</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- E-Commerce -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card h-100 shadow-sm p-4 text-center">
-            <i class="bi bi-cart3 service-icon"></i>
-            <h4 class="mb-3">E-Commerce Solutions</h4>
-            <p class="text-muted">
+<div class="mt-3">
+<span class="tech-badge small">cPanel</span>
+<span class="tech-badge small">SSL</span>
+<span class="tech-badge small">Linux</span>
+</div>
+</div>
+</div>
+<!-- E-Commerce -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+<div class="card h-100 shadow-sm p-4 text-center">
+<i class="bi bi-cart3 service-icon"></i>
+<h4 class="mb-3" data-i18n="services.ecommerce.title">E-Commerce Solutions</h4>
+<p class="text-muted" data-i18n-html="services.ecommerce.description">
               Complete online stores with product management, payment integration, and order tracking. 
               Built with Laravel or ASP.NET Core.
             </p>
-            <div class="mt-3">
-              <span class="tech-badge small">Payment APIs</span>
-              <span class="tech-badge small">MySQL</span>
-              <span class="tech-badge small">Redis</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Industrial Automation -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="card h-100 shadow-sm p-4 text-center">
-            <i class="bi bi-gear service-icon"></i>
-            <h4 class="mb-3">Industrial Automation</h4>
-            <p class="text-muted">
+<div class="mt-3">
+<span class="tech-badge small">Payment APIs</span>
+<span class="tech-badge small">MySQL</span>
+<span class="tech-badge small">Redis</span>
+</div>
+</div>
+</div>
+<!-- Industrial Automation -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<div class="card h-100 shadow-sm p-4 text-center">
+<i class="bi bi-gear service-icon"></i>
+<h4 class="mb-3" data-i18n="services.automation.title">Industrial Automation</h4>
+<p class="text-muted" data-i18n-html="services.automation.description">
               Connect your factory equipment to the web. Monitor machines, track production, 
               and control devices remotely.
             </p>
-            <div class="mt-3">
-              <span class="tech-badge small">Modbus</span>
-              <span class="tech-badge small">SCADA</span>
-              <span class="tech-badge small">MQTT</span>
-            </div>
-          </div>
-        </div>
- 
-        <!-- APIs -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card h-100 shadow-sm p-4 text-center">
-            <i class="bi bi-cloud-arrow-up service-icon"></i>
-            <h4 class="mb-3">RESTful APIs</h4>
-            <p class="text-muted">
+<div class="mt-3">
+<span class="tech-badge small">Modbus</span>
+<span class="tech-badge small">SCADA</span>
+<span class="tech-badge small">MQTT</span>
+</div>
+</div>
+</div>
+<!-- APIs -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+<div class="card h-100 shadow-sm p-4 text-center">
+<i class="bi bi-cloud-arrow-up service-icon"></i>
+<h4 class="mb-3" data-i18n="services.api.title">RESTful APIs</h4>
+<p class="text-muted" data-i18n-html="services.api.description">
               Powerful APIs that power your mobile apps and frontend applications. 
               Built with best practices and documentation.
             </p>
-            <div class="mt-3">
-              <span class="tech-badge small">Web API</span>
-              <span class="tech-badge small">Laravel API</span>
-              <span class="tech-badge small">JWT</span>
-            </div>
-          </div>
+<div class="mt-3">
+<span class="tech-badge small">Web API</span>
+<span class="tech-badge small">Laravel API</span>
+<span class="tech-badge small">JWT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hosting Package Highlight -->
+<div class="row mt-5 justify-content-center gy-4" data-aos="fade-up">
+<div class="col-md-8">
+<div class="card border-primary shadow">
+<div class="card-body p-4 text-center">
+<h4 class="text-primary mb-3" data-i18n-html="package.title"><i class="bi bi-stars"></i> Complete Business Package</h4>
+<p class="lead" data-i18n="package.subtitle">I don't just build your application — I get it online!</p>
+<div class="row mt-4 gy-4">
+<div class="col-md-4">
+<h5 data-i18n-html="package.domain.title"><i class="bi bi-globe text-success"></i> Domain Name</h5>
+<p class="small" data-i18n="package.domain.desc">Get your custom domain (.com, .jo, etc.)</p>
+</div>
+<div class="col-md-4">
+<h5 data-i18n-html="package.hosting.title"><i class="bi bi-hdd-stack text-info"></i> Hosting Setup</h5>
+<p class="small" data-i18n="package.hosting.desc">Reliable hosting with SSL certificate</p>
+</div>
+<div class="col-md-4">
+<h5 data-i18n-html="package.email.title"><i class="bi bi-envelope-paper text-warning"></i> Business Email</h5>
+<p class="small" data-i18n="package.email.desc">Professional email accounts (info@yourcompany.com)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills & Technologies (Updated with Laravel & Flutter) -->
+<section class="section" id="skills"><div class="container">
+<h3 class="mb-5 text-center" data-i18n="skills.heading">// Technologies I Work With</h3>
+<!-- Backend -->
+<h5 class="mb-3" data-i18n-html="skills.backend"><i class="bi bi-server me-2"></i>Backend</h5>
+<div class="row text-center mb-4 gy-4">
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in">
+<div class="tech-badge w-100 p-3">
+<i class="bi bi-microsoft"></i> .NET / C#
         </div>
-      </div>
-      
-      <!-- Hosting Package Highlight -->
-      <div class="row mt-5 justify-content-center" data-aos="fade-up">
-        <div class="col-md-8">
-          <div class="card border-primary shadow">
-            <div class="card-body p-4 text-center">
-              <h4 class="text-primary mb-3"><i class="bi bi-stars"></i> Complete Business Package</h4>
-              <p class="lead">I don't just build your application — I get it online!</p>
-              <div class="row mt-4">
-                <div class="col-md-4">
-                  <h5><i class="bi bi-globe text-success"></i> Domain Name</h5>
-                  <p class="small">Get your custom domain (.com, .jo, etc.)</p>
-                </div>
-                <div class="col-md-4">
-                  <h5><i class="bi bi-hdd-stack text-info"></i> Hosting Setup</h5>
-                  <p class="small">Reliable hosting with SSL certificate</p>
-                </div>
-                <div class="col-md-4">
-                  <h5><i class="bi bi-envelope-paper text-warning"></i> Business Email</h5>
-                  <p class="small">Professional email accounts (info@yourcompany.com)</p>
-                </div>
-              </div>
-            </div>
-          </div>
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="50">
+<div class="tech-badge w-100 p-3 bg-danger text-white">
+<i class="bi bi-layers"></i> Laravel
         </div>
-      </div>
-    </div>
-
-
- 
-  </section>
-
-  <!-- Skills & Technologies (Updated with Laravel & Flutter) -->
-  <section id="skills" class="section container">
-    <h3 class="mb-5 text-center">// Technologies I Work With</h3>
-    
-    <!-- Backend -->
-    <h5 class="mb-3"><i class="bi bi-server me-2"></i>Backend</h5>
-    <div class="row text-center mb-4">
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in">
-        <div class="tech-badge w-100 p-3">
-          <i class="bi bi-microsoft"></i> .NET / C#
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="100">
+<div class="tech-badge w-100 p-3">
+<i class="bi bi-code-square"></i> ASP.NET Core
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="50">
-        <div class="tech-badge w-100 p-3 bg-danger text-white">
-          <i class="bi bi-layers"></i> Laravel
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="150">
+<div class="tech-badge w-100 p-3 bg-warning text-dark">
+<i class="bi bi-filetype-php"></i> PHP
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="100">
-        <div class="tech-badge w-100 p-3">
-          <i class="bi bi-code-square"></i> ASP.NET Core
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
+<div class="tech-badge w-100 p-3">
+<i class="bi bi-database"></i> SQL Server
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="150">
-        <div class="tech-badge w-100 p-3 bg-warning text-dark">
-          <i class="bi bi-filetype-php"></i> PHP
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="250">
+<div class="tech-badge w-100 p-3 bg-primary text-white">
+<i class="bi bi-database"></i> MySQL
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
-        <div class="tech-badge w-100 p-3">
-          <i class="bi bi-database"></i> SQL Server
+</div>
+</div>
+<!-- Mobile -->
+<h5 class="mb-3" data-i18n-html="skills.mobile"><i class="bi bi-phone me-2"></i>Mobile Development</h5>
+<div class="row text-center mb-4 gy-4">
+<div class="col-md-3 col-6 mb-3" data-aos="zoom-in">
+<div class="tech-badge w-100 p-3 bg-info text-white">
+<i class="bi bi-phone"></i> Flutter
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="250">
-        <div class="tech-badge w-100 p-3 bg-primary text-white">
-          <i class="bi bi-database"></i> MySQL
+</div>
+<div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="50">
+<div class="tech-badge w-100 p-3 bg-primary text-white">
+<i class="bi bi-phone"></i> Dart
         </div>
-      </div>
-    </div>
-    
-    <!-- Mobile -->
-    <h5 class="mb-3"><i class="bi bi-phone me-2"></i>Mobile Development</h5>
-    <div class="row text-center mb-4">
-      <div class="col-md-3 col-6 mb-3" data-aos="zoom-in">
-        <div class="tech-badge w-100 p-3 bg-info text-white">
-          <i class="bi bi-phone"></i> Flutter
+</div>
+<div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
+<div class="tech-badge w-100 p-3 bg-warning text-dark">
+<i class="bi bi-android"></i> Android
         </div>
-      </div>
-      <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="50">
-        <div class="tech-badge w-100 p-3 bg-primary text-white">
-          <i class="bi bi-phone"></i> Dart
+</div>
+<div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="150">
+<div class="tech-badge w-100 p-3 bg-dark text-white">
+<i class="bi bi-apple"></i> iOS
         </div>
-      </div>
-      <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
-        <div class="tech-badge w-100 p-3 bg-warning text-dark">
-          <i class="bi bi-android"></i> Android
+</div>
+</div>
+<!-- Frontend & Other -->
+<h5 class="mb-3" data-i18n-html="skills.frontend"><i class="bi bi-code me-2"></i>Frontend &amp; Other</h5>
+<div class="row text-center gy-4">
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in">
+<div class="tech-badge w-100 p-3">
+<i class="bi bi-filetype-js"></i> JavaScript
         </div>
-      </div>
-      <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="150">
-        <div class="tech-badge w-100 p-3 bg-dark text-white">
-          <i class="bi bi-apple"></i> iOS
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="50">
+<div class="tech-badge w-100 p-3">
+<i class="bi bi-bootstrap"></i> Bootstrap
         </div>
-      </div>
-    </div>
-    
-    <!-- Frontend & Other -->
-    <h5 class="mb-3"><i class="bi bi-code me-2"></i>Frontend & Other</h5>
-    <div class="row text-center">
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in">
-        <div class="tech-badge w-100 p-3">
-          <i class="bi bi-filetype-js"></i> JavaScript
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="100">
+<div class="tech-badge w-100 p-3">
+<i class="bi bi-cloud"></i> REST APIs
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="50">
-        <div class="tech-badge w-100 p-3">
-          <i class="bi bi-bootstrap"></i> Bootstrap
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="150">
+<div class="tech-badge w-100 p-3">
+<i class="bi bi-github"></i> Git / GitHub
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="100">
-        <div class="tech-badge w-100 p-3">
-          <i class="bi bi-cloud"></i> REST APIs
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
+<div class="tech-badge w-100 p-3 bg-secondary text-white">
+<i class="bi bi-hdd-stack"></i> cPanel
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="150">
-        <div class="tech-badge w-100 p-3">
-          <i class="bi bi-github"></i> Git / GitHub
+</div>
+<div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="250">
+<div class="tech-badge w-100 p-3 bg-success text-white">
+<i class="bi bi-shield-lock"></i> SSL / Security
         </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
-        <div class="tech-badge w-100 p-3 bg-secondary text-white">
-          <i class="bi bi-hdd-stack"></i> cPanel
-        </div>
-      </div>
-      <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="250">
-        <div class="tech-badge w-100 p-3 bg-success text-white">
-          <i class="bi bi-shield-lock"></i> SSL / Security
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section bg-light">
-    <div class="container">
-      <h3 class="mb-4 text-center">// Featured Projects</h3>
-      <p class="text-center text-muted mb-4" data-aos="fade-up">
+</div>
+</div>
+</div></section>
+<!-- Projects -->
+<section class="section bg-light" id="projects">
+<div class="container">
+<h3 class="mb-4 text-center" data-i18n="projects.heading">// Featured Projects</h3>
+<p class="text-center text-muted mb-4" data-aos="fade-up" data-i18n="projects.subtitle">
         Web applications, mobile apps, industrial systems, and more
       </p>
-
-      <div class="mb-4 text-center" data-aos="fade-up">
-        <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
-        <button class="btn btn-outline-primary filter-btn" data-filter="web">Web Apps</button>
-        <button class="btn btn-outline-primary filter-btn" data-filter="mobile">Mobile Apps</button>
-        <button class="btn btn-outline-primary filter-btn" data-filter="api">APIs</button>
-        <button class="btn btn-outline-primary filter-btn" data-filter="laravel">Laravel</button>
-        <button class="btn btn-outline-primary filter-btn" data-filter="industrial">Industrial</button>
-        <button class="btn btn-outline-primary filter-btn" data-filter="agriculture">Agriculture</button>
-      </div>
-
-      <div class="row g-4" id="project-gallery"></div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section container">
-    <h3 class="mb-4">// Experience</h3>
-    <div class="card shadow-sm" data-aos="fade-up">
-      <div class="card-body p-4">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h4 class="mb-0">Israr Engineering LLC</h4>
-          <span class="badge bg-primary">Sep 2022 – Present</span>
-        </div>
-        <h5 class="text-muted mb-4">Lead .NET Developer | Amman, Jordan</h5>
-        
-        <div class="row">
-          <div class="col-md-6">
-            <h6><i class="bi bi-code-square text-primary me-2"></i>Web & Mobile Development</h6>
-            <ul class="mb-4">
-              <li>Lead a team of developers building web and mobile applications</li>
-              <li>Develop applications using both ASP.NET Core and Laravel PHP</li>
-              <li>Coordinate with Flutter team for cross-platform mobile apps</li>
-              <li>Manage hosting, domains, and server deployments for clients</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <h6><i class="bi bi-gear text-primary me-2"></i>Industrial Systems</h6>
-            <ul class="mb-4">
-              <li>Developed large-scale data collection platforms for industrial equipment</li>
-              <li>Built APIs connecting SCADA systems with web applications</li>
-              <li>Created live alarm monitoring and machine performance tracking</li>
-            </ul>
-          </div>
-        </div>
-
-        <h6 class="mt-3"><i class="bi bi-trophy text-primary me-2"></i>Key Achievements</h6>
-        <ul>
-          <li>Built and deployed over 30 successful projects across web, mobile, and industrial domains</li>
-          <li>Established a Flutter mobile team for cross-platform app development</li>
-          <li>Provide complete hosting solutions including domain registration and SSL setup</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="section bg-light">
-    <div class="container">
-      <h3 class="mb-4">// Education</h3>
-      <div class="card shadow-sm" data-aos="fade-up">
-        <div class="card-body p-4">
-          <div class="d-flex align-items-center">
-            <i class="bi bi-mortarboard-fill text-primary fs-1 me-4"></i>
-            <div>
-              <h4 class="mb-2">Bachelor of Computer Science</h4>
-              <p class="lead mb-0">University of Jordan, Amman</p>
-              <p class="text-muted">Graduated: 2022</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact (Updated with hosting mentions) -->
-  <section id="contact" class="section container">
-    <h3 class="mb-4 text-center">// Let's Build Something Great Together</h3>
-    <p class="lead text-center mb-5" data-aos="fade-up">
+<div class="mb-4 text-center" data-aos="fade-up">
+<button class="btn btn-outline-primary filter-btn active" data-filter="all" data-i18n="projects.filters.all">All</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="web" data-i18n="projects.filters.web">Web Apps</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="mobile" data-i18n="projects.filters.mobile">Mobile Apps</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="api" data-i18n="projects.filters.api">APIs</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="laravel" data-i18n="projects.filters.laravel">Laravel</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="industrial" data-i18n="projects.filters.industrial">Industrial</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="agriculture" data-i18n="projects.filters.agriculture">Agriculture</button>
+</div>
+<div class="row g-4" id="project-gallery"></div>
+</div>
+</section>
+<!-- Experience -->
+<section class="section" id="experience"><div class="container">
+<h3 class="mb-4" data-i18n="experience.heading">// Experience</h3>
+<div class="card shadow-sm" data-aos="fade-up">
+<div class="card-body p-4">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2 mb-3">
+<h4 class="mb-0" data-i18n="experience.company">Israr Engineering LLC</h4>
+<span class="badge bg-primary" data-i18n="experience.period">Sep 2022 – Present</span>
+</div>
+<h5 class="text-muted mb-4" data-i18n="experience.role">Lead .NET Developer | Amman, Jordan</h5>
+<div class="row gy-4">
+<div class="col-md-6">
+<h6 data-i18n-html="experience.webMobile.title"><i class="bi bi-code-square text-primary me-2"></i>Web &amp; Mobile Development</h6>
+<ul class="mb-4">
+<li data-i18n="experience.webMobile.points.lead">Lead a team of developers building web and mobile applications</li>
+<li data-i18n="experience.webMobile.points.develop">Develop applications using both ASP.NET Core and Laravel PHP</li>
+<li data-i18n="experience.webMobile.points.coordinate">Coordinate with Flutter team for cross-platform mobile apps</li>
+<li data-i18n="experience.webMobile.points.manage">Manage hosting, domains, and server deployments for clients</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h6 data-i18n-html="experience.industrial.title"><i class="bi bi-gear text-primary me-2"></i>Industrial Systems</h6>
+<ul class="mb-4">
+<li data-i18n="experience.industrial.points.data">Developed large-scale data collection platforms for industrial equipment</li>
+<li data-i18n="experience.industrial.points.apis">Built APIs connecting SCADA systems with web applications</li>
+<li data-i18n="experience.industrial.points.alarms">Created live alarm monitoring and machine performance tracking</li>
+</ul>
+</div>
+</div>
+<h6 class="mt-3" data-i18n-html="experience.achievements.title"><i class="bi bi-trophy text-primary me-2"></i>Key Achievements</h6>
+<ul>
+<li data-i18n="experience.achievements.points.projects">Built and deployed over 30 successful projects across web, mobile, and industrial domains</li>
+<li data-i18n="experience.achievements.points.flutter">Established a Flutter mobile team for cross-platform app development</li>
+<li data-i18n="experience.achievements.points.hosting">Provide complete hosting solutions including domain registration and SSL setup</li>
+</ul>
+</div>
+</div>
+</div></section>
+<!-- Education -->
+<section class="section bg-light" id="education">
+<div class="container">
+<h3 class="mb-4" data-i18n="education.heading">// Education</h3>
+<div class="card shadow-sm" data-aos="fade-up">
+<div class="card-body p-4">
+<div class="d-flex align-items-center">
+<i class="bi bi-mortarboard-fill text-primary fs-1 me-4"></i>
+<div>
+<h4 class="mb-2" data-i18n="education.degree">Bachelor of Computer Science</h4>
+<p class="lead mb-0" data-i18n="education.university">University of Jordan, Amman</p>
+<p class="text-muted" data-i18n="education.graduated">Graduated: 2022</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact (Updated with hosting mentions) -->
+<section class="section" id="contact"><div class="container">
+<h3 class="d-flex flex-wrap gap-2 justify-content-center mb-4" data-i18n="contact.heading">// Let's Turn Your Idea Into a Product</h3>
+<p class="lead text-center mb-5" data-aos="fade-up" data-i18n="contact.subtitle">
       Need a website? Mobile app? Complete system with hosting? 
       I provide end-to-end solutions for your business.
     </p>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card shadow-sm border-primary" data-aos="fade-up">
-          <div class="card-body p-4">
-            <div class="text-center mb-4">
-              <span class="badge bg-primary p-3 me-2"><i class="bi bi-phone"></i> Flutter Team</span>
-              <span class="badge bg-success p-3 me-2"><i class="bi bi-globe"></i> Domains</span>
-              <span class="badge bg-info p-3"><i class="bi bi-hdd-stack"></i> Hosting</span>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-6">
-                <h5 class="mb-4">Get in Touch</h5>
-                <ul class="list-unstyled">
-                  <li class="mb-3">
-                    <i class="bi bi-envelope-fill text-primary me-3"></i>
-                    <a href="mailto:mohannad.muhana@gmail.com" class="text-decoration-none">mohannad.muhana@gmail.com</a>
-                  </li>
-                  <li class="mb-3">
-                    <i class="bi bi-telephone-fill text-primary me-3"></i>
-                    <a href="tel:+962780869084" class="text-decoration-none">+962 7 8086 9084</a>
-                  </li>
-                  <li class="mb-3">
-                    <i class="bi bi-whatsapp text-success me-3"></i>
-                    <a href="https://wa.me/962780869084" target="_blank" class="text-decoration-none">Chat on WhatsApp</a>
-                  </li>
-                  <li class="mb-3">
-                    <i class="bi bi-geo-alt-fill text-danger me-3"></i>
-                    <span>Amman, Jordan</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <h5 class="mb-4">Connect Online</h5>
-                <ul class="list-unstyled">
-                  <li class="mb-3">
-                    <i class="bi bi-linkedin text-primary me-3"></i>
-                    <a href="https://www.linkedin.com/in/mohannadmuhana/" target="_blank" class="text-decoration-none">linkedin.com/in/mohannadmuhana</a>
-                  </li>
-                  <!-- <li class="mb-3">
+<div class="row justify-content-center gy-4">
+<div class="col-md-8">
+<div class="card shadow-sm border-primary" data-aos="fade-up">
+<div class="card-body p-4">
+<div class="text-center mb-4">
+<span class="badge bg-primary p-3 me-2" data-i18n-html="contact.badges.flutter"><i class="bi bi-phone"></i> Flutter Team</span>
+<span class="badge bg-success p-3 me-2" data-i18n-html="contact.badges.domains"><i class="bi bi-globe"></i> Domains</span>
+<span class="badge bg-info p-3" data-i18n-html="contact.badges.hosting"><i class="bi bi-hdd-stack"></i> Hosting</span>
+</div>
+<div class="row gy-4">
+<div class="col-md-6">
+<h5 class="mb-4" data-i18n="contact.getInTouch">Get in Touch</h5>
+<ul class="list-unstyled">
+<li class="mb-3">
+<i class="bi bi-envelope-fill text-primary me-3"></i>
+<a class="text-decoration-none" href="mailto:mohannad.muhana@gmail.com">mohannad.muhana@gmail.com</a>
+</li>
+<li class="mb-3">
+<i class="bi bi-telephone-fill text-primary me-3"></i>
+<a class="text-decoration-none" href="tel:+962780869084">+962 7 8086 9084</a>
+</li>
+<li class="mb-3">
+<i class="bi bi-whatsapp text-success me-3"></i>
+<a class="text-decoration-none" data-i18n="contact.whatsapp" href="https://wa.me/962780869084" target="_blank">Chat on WhatsApp</a>
+</li>
+<li class="mb-3">
+<i class="bi bi-geo-alt-fill text-danger me-3"></i>
+<span data-i18n="contact.location">Amman, Jordan</span>
+</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h5 class="mb-4" data-i18n="contact.connectOnline">Connect Online</h5>
+<ul class="list-unstyled">
+<li class="mb-3">
+<i class="bi bi-linkedin text-primary me-3"></i>
+<a class="text-decoration-none" href="https://www.linkedin.com/in/mohannadmuhana/" target="_blank">linkedin.com/in/mohannadmuhana</a>
+</li>
+<!-- <li class="mb-3">
                     <i class="bi bi-github text-dark me-3"></i>
                     <a href="#" target="_blank" class="text-decoration-none">github.com/mohannadmuhana</a>
                   </li>
@@ -500,43 +467,42 @@
                     <i class="bi bi-twitter-x text-primary me-3"></i>
                     <a href="#" target="_blank" class="text-decoration-none">@mohannadmuhana</a>
                   </li> -->
-                </ul>
-              </div>
-            </div>
-            
-            <hr class="my-4">
-            
-            <div class="row text-center">
-              <div class="col-4">
-                <h6><i class="bi bi-check-circle text-success"></i> Development</h6>
-              </div>
-              <div class="col-4">
-                <h6><i class="bi bi-check-circle text-success"></i> Hosting</h6>
-              </div>
-              <div class="col-4">
-                <h6><i class="bi bi-check-circle text-success"></i> Support</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p class="mb-2">© 2025 Mohannad Muhana — Full-Stack Developer | Flutter Team Lead | Hosting Solutions</p>
-      <p class="small">Built with <i class="bi bi-heart-fill text-danger"></i> using ASP.NET Core, Laravel & Flutter</p>
-    </div>
-  </footer>
-
-  <!-- JS Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
-  <!-- Custom JS -->
-  <script src="js/main.js"></script>
+</ul>
+</div>
+</div>
+<hr class="my-4"/>
+<div class="row text-center gy-4">
+<div class="col-12 col-sm-4">
+<h6 data-i18n-html="contact.services.development"><i class="bi bi-check-circle text-success"></i> Development</h6>
+</div>
+<div class="col-12 col-sm-4">
+<h6 data-i18n-html="contact.services.hosting"><i class="bi bi-check-circle text-success"></i> Hosting</h6>
+</div>
+<div class="col-12 col-sm-4">
+<h6 data-i18n-html="contact.services.support"><i class="bi bi-check-circle text-success"></i> Support</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<p class="mb-2" data-i18n="footer.copyright">
+      © 2026 Mohannad Muhana — Full-Stack Developer | Flutter Team Lead
+    </p>
+<p class="small" data-i18n="footer.subtitle">
+      From concept to deployment — Web Applications, Mobile Apps, Hosting &amp; Business Solutions.
+    </p>
+</div>
+</footer>
+<!-- JS Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Custom JS -->
+<script src="js/main.js"></script>
 </body>
 </html>

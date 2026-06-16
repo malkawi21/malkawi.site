@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "مهند مهنا | وكالة تطوير ويب وموبايل Full-Stack"
+  },
+  "language": {
+    "switchToArabic": "AR",
+    "switchToEnglish": "EN"
+  },
+  "nav": {
+    "about": "نبذة",
+    "services": "الخدمات",
+    "projects": "المشاريع",
+    "experience": "الخبرة",
+    "education": "التعليم",
+    "contact": "تواصل"
+  },
+  "buttons": {
+    "viewWork": "عرض الأعمال",
+    "letsTalk": "تواصل معي"
+  },
+  "common": {
+    "new": "جديد"
+  },
+  "hero": {
+    "badge": "مطور Full-Stack | قائد فريق Flutter | مهندس حلول رقمية",
+    "title": "حلول رقمية متكاملة <span class=\"text-warning\">من الكود إلى التشغيل</span>",
+    "description": "مرحباً، أنا <strong>مهند مهنا</strong> — أقود فريقاً من المطورين لبناء <span class=\"fw-bold\">تطبيقات ويب، تطبيقات موبايل، وأنظمة صناعية</span>. من التطوير وحتى النشر والتشغيل، أقدم حلولاً متكاملة لأعمالك.",
+    "features": {
+      "web": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>تطوير الويب",
+      "automation": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>تطبيقات صناعية لحظية - أتمتة",
+      "desktop": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>تطبيقات سطح المكتب",
+      "mobile": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>تطوير تطبيقات الموبايل - فريق Flutter",
+      "hosting": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>حجز الدومينات وخدمات الاستضافة"
+    }
+  },
+  "about": {
+    "heading": "// نبذة عني",
+    "intro": "أنا <strong>مطور .NET وLaravel</strong> بخبرة عملية تجمع بين تطوير الويب، قيادة فريق Flutter، وبناء أنظمة تتصل بالمعدات الصناعية.",
+    "solutionsIntro": "بخبرة تزيد عن 4 سنوات وفريق متخصص، أقدم حلولاً متكاملة من البداية وحتى التشغيل:",
+    "points": {
+      "web": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>تطبيقات ويب Full-Stack باستخدام ASP.NET Core وLaravel",
+      "mobile": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>تطبيقات موبايل متعددة المنصات باستخدام Flutter لأنظمة iOS وAndroid",
+      "domain": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>حجز الدومينات وإعداد الاستضافة",
+      "digital": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>تحول رقمي متكامل لأعمالك"
+    },
+    "final": "سواء كنت تحتاج إلى <strong>موقع إلكتروني، تطبيق موبايل، أو نظام صناعي متكامل</strong> — لدي الفريق والخبرة اللازمة لتنفيذ المشروع بجودة عالية.",
+    "quickFacts": {
+      "title": "حقائق سريعة",
+      "experience": "<i class=\"bi bi-code-slash me-2 text-primary\"></i>أكثر من 4 سنوات خبرة احترافية",
+      "projects": "<i class=\"bi bi-briefcase me-2 text-primary\"></i>أكثر من 30 مشروعاً ناجحاً",
+      "flutter": "<i class=\"bi bi-phone me-2 text-primary\"></i>قيادة فريق Flutter",
+      "hosting": "<i class=\"bi bi-cloud me-2 text-primary\"></i>حلول استضافة متكاملة"
+    }
+  },
+  "services": {
+    "heading": "// حلول رقمية متكاملة",
+    "web": {
+      "title": "تطبيقات الويب",
+      "description": "تطبيقات ويب مخصصة مبنية باستخدام <strong>ASP.NET Core</strong> أو <strong>Laravel PHP</strong>. من بوابات الأعمال إلى منصات التجارة الإلكترونية، أبني الحل المناسب لاحتياجك."
+    },
+    "mobile": {
+      "title": "تطبيقات موبايل Flutter",
+      "description": "أقود فريق Flutter متخصصاً لبناء تطبيقات موبايل جميلة ومتعددة المنصات لأنظمة <strong>iOS وAndroid</strong> من قاعدة كود واحدة."
+    },
+    "hosting": {
+      "title": "الاستضافة والدومينات",
+      "description": "حلول استضافة متكاملة تشمل <strong>حجز الدومينات، شهادات SSL، وإعداد الخوادم</strong>. أتولى كل شيء من كتابة الكود وحتى تشغيله على الخادم."
+    },
+    "ecommerce": {
+      "title": "حلول التجارة الإلكترونية",
+      "description": "متاجر إلكترونية متكاملة تشمل إدارة المنتجات، تكامل الدفع، وتتبع الطلبات. مبنية باستخدام Laravel أو ASP.NET Core."
+    },
+    "automation": {
+      "title": "الأتمتة الصناعية",
+      "description": "اربط معدات المصنع بالويب، وراقب الآلات، وتتبع الإنتاج، وتحكم بالأجهزة عن بعد."
+    },
+    "api": {
+      "title": "واجهات RESTful API",
+      "description": "واجهات API قوية لتشغيل تطبيقات الموبايل والواجهات الأمامية. مبنية وفق أفضل الممارسات مع توثيق واضح."
+    }
+  },
+  "package": {
+    "title": "<i class=\"bi bi-stars\"></i> باقة أعمال متكاملة",
+    "subtitle": "لا أبني التطبيق فقط — بل أجعله يعمل على الإنترنت!",
+    "domain": {
+      "title": "<i class=\"bi bi-globe text-success\"></i> اسم الدومين",
+      "desc": "احصل على دومين مخصص مثل .com أو .jo وغيرها"
+    },
+    "hosting": {
+      "title": "<i class=\"bi bi-hdd-stack text-info\"></i> إعداد الاستضافة",
+      "desc": "استضافة موثوقة مع شهادة SSL"
+    },
+    "email": {
+      "title": "<i class=\"bi bi-envelope-paper text-warning\"></i> بريد أعمال",
+      "desc": "حسابات بريد احترافية مثل info@yourcompany.com"
+    }
+  },
+  "skills": {
+    "heading": "// التقنيات التي أعمل بها",
+    "backend": "<i class=\"bi bi-server me-2\"></i>تطوير Backend",
+    "mobile": "<i class=\"bi bi-phone me-2\"></i>تطوير الموبايل",
+    "frontend": "<i class=\"bi bi-code me-2\"></i>الواجهة الأمامية وتقنيات أخرى"
+  },
+  "projects": {
+    "heading": "// مشاريع مختارة",
+    "subtitle": "تطبيقات ويب، تطبيقات موبايل، أنظمة صناعية، والمزيد",
+    "empty": "لا توجد مشاريع في هذه الفئة",
+    "filters": {
+      "all": "الكل",
+      "web": "تطبيقات ويب",
+      "mobile": "تطبيقات موبايل",
+      "api": "واجهات API",
+      "laravel": "Laravel",
+      "industrial": "صناعي",
+      "agriculture": "زراعة"
+    },
+    "types": {
+      "web": "ويب",
+      "api": "واجهات API",
+      "scada": "سكادا",
+      "energy": "طاقة",
+      "tools": "أدوات",
+      "agriculture": "زراعة"
+    },
+    "items": {
+      "ecommerce": {
+        "title": "منصة تجارة إلكترونية",
+        "desc": "متجر إلكتروني متكامل يشمل إدارة المنتجات، سلة الشراء، تكامل الدفع Stripe/PayPal، ونظام تتبع الطلبات، تم بناؤه باستخدام ASP.NET Core."
+      },
+      "hotel": {
+        "title": "نظام حجز فنادق",
+        "desc": "نظام حجوزات كامل يشمل تقويم توفر الغرف، الدفع الإلكتروني، لوحة تحكم إدارية، تأكيدات بريدية آلية، وإدارة العملاء."
+      },
+      "portal": {
+        "title": "بوابة موظفين",
+        "desc": "بوابة داخلية للشركات تشمل إدارة الإجازات، تتبع الحضور، تقييم الأداء، وإعلانات الشركة."
+      },
+      "realtime": {
+        "title": "مزامنة بيانات وإنذار لحظي متعددة المواقع",
+        "desc": "واجهة API عالية الأداء باستخدام ASP.NET Core لاستقبال تدفقات البيانات الصناعية من عدة مواقع مع مزامنة لحظية."
+      },
+      "scada": {
+        "title": "تكامل أنظمة SCADA",
+        "desc": "أنظمة SCADA مبنية على الويب لمراقبة العمليات الصناعية والتحكم بها مع عرض البيانات بشكل لحظي."
+      },
+      "tracker": {
+        "title": "وحدة تحكم تتبع شمسي",
+        "desc": "تطبيق تحكم ومراقبة لأنظمة التتبع الشمسي، يدير تموضع الألواح والحالة اللحظية وتحسين الأداء في مزارع الطاقة الشمسية."
+      },
+      "portforwarder": {
+        "title": "PMM Port Forwarder",
+        "desc": "أداة لتحويل الاتصال من Serial إلى UDP لأنظمة PMM، تتيح الوصول عن بعد للأجهزة التسلسلية عبر الشبكة."
+      },
+      "modbus": {
+        "title": "أداة اختبار Modbus Master & Slave",
+        "desc": "أداة تشخيص ومحاكاة لشبكات Modbus تدعم وضعي Master وSlave مع مراقبة مباشرة للبيانات واختبار الأوامر."
+      },
+      "configurator": {
+        "title": "أداة إعداد منتجات PMM",
+        "desc": "أداة موحدة لإعداد أجهزة PMM، تتيح التحكم والتركيب وإدارة المعاملات لجميع أجهزة الشركة من واجهة واحدة."
+      },
+      "cowrmat": {
+        "title": "COWRMAT - أداة تحسين المحاصيل",
+        "desc": "نظام دعم قرار احترافي لتحسين تخطيط المحاصيل، رفع كفاءة الري، ودعم التوزيع المستدام للمياه المعالجة في الإدارة الزراعية."
+      }
+    }
+  },
+  "experience": {
+    "heading": "// الخبرة",
+    "company": "شركة إسرار الهندسية",
+    "period": "سبتمبر 2022 – حتى الآن",
+    "role": "قائد تطوير .NET | عمّان، الأردن",
+    "webMobile": {
+      "title": "<i class=\"bi bi-code-square text-primary me-2\"></i>تطوير الويب والموبايل",
+      "points": {
+        "lead": "قيادة فريق مطورين لبناء تطبيقات ويب وموبايل",
+        "develop": "تطوير تطبيقات باستخدام ASP.NET Core وLaravel PHP",
+        "coordinate": "التنسيق مع فريق Flutter لتطبيقات الموبايل متعددة المنصات",
+        "manage": "إدارة الاستضافة والدومينات ونشر الخوادم للعملاء"
+      }
+    },
+    "industrial": {
+      "title": "<i class=\"bi bi-gear text-primary me-2\"></i>الأنظمة الصناعية",
+      "points": {
+        "data": "تطوير منصات جمع بيانات واسعة النطاق للمعدات الصناعية",
+        "apis": "بناء واجهات API تربط أنظمة SCADA بتطبيقات الويب",
+        "alarms": "إنشاء مراقبة إنذارات لحظية وتتبع أداء الآلات"
+      }
+    },
+    "achievements": {
+      "title": "<i class=\"bi bi-trophy text-primary me-2\"></i>أبرز الإنجازات",
+      "points": {
+        "projects": "بناء ونشر أكثر من 30 مشروعاً ناجحاً في مجالات الويب والموبايل والصناعة",
+        "flutter": "تأسيس فريق Flutter لتطوير تطبيقات متعددة المنصات",
+        "hosting": "تقديم حلول استضافة متكاملة تشمل حجز الدومينات وإعداد SSL"
+      }
+    }
+  },
+  "education": {
+    "heading": "// التعليم",
+    "degree": "بكالوريوس علم الحاسوب",
+    "university": "الجامعة الأردنية، عمّان",
+    "graduated": "سنة التخرج: 2022"
+  },
+  "contact": {
+    "heading": "// لنحوّل فكرتك إلى منتج",
+    "subtitle": "تحتاج موقعاً إلكترونياً؟ تطبيق موبايل؟ نظاماً كاملاً مع الاستضافة؟ أقدم لك حلولاً متكاملة من البداية وحتى التشغيل.",
+    "badges": {
+      "flutter": "<i class=\"bi bi-phone\"></i> فريق Flutter",
+      "domains": "<i class=\"bi bi-globe\"></i> دومينات",
+      "hosting": "<i class=\"bi bi-hdd-stack\"></i> استضافة"
+    },
+    "getInTouch": "تواصل معي",
+    "connectOnline": "تواصل عبر الإنترنت",
+    "whatsapp": "تواصل عبر واتساب",
+    "location": "عمّان، الأردن",
+    "services": {
+      "development": "<i class=\"bi bi-check-circle text-success\"></i> تطوير",
+      "hosting": "<i class=\"bi bi-check-circle text-success\"></i> استضافة",
+      "support": "<i class=\"bi bi-check-circle text-success\"></i> دعم"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 مهند مهنا — مطور Full-Stack | قائد فريق Flutter",
+    "subtitle": "من الفكرة إلى النشر — تطبيقات ويب، تطبيقات موبايل، استضافة، وحلول أعمال."
+  }
+}

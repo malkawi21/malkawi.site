@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Mohannad Muhana | Full-Stack Web & Mobile Development Agency"
+  },
+  "language": {
+    "switchToArabic": "AR",
+    "switchToEnglish": "EN"
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "viewWork": "View My Work",
+    "letsTalk": "Let's Talk"
+  },
+  "common": {
+    "new": "NEW"
+  },
+  "hero": {
+    "badge": "Full-Stack Developer | Flutter Team Lead | Digital Solutions Architect",
+    "title": "Complete Digital Solutions <span class=\"text-warning\">From Code to Cloud</span>",
+    "description": "Hi, I'm <strong>Mohannad Muhana</strong> — I lead a team of developers building <span class=\"fw-bold\">web applications, mobile apps, and industrial systems</span>. From development to deployment, I provide complete solutions for your business.",
+    "features": {
+      "web": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Web Development",
+      "automation": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Industrial Real-Time Applications (Automation)",
+      "desktop": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Desktop Applications",
+      "mobile": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Mobile App Development (Flutter Team)",
+      "hosting": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Domain Registration & Hosting Services"
+    }
+  },
+  "about": {
+    "heading": "// About Me",
+    "intro": "I'm a <strong>.NET & Laravel developer</strong> with a unique blend of skills — I create modern web applications, lead a Flutter mobile team, AND build systems that connect to industrial equipment.",
+    "solutionsIntro": "With over 4 years of experience and a dedicated team, I offer end-to-end solutions:",
+    "points": {
+      "web": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>Full-stack web applications (ASP.NET Core & Laravel)",
+      "mobile": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>Cross-platform mobile apps with Flutter (iOS & Android)",
+      "domain": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>Domain registration and hosting setup",
+      "digital": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>Complete digital transformation for your business"
+    },
+    "final": "Whether you need a <strong>website, mobile app, or complete industrial system</strong> — I have the team and expertise to deliver.",
+    "quickFacts": {
+      "title": "Quick Facts",
+      "experience": "<i class=\"bi bi-code-slash me-2 text-primary\"></i>4+ Years of Professional Experience",
+      "projects": "<i class=\"bi bi-briefcase me-2 text-primary\"></i>30+ Successful Projects Delivered",
+      "flutter": "<i class=\"bi bi-phone me-2 text-primary\"></i>Flutter Team Leadership",
+      "hosting": "<i class=\"bi bi-cloud me-2 text-primary\"></i>End-to-End Hosting Solutions"
+    }
+  },
+  "services": {
+    "heading": "// Complete Digital Solutions",
+    "web": {
+      "title": "Web Applications",
+      "description": "Custom web applications built with <strong>ASP.NET Core</strong> or <strong>Laravel PHP</strong>. From business portals to e-commerce platforms, I build what you need."
+    },
+    "mobile": {
+      "title": "Mobile Apps (Flutter)",
+      "description": "I lead a dedicated Flutter team that builds beautiful, cross-platform mobile apps for <strong>iOS and Android</strong> from a single codebase."
+    },
+    "hosting": {
+      "title": "Hosting & Domains",
+      "description": "Full hosting solutions including <strong>domain registration, SSL certificates, and server setup</strong>. I handle everything from code to cloud."
+    },
+    "ecommerce": {
+      "title": "E-Commerce Solutions",
+      "description": "Complete online stores with product management, payment integration, and order tracking. Built with Laravel or ASP.NET Core."
+    },
+    "automation": {
+      "title": "Industrial Automation",
+      "description": "Connect your factory equipment to the web. Monitor machines, track production, and control devices remotely."
+    },
+    "api": {
+      "title": "RESTful APIs",
+      "description": "Powerful APIs that power your mobile apps and frontend applications. Built with best practices and documentation."
+    }
+  },
+  "package": {
+    "title": "<i class=\"bi bi-stars\"></i> Complete Business Package",
+    "subtitle": "I don't just build your application — I get it online!",
+    "domain": {
+      "title": "<i class=\"bi bi-globe text-success\"></i> Domain Name",
+      "desc": "Get your custom domain (.com, .jo, etc.)"
+    },
+    "hosting": {
+      "title": "<i class=\"bi bi-hdd-stack text-info\"></i> Hosting Setup",
+      "desc": "Reliable hosting with SSL certificate"
+    },
+    "email": {
+      "title": "<i class=\"bi bi-envelope-paper text-warning\"></i> Business Email",
+      "desc": "Professional email accounts (info@yourcompany.com)"
+    }
+  },
+  "skills": {
+    "heading": "// Technologies I Work With",
+    "backend": "<i class=\"bi bi-server me-2\"></i>Backend",
+    "mobile": "<i class=\"bi bi-phone me-2\"></i>Mobile Development",
+    "frontend": "<i class=\"bi bi-code me-2\"></i>Frontend & Other"
+  },
+  "projects": {
+    "heading": "// Featured Projects",
+    "subtitle": "Web applications, mobile apps, industrial systems, and more",
+    "empty": "No projects found in this category",
+    "filters": {
+      "all": "All",
+      "web": "Web Apps",
+      "mobile": "Mobile Apps",
+      "api": "APIs",
+      "laravel": "Laravel",
+      "industrial": "Industrial",
+      "agriculture": "Agriculture"
+    },
+    "types": {
+      "web": "web",
+      "api": "api",
+      "scada": "scada",
+      "energy": "energy",
+      "tools": "tools",
+      "agriculture": "agriculture"
+    },
+    "items": {
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "desc": "Full-featured online store with product management, shopping cart, payment integration (Stripe/PayPal), and order tracking system built with ASP.NET Core."
+      },
+      "hotel": {
+        "title": "Hotel Booking System",
+        "desc": "Complete reservation system with room availability calendar, online payments, admin dashboard, automated email confirmations, and customer management."
+      },
+      "portal": {
+        "title": "Employee Portal",
+        "desc": "Internal company portal with leave management, attendance tracking, performance reviews, and company announcements."
+      },
+      "realtime": {
+        "title": "Real-Time Multi-Site Data Sync & Alarm Management",
+        "desc": "High-performance ASP.NET Core API for ingesting industrial data streams from multiple locations with real-time synchronization."
+      },
+      "scada": {
+        "title": "SCADA Systems Integration",
+        "desc": "Web-based SCADA systems for monitoring and controlling industrial processes with real-time data visualization."
+      },
+      "tracker": {
+        "title": "Solar Tracker Controller",
+        "desc": "A control and monitoring application for solar tracking systems — manages panel positioning, real-time status updates, and performance optimization for solar farms."
+      },
+      "portforwarder": {
+        "title": "PMM Port Forwarder",
+        "desc": "Serial-to-UDP forwarding utility for PMM systems — enables remote access to serial devices over network."
+      },
+      "modbus": {
+        "title": "Modbus Tester (Master & Slave)",
+        "desc": "Diagnostic and simulation utility for Modbus networks, supporting both master and slave modes with live data monitoring and command testing."
+      },
+      "configurator": {
+        "title": "PMM Product Configurator",
+        "desc": "Unified configuration tool for PMM hardware — allows control, installation, and parameter management of all company devices from a single interface."
+      },
+      "cowrmat": {
+        "title": "COWRMAT - Crop Optimization Tool",
+        "desc": "A professional decision-support system designed to optimize crop planning, improve irrigation efficiency, and support sustainable treated wastewater allocation for agricultural management."
+      }
+    }
+  },
+  "experience": {
+    "heading": "// Experience",
+    "company": "Israr Engineering LLC",
+    "period": "Sep 2022 – Present",
+    "role": "Lead .NET Developer | Amman, Jordan",
+    "webMobile": {
+      "title": "<i class=\"bi bi-code-square text-primary me-2\"></i>Web & Mobile Development",
+      "points": {
+        "lead": "Lead a team of developers building web and mobile applications",
+        "develop": "Develop applications using both ASP.NET Core and Laravel PHP",
+        "coordinate": "Coordinate with Flutter team for cross-platform mobile apps",
+        "manage": "Manage hosting, domains, and server deployments for clients"
+      }
+    },
+    "industrial": {
+      "title": "<i class=\"bi bi-gear text-primary me-2\"></i>Industrial Systems",
+      "points": {
+        "data": "Developed large-scale data collection platforms for industrial equipment",
+        "apis": "Built APIs connecting SCADA systems with web applications",
+        "alarms": "Created live alarm monitoring and machine performance tracking"
+      }
+    },
+    "achievements": {
+      "title": "<i class=\"bi bi-trophy text-primary me-2\"></i>Key Achievements",
+      "points": {
+        "projects": "Built and deployed over 30 successful projects across web, mobile, and industrial domains",
+        "flutter": "Established a Flutter mobile team for cross-platform app development",
+        "hosting": "Provide complete hosting solutions including domain registration and SSL setup"
+      }
+    }
+  },
+  "education": {
+    "heading": "// Education",
+    "degree": "Bachelor of Computer Science",
+    "university": "University of Jordan, Amman",
+    "graduated": "Graduated: 2022"
+  },
+  "contact": {
+    "heading": "// Let's Turn Your Idea Into a Product",
+    "subtitle": "Need a website? Mobile app? Complete system with hosting? I provide end-to-end solutions for your business.",
+    "badges": {
+      "flutter": "<i class=\"bi bi-phone\"></i> Flutter Team",
+      "domains": "<i class=\"bi bi-globe\"></i> Domains",
+      "hosting": "<i class=\"bi bi-hdd-stack\"></i> Hosting"
+    },
+    "getInTouch": "Get in Touch",
+    "connectOnline": "Connect Online",
+    "whatsapp": "Chat on WhatsApp",
+    "location": "Amman, Jordan",
+    "services": {
+      "development": "<i class=\"bi bi-check-circle text-success\"></i> Development",
+      "hosting": "<i class=\"bi bi-check-circle text-success\"></i> Hosting",
+      "support": "<i class=\"bi bi-check-circle text-success\"></i> Support"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Mohannad Muhana — Full-Stack Developer | Flutter Team Lead",
+    "subtitle": "From concept to deployment — Web Applications, Mobile Apps, Hosting & Business Solutions."
+  }
+}

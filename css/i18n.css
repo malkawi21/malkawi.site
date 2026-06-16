@@ -1,0 +1,58 @@
+/* Language / RTL support */
+#languageToggle {
+  min-width: 48px;
+  height: 38px;
+  font-weight: 700;
+  border-radius: 50rem;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-section,
+html[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+
+html[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}
+
+html[dir="rtl"] .me-2,
+html[dir="rtl"] .me-3,
+html[dir="rtl"] .me-4 {
+  margin-right: 0 !important;
+}
+
+html[dir="rtl"] .me-2 {
+  margin-left: 0.5rem !important;
+}
+
+html[dir="rtl"] .me-3 {
+  margin-left: 1rem !important;
+}
+
+html[dir="rtl"] .me-4 {
+  margin-left: 1.5rem !important;
+}
+
+html[dir="rtl"] .ms-lg-2,
+html[dir="rtl"] .ms-lg-3 {
+  margin-left: 0 !important;
+}
+
+@media (min-width: 992px) {
+  html[dir="rtl"] .ms-lg-2 {
+    margin-right: 0.5rem !important;
+  }
+
+  html[dir="rtl"] .ms-lg-3 {
+    margin-right: 1rem !important;
+  }
+}
+
+html[dir="rtl"] .position-absolute.top-0.end-0 {
+  right: auto !important;
+  left: 0 !important;
+}
