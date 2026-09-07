@@ -1,269 +1,87 @@
-(() => {
-  'use strict';
+/**
+ * main.js — application entry point.
+ *
+ * Boot order matters: translations must resolve before any renderer runs,
+ * because every component reads its copy from the dictionary.
+ */
 
-  const aosAvailable = typeof AOS !== 'undefined';
-  const lightboxAvailable = typeof GLightbox !== 'undefined';
+import { setLanguage, preferredLang, currentLang, t } from './i18n.js';
+import { renderAll } from './ui/sections.js';
+import { initNav } from './ui/nav.js';
+import { initReveal, observeReveals, initSpotlight, initCounters } from './ui/motion.js';
+import { initLightbox } from './ui/lightbox.js';
+import { initProjects } from './ui/projects.js';
+import { initArchitecture } from './ui/architecture.js';
+import { initForm } from './ui/form.js';
 
-  if (aosAvailable) {
-    AOS.init({ duration: 800, once: true });
-  }
+function syncLangToggle() {
+  const btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+  const next = currentLang() === 'ar' ? 'en' : 'ar';
+  btn.textContent = next.toUpperCase();
+  btn.setAttribute('aria-label', t('language.switchLabel'));
+  btn.dataset.next = next;
+}
 
-  const lightbox = lightboxAvailable ? GLightbox({ selector: '.glightbox' }) : null;
-
-  const supportedLanguages = ['en', 'ar'];
-  const defaultLanguage = 'en';
-
-  const projects = [
-    {
-      id: 'ecommerce',
-      images: ['images/ecommerce1.jpg', 'images/ecommerce2.jpg'],
-      type: 'web'
-    },
-    {
-      id: 'hotel',
-      images: ['images/hotel1.jpg', 'images/hotel2.png'],
-      type: 'web'
-    },
-    {
-      id: 'portal',
-      images: ['images/portal1.webp'],
-      type: 'web'
-    },
-    {
-      id: 'realtime',
-      images: ['images/Alarm-Management.jpg', 'images/api.png'],
-      type: 'api'
-    },
-    {
-      id: 'scada',
-      images: ['images/SCADA-system.jpg', 'images/scada.png'],
-      type: 'scada'
-    },
-    {
-      id: 'tracker',
-      images: ['images/Tracker01.PNG', 'images/Tracker02.PNG', 'images/Tracker03.PNG', 'images/Tracker04.PNG', 'images/Solar-tracking-system.webp'],
-      type: 'energy'
-    },
-    {
-      id: 'portforwarder',
-      images: ['images/Portforwarder01.PNG', 'images/Portforwarder02.PNG'],
-      type: 'tools'
-    },
-    {
-      id: 'modbus',
-      images: ['images/modbusMaster01.PNG', 'images/modbusMaster02.PNG', 'images/modbusMaster03.PNG', 'images/Slave01.PNG', 'images/Slave02.PNG'],
-      type: 'tools'
-    },
-    {
-      id: 'configurator',
-      images: ['images/Config01.PNG', 'images/Config02.PNG', 'images/Config03.PNG', 'images/Config04.PNG'],
-      type: 'tools'
-    },
-    {
-      id: 'cowrmat',
-      images: ['images/agri1.PNG', 'images/agri2.PNG', 'images/agri3.PNG', 'images/agri4.PNG'],
-      type: 'agriculture'
-    }
-  ];
-
-  const filterAliases = {
-    all: ['web', 'api', 'scada', 'energy', 'tools', 'agriculture'],
-    industrial: ['scada', 'energy', 'tools'],
-    mobile: [],
-    laravel: ['web'],
-    web: ['web'],
-    api: ['api'],
-    agriculture: ['agriculture']
-  };
-
-  let currentTranslations = null;
-  let currentLanguage = localStorage.getItem('language') || defaultLanguage;
-
-  const gallery = document.getElementById('project-gallery');
-  const languageToggle = document.getElementById('languageToggle');
-  const darkModeToggle = document.getElementById('darkModeToggle');
-
-  function getNestedValue(object, path) {
-    return path.split('.').reduce((value, key) => value?.[key], object);
-  }
-
-  function escapeAttribute(value) {
-    return String(value ?? '').replace(/"/g, '&quot;');
-  }
-
-  async function loadTranslations(language) {
-    const safeLanguage = supportedLanguages.includes(language) ? language : defaultLanguage;
-    const response = await fetch(`lang/${safeLanguage}.json`, { cache: 'no-cache' });
-
-    if (!response.ok) {
-      throw new Error(`Failed to load language file: ${safeLanguage}`);
-    }
-
-    currentLanguage = safeLanguage;
-    currentTranslations = await response.json();
-
-    localStorage.setItem('language', safeLanguage);
-
-    document.documentElement.lang = safeLanguage;
-    document.documentElement.dir = safeLanguage === 'ar' ? 'rtl' : 'ltr';
-
-    translateStaticContent();
-    renderProjects(getActiveFilter());
-  }
-
-  function translateStaticContent() {
-    if (!currentTranslations) return;
-
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-      const value = getNestedValue(currentTranslations, element.dataset.i18n);
-      if (value == null) return;
-
-      if (element.tagName === 'TITLE') {
-        document.title = value;
-      } else {
-        element.textContent = value;
-      }
-    });
-
-    document.querySelectorAll('[data-i18n-html]').forEach(element => {
-      const value = getNestedValue(currentTranslations, element.dataset.i18nHtml);
-      if (value != null) {
-        element.innerHTML = value;
-      }
-    });
-
-    if (languageToggle) {
-      languageToggle.textContent = currentLanguage === 'ar'
-        ? currentTranslations.language.switchToEnglish
-        : currentTranslations.language.switchToArabic;
-    }
-  }
-
-  function getActiveFilter() {
-    return document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
-  }
-
-  function renderProjects(filter = 'all') {
-    if (!gallery || !currentTranslations) return;
-
-    const allowedTypes = filterAliases[filter] || [filter];
-    const filteredProjects = filter === 'all'
-      ? projects
-      : projects.filter(project => allowedTypes.includes(project.type));
-
-    if (!filteredProjects.length) {
-      gallery.innerHTML = `
-        <div class="col-12 text-center py-5">
-          <p class="lead mb-0">${currentTranslations.projects.empty}</p>
-        </div>
-      `;
-      return;
-    }
-
-    gallery.innerHTML = filteredProjects.map(project => {
-      const item = currentTranslations.projects.items[project.id];
-      const title = item?.title || project.id;
-      const desc = item?.desc || '';
-      const typeLabel = currentTranslations.projects.types[project.type] || project.type;
-      const galleryName = escapeAttribute(project.id);
-
-      const thumbnails = project.images.slice(1, 4).map(image => `
-        <a href="${image}" class="glightbox" data-gallery="${galleryName}">
-          <img src="${image}" class="thumb" alt="${escapeAttribute(title)} preview" loading="lazy" onerror="this.src='https://via.placeholder.com/50x50?text=No+Image'">
-        </a>
-      `).join('');
-
-      return `
-        <div class="col-md-6 col-lg-4">
-          <article class="card shadow-sm h-100 project-card" data-aos="fade-up">
-            <div class="ratio ratio-16x9">
-              <a href="${project.images[0]}" class="glightbox" data-gallery="${galleryName}">
-                <img src="${project.images[0]}" class="card-img-top project-img" alt="${escapeAttribute(title)}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Project+Image'">
-              </a>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">${title}</h5>
-              <p class="card-text small">${desc}</p>
-              <div class="mt-auto">
-                <span class="badge bg-secondary mb-2">${typeLabel}</span>
-                ${project.images.length > 1 ? `<div class="gallery-thumbs mt-2">${thumbnails}</div>` : ''}
-              </div>
-            </div>
-          </article>
-        </div>
-      `;
-    }).join('');
-
-    if (lightbox) lightbox.reload();
-    if (aosAvailable) AOS.refreshHard();
-  }
-
-  function initializeFilters() {
-    document.querySelectorAll('.filter-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(item => item.classList.remove('active'));
-        button.classList.add('active');
-        renderProjects(button.dataset.filter || 'all');
-      });
-    });
-  }
-
-  function initializeLanguageToggle() {
-    languageToggle?.addEventListener('click', async () => {
-      const nextLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
-      await loadTranslations(nextLanguage);
-    });
-  }
-
-  function initializeDarkMode() {
-    const savedTheme = localStorage.getItem('theme');
-
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      darkModeToggle?.querySelector('i')?.classList.replace('bi-moon', 'bi-sun');
-    }
-
-    darkModeToggle?.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-
-      const isDark = document.body.classList.contains('dark-mode');
-      const icon = darkModeToggle.querySelector('i');
-
-      if (icon) {
-        icon.classList.toggle('bi-moon', !isDark);
-        icon.classList.toggle('bi-sun', isDark);
-      }
-
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-  }
-
-  function initializeMobileNavbarAutoClose() {
-    document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        const collapse = document.querySelector('.navbar-collapse.show');
-        if (!collapse || typeof bootstrap === 'undefined') return;
-
-        bootstrap.Collapse.getOrCreateInstance(collapse).hide();
-      });
-    });
-  }
-
-  async function initialize() {
-    initializeFilters();
-    initializeLanguageToggle();
-    initializeDarkMode();
-    initializeMobileNavbarAutoClose();
-
+function initLangToggle() {
+  const btn = document.getElementById('lang-toggle');
+  btn?.addEventListener('click', async () => {
+    btn.disabled = true;
     try {
-      await loadTranslations(currentLanguage);
-    } catch (error) {
-      console.error(error);
-      if (currentLanguage !== defaultLanguage) {
-        await loadTranslations(defaultLanguage);
-      }
+      await setLanguage(btn.dataset.next || 'ar');
+    } catch (err) {
+      console.error(err);
+    } finally {
+      btn.disabled = false;
     }
+  });
+}
+
+function initYear() {
+  const el = document.getElementById('year');
+  if (el) el.textContent = String(new Date().getFullYear());
+}
+
+async function boot() {
+  // 1. Copy first — nothing can render without it.
+  try {
+    await setLanguage(preferredLang());
+  } catch (err) {
+    console.error('Falling back to English:', err);
+    await setLanguage('en').catch(() => {});
   }
 
-  initialize();
-})();
+  // 2. Data-driven markup.
+  renderAll();
+  initProjects();
+  initArchitecture();
+
+  // 3. Behaviour and motion, once the DOM they observe exists.
+  initNav();
+  initReveal();
+  initSpotlight();
+  initCounters();
+  initLightbox();
+  initForm();
+  initLangToggle();
+  initYear();
+  syncLangToggle();
+
+  document.body.classList.add('is-ready');
+}
+
+// Re-render on language change: sections rebuild their own markup, then the
+// reveal observer and counters are re-attached to the fresh nodes.
+document.addEventListener('i18n:changed', () => {
+  if (!document.body.classList.contains('is-ready')) return;
+  renderAll();
+  observeReveals();
+  initCounters();
+  syncLangToggle();
+});
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot, { once: true });
+} else {
+  boot();
+}

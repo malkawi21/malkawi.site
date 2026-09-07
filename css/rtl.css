@@ -1,0 +1,119 @@
+/* ==========================================================================
+   rtl.css — Arabic / right-to-left support
+
+   The layout is built on CSS logical properties (inset-inline, margin-inline,
+   padding-inline, border-inline), so direction mostly resolves itself.
+   What is left here are the three things logical properties cannot flip:
+   physical transforms, gradient angles, and glyph-direction on icons.
+   ========================================================================== */
+
+html[dir="rtl"] {
+  --font-display: "IBM Plex Sans Arabic", "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans Arabic", "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+/* Latin technical terms stay in the Latin mono face even inside Arabic
+   copy — protocol and product names should never be transliterated. */
+html[dir="rtl"] .mono,
+html[dir="rtl"] code,
+html[dir="rtl"] .chip,
+html[dir="rtl"] .metric__value,
+html[dir="rtl"] .channel__v {
+  font-family: "JetBrains Mono", var(--font-mono);
+}
+
+/* Pure-Latin technical labels must also be laid out LTR, not just set in the
+   Latin face. Under the bidi algorithm an RTL paragraph moves a leading
+   neutral character to the other end, so ".NET · Python" renders as
+   "NET · Python." — correct per the algorithm, wrong as a product name.
+   Only elements whose content is entirely Latin are listed here; labels that
+   carry Arabic prose stay RTL. */
+html[dir="rtl"] .chip,
+html[dir="rtl"] .metric__value,
+html[dir="rtl"] .channel__v,
+html[dir="rtl"] .chain__proto,
+html[dir="rtl"] .op__meta,
+html[dir="rtl"] .pipe__step,
+html[dir="rtl"] .lightbox__pos,
+html[dir="rtl"] .filter__n {
+  direction: ltr;
+  text-align: start;
+}
+
+/* The proto column sits at the far edge of the chain row, so it keeps its
+   right-hand alignment within an LTR run. */
+html[dir="rtl"] .chain__proto { text-align: end; }
+
+/* Arabic headings need a touch more leading and no negative tracking */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4 {
+  letter-spacing: 0;
+  line-height: 1.32;
+}
+
+html[dir="rtl"] .kicker,
+html[dir="rtl"] .card__eyebrow,
+html[dir="rtl"] .field__label,
+html[dir="rtl"] .layer__title,
+html[dir="rtl"] .skillgroup__title,
+html[dir="rtl"] .xp__colhead,
+html[dir="rtl"] .pd__block h4 {
+  letter-spacing: 0;
+}
+
+/* --- gradients that point along the reading direction ------------------ */
+
+html[dir="rtl"] .kicker::before,
+html[dir="rtl"] .pd__hero .kicker::before {
+  background: linear-gradient(270deg, transparent, var(--accent));
+}
+
+html[dir="rtl"] .pd__block h4::after,
+html[dir="rtl"] .layer__spine {
+  background: linear-gradient(270deg, var(--line-strong), transparent);
+}
+
+@media (max-width: 560px) {
+  html[dir="rtl"] .layer__spine {
+    background: linear-gradient(270deg, var(--layer-color, var(--accent)), transparent);
+  }
+}
+
+html[dir="rtl"] .nav__link::after { transform: translateX(50%); }
+
+/* --- physical transforms ---------------------------------------------- */
+
+html[dir="rtl"] .layer:hover,
+html[dir="rtl"] .layer:focus-within { transform: translateX(-4px); }
+
+html[dir="rtl"] .chain__node:hover { transform: translateX(-3px); }
+
+@media (max-width: 560px) {
+  html[dir="rtl"] .layer:hover { transform: none; }
+}
+
+/* --- directional icons ------------------------------------------------- */
+
+/* Arrows that mean "forward" must point left in RTL. */
+html[dir="rtl"] .card__more svg,
+html[dir="rtl"] .channel__go svg,
+html[dir="rtl"] [data-flip-rtl] {
+  transform: scaleX(-1);
+}
+
+/* ...but arrows that mean "down the pipeline" stay vertical. */
+html[dir="rtl"] .pipe__arrow svg,
+html[dir="rtl"] .to-top svg {
+  transform: none;
+}
+
+/* --- lightbox next/prev swap ------------------------------------------ */
+
+html[dir="rtl"] .lightbox__nav svg { transform: scaleX(-1); }
+
+/* --- form and text alignment ------------------------------------------ */
+
+html[dir="rtl"] .field__input { text-align: start; }
+html[dir="rtl"] input[type="email"] { direction: ltr; text-align: start; }

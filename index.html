@@ -1,677 +1,568 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 
 <head>
-        <meta charset="utf-8" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title data-i18n="meta.title">Mohannad Muhana | Full-Stack Web &amp; Mobile Development Agency</title>
-        <link href="images/icons8-it-64.png" rel="icon" sizes="64x64" type="image/png" />
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <!-- Bootstrap Icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- AOS (Scroll Animations) -->
-        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-        <!-- GLightbox (Image Viewer) -->
-        <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
-        <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet" />
-        <link href="css/i18n.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#05070c">
+
+  <title data-i18n="meta.title">Mohannad Muhana — Software Engineer | Industrial Automation, SCADA &amp; .NET</title>
+  <meta name="description"
+    content="Software engineer building industrial IoT, SCADA and data-acquisition systems end to end — from Modbus and MQTT device integration through ASP.NET Core APIs and SQL/Redis to operator dashboards and production infrastructure. Based in Amman, Jordan.">
+  <meta name="author" content="Mohannad Muhana">
+  <meta name="keywords"
+    content="Software Engineer, .NET Developer, ASP.NET Core, SCADA Engineer, Industrial Automation Software, Industrial IoT, Backend Engineer, Modbus, MQTT, Data Acquisition, Power Plant Controller, Renewable Energy Software, Amman, Jordan">
+  <link rel="canonical" href="https://malkawi.site/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://malkawi.site/">
+  <meta property="og:site_name" content="Mohannad Muhana">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_JO">
+  <meta property="og:title" content="Mohannad Muhana — Software Engineer | Industrial Automation, SCADA &amp; .NET">
+  <meta property="og:description"
+    content="From field device to cloud: Modbus and MQTT integration, ASP.NET Core APIs, SQL/Redis data layers, SCADA dashboards and the infrastructure that runs them.">
+  <meta property="og:image" content="https://malkawi.site/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mohannad Muhana — Software Engineer, Industrial Automation, SCADA and Cloud Systems">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohannad Muhana — Software Engineer | Industrial Automation, SCADA &amp; .NET">
+  <meta name="twitter:description"
+    content="From field device to cloud: Modbus and MQTT integration, ASP.NET Core APIs, SQL/Redis data layers, SCADA dashboards and the infrastructure that runs them.">
+  <meta name="twitter:image" content="https://malkawi.site/assets/og-image.png">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts: one stylesheet request, three families, swap so text paints immediately -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <!-- Set before any stylesheet paints: the scroll-reveal initial state is
+       scoped to .js, so if scripting is unavailable the content is simply
+       visible rather than stuck at opacity 0. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/rtl.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohannad Muhana",
+    "url": "https://malkawi.site/",
+    "jobTitle": "Software Engineer / .NET Developer",
+    "email": "mailto:mohannad.muhana@gmail.com",
+    "telephone": "+962780869084",
+    "address": { "@type": "PostalAddress", "addressLocality": "Amman", "addressCountry": "JO" },
+    "sameAs": ["https://www.linkedin.com/in/mohannadmuhana/"],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Jordan" },
+    "worksFor": { "@type": "Organization", "name": "Israr Engineering LLC" },
+    "knowsAbout": [
+      "ASP.NET Core", "C#", ".NET", "Industrial Automation", "SCADA",
+      "Power Plant Controller", "Modbus TCP/RTU", "MQTT", "Industrial IoT",
+      "Data Acquisition", "REST APIs", "SQL Server", "MySQL", "Redis",
+      "Angular", "Python", "Linux Server Administration", "WireGuard"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-        <!-- Navbar -->
-        <header class="site-header">
-                <nav class="navbar navbar-expand-lg navbar-dark py-3">
-                        <div class="container">
-                                <a class="navbar-brand" href="#hero">
-                                        &lt;Mohannad_Muhana /&gt;
-                                </a>
-                                <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                                        class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse"
-                                        type="button">
-                                        <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                                        <ul class="navbar-nav align-items-center">
-                                                <li class="nav-item"><a class="nav-link" data-i18n="nav.about"
-                                                                href="#about">About</a></li>
-                                                <li class="nav-item"><a class="nav-link" data-i18n="nav.services"
-                                                                href="#services">Services</a></li>
-                                                <li class="nav-item"><a class="nav-link" data-i18n="nav.projects"
-                                                                href="#projects">Projects</a></li>
-                                                <li class="nav-item"><a class="nav-link" data-i18n="nav.experience"
-                                                                href="#experience">Experience</a></li>
-                                                <li class="nav-item"><a class="nav-link" data-i18n="nav.education"
-                                                                href="#education">Education</a></li>
-                                                <li class="nav-item"><a class="nav-link" data-i18n="nav.contact"
-                                                                href="#contact">Contact</a></li>
-                                                <li class="nav-item ms-lg-3 mt-3 mt-lg-0"><button
-                                                                aria-label="Toggle dark mode"
-                                                                class="btn btn-outline-light" id="darkModeToggle"
-                                                                type="button"><i class="bi bi-moon"></i></button></li>
-                                                <li class="nav-item ms-lg-2 mt-3 mt-lg-0"><button
-                                                                class="btn btn-outline-light"
-                                                                data-i18n="language.switchToArabic" id="languageToggle"
-                                                                type="button">AR</button></li>
-                                        </ul>
+  <a class="skip-link" href="#home" data-i18n="a11y.skip">Skip to content</a>
 
-                                </div>
-                        </div>
-                </nav>
+  <noscript>
+    <p style="padding:1rem 1.25rem;margin:0;background:#1a1206;border-bottom:1px solid #4a3410;color:#f0a63c;font:500 0.9rem/1.5 system-ui,sans-serif;text-align:center">
+      This site uses JavaScript to render the project catalogue and technical sections.
+      With scripting disabled you can still reach me at
+      <a href="mailto:mohannad.muhana@gmail.com" style="color:#22d3ee">mohannad.muhana@gmail.com</a>
+      or download the <a href="assets/Mohannad-Muhana-CV.pdf" style="color:#22d3ee">CV (PDF)</a>.
+    </p>
+  </noscript>
+
+  <!-- ===================================================================
+       Header
+       =================================================================== -->
+  <header class="header">
+    <nav class="shell nav" aria-label="Primary">
+      <a class="brand" href="#home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 17V7l4.5 6L12 7v10" />
+            <path d="M16 8v8M20 8v8" opacity=".55" />
+          </svg>
+        </span>
+        <span>Mohannad Muhana<span class="brand__sub"> / .NET</span></span>
+      </a>
+
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="nav-links"
+        data-i18n-attr="aria-label:a11y.menu" aria-label="Toggle menu">
+        <span></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a class="nav__link" href="#about" data-i18n="nav.about">About</a></li>
+        <li><a class="nav__link" href="#expertise" data-i18n="nav.expertise">Expertise</a></li>
+        <li><a class="nav__link" href="#architecture" data-i18n="nav.architecture">Architecture</a></li>
+        <li><a class="nav__link" href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a class="nav__link" href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a class="nav__link" href="#stack" data-i18n="nav.stack">Stack</a></li>
+        <li><a class="nav__link" href="#infrastructure" data-i18n="nav.infrastructure">Infrastructure</a></li>
+        <li><a class="btn btn--primary btn--sm" href="#contact" data-i18n="nav.cta">Let's talk</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">AR</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =================================================================
+         Hero
+         ================================================================= -->
+    <section class="hero" id="home">
+      <div class="shell hero__grid">
+        <div>
+          <span class="status" data-reveal>
+            <span class="status__dot"></span>
+            <span data-i18n="hero.status">Israr Engineering · Amman, Jordan</span>
+          </span>
+
+          <h1 class="hero__title" data-reveal style="--reveal-delay:70ms">
+            <span data-i18n="hero.titleLead">Software Engineer for systems that</span>
+            <span class="accent" data-i18n="hero.titleAccent">have to run in the real world.</span>
+          </h1>
+
+          <ul class="hero__domains" data-reveal style="--reveal-delay:120ms">
+            <li data-i18n="hero.domains.automation">Industrial Automation</li>
+            <li data-i18n="hero.domains.scada">SCADA</li>
+            <li data-i18n="hero.domains.iot">IoT &amp; Telemetry</li>
+            <li data-i18n="hero.domains.cloud">Cloud &amp; APIs</li>
+          </ul>
+
+          <p class="lede hero__lede" data-reveal style="--reveal-delay:170ms" data-i18n="hero.lede">
+            I design and build the software that carries a measurement from a meter, inverter or PLC all the way to an
+            operator's screen — protocol integration, edge acquisition, ASP.NET Core services, the databases underneath
+            them, and the servers they run on.
+          </p>
+
+          <div class="hero__cta" data-reveal style="--reveal-delay:220ms">
+            <a class="btn btn--primary" href="#projects" data-i18n="hero.cta.projects">View projects</a>
+            <a class="btn btn--ghost" href="#experience" data-i18n="hero.cta.experience">Experience</a>
+            <a class="btn btn--ghost" href="assets/Mohannad-Muhana-CV.pdf" download
+              data-i18n="hero.cta.cv">Download CV</a>
+            <a class="btn btn--quiet" href="#contact" data-i18n="hero.cta.contact">Contact</a>
+          </div>
+
+          <div class="metrics" id="metrics" data-reveal style="--reveal-delay:270ms"></div>
+        </div>
+
+        <div class="chain panel panel--lit" id="signal-chain" data-reveal style="--reveal-delay:150ms"></div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- =================================================================
+         About
+         ================================================================= -->
+    <section class="section" id="about">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <span class="kicker" data-i18n="about.kicker">About</span>
+          <h2 data-i18n="about.title">One engineer across the whole signal path</h2>
         </header>
-        <!-- Hero -->
-        <section class="hero-section" id="hero">
-                <div class="container hero-content">
-                        <h2 class="display-4 fw-bold" data-aos="fade-up" data-aos-delay="100"
-                                data-i18n-html="hero.title">
-                                Complete Digital Solutions <span class="text-warning">From Code to Cloud</span>
-                        </h2>
-                        <p class="lead mt-4 mx-auto" data-aos="fade-up" data-aos-delay="200"
-                                data-i18n-html="hero.description">
-                                Hi, I'm <strong>Mohannad Muhana</strong> — I lead a team of developers building
-                                <span class="fw-bold">web applications, mobile apps, and industrial systems</span>.
-                                From development to deployment, I provide complete solutions for your business.
-                        </p>
-                        <div class="mt-4" data-aos="fade-up" data-aos-delay="250">
-                                <p data-i18n-html="hero.features.web"><i
-                                                class="bi bi-check-circle-fill text-warning me-2"></i>Web Development
-                                </p>
-                                <p data-i18n-html="hero.features.automation"><i
-                                                class="bi bi-check-circle-fill text-warning me-2"></i>Industrial
-                                        Real-Time Applications (Automation)</p>
-                                <p data-i18n-html="hero.features.desktop"><i
-                                                class="bi bi-check-circle-fill text-warning me-2"></i>Desktop
-                                        Applications</p>
-                                <p data-i18n-html="hero.features.mobile"><i
-                                                class="bi bi-check-circle-fill text-warning me-2"></i>Mobile App
-                                        Development (Flutter Team)</p>
-                                <p data-i18n-html="hero.features.hosting"><i
-                                                class="bi bi-check-circle-fill text-warning me-2"></i>Domain
-                                        Registration &amp; Hosting Services</p>
-                        </div>
-                        <div class="mt-5" data-aos="fade-up" data-aos-delay="300">
-                                <a class="btn btn-light btn-lg me-3" data-i18n="buttons.viewWork" href="#projects">View
-                                        My Work</a>
-                                <a class="btn btn-outline-light btn-lg" data-i18n="buttons.letsTalk"
-                                        href="#contact">Let's Talk</a>
-                        </div>
+
+        <div class="about">
+          <div data-reveal>
+            <p class="about__p" data-i18n="about.p1">
+              I am a software engineer specialising in .NET backend development, industrial IoT, SCADA and real-time
+              data systems. My work sits where software meets physical equipment: designing high-throughput APIs,
+              distributed data-acquisition platforms, industrial communication integrations and the monitoring
+              interfaces engineers actually use.
+            </p>
+            <p class="about__p" data-i18n="about.p2">
+              That means I am comfortable at every level of the stack — reading a register map off an inverter,
+              writing the background service that polls it, modelling the time-series table it lands in, exposing it
+              through an authenticated REST API, and configuring the Linux or Windows server that keeps the whole
+              thing online at a remote site.
+            </p>
+            <p class="about__p" data-i18n="about.p3">
+              I work alongside electrical, automation and mechanical engineers, which shapes how I build: systems have
+              to survive unreliable links, restarting devices and sites nobody can visit at short notice. I also lead a
+              small development team, including Flutter developers who deliver the mobile side of client projects.
+            </p>
+          </div>
+
+          <aside class="panel facts" data-reveal style="--reveal-delay:100ms">
+            <div class="facts__list">
+              <div class="fact">
+                <span class="fact__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2.5" y="7" width="19" height="13" rx="2" />
+                    <path d="M8.5 7V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2M2.5 12.5h19" />
+                  </svg>
+                </span>
+                <div>
+                  <div class="fact__k" data-i18n="about.facts.role.k">Current role</div>
+                  <div class="fact__v" data-i18n="about.facts.role.v">Software Engineer / .NET Developer</div>
                 </div>
-        </section>
-        <!-- About -->
-        <section class="section" id="about">
-                <div class="container">
-                        <h3 class="mb-4" data-i18n="about.heading">// About Me</h3>
-                        <div class="row gy-4">
-                                <div class="col-lg-8" data-aos="fade-up">
-                                        <p class="lead" data-i18n-html="about.intro">
-                                                I'm a <strong>.NET &amp; Laravel developer</strong> with a unique blend
-                                                of skills — I create modern web applications,
-                                                lead a Flutter mobile team, AND build systems that connect to industrial
-                                                equipment.
-                                        </p>
-                                        <p data-i18n="about.solutionsIntro">
-                                                With over 4 years of experience and a dedicated team, I offer end-to-end
-                                                solutions:
-                                        </p>
-                                        <ul class="list-unstyled">
-                                                <li class="mb-2" data-i18n-html="about.points.web"><i
-                                                                class="bi bi-check-circle-fill text-success me-2"></i>Full-stack
-                                                        web applications (ASP.NET Core &amp; Laravel)</li>
-                                                <li class="mb-2" data-i18n-html="about.points.mobile"><i
-                                                                class="bi bi-check-circle-fill text-success me-2"></i>Cross-platform
-                                                        mobile apps with Flutter (iOS &amp; Android)</li>
-                                                <li class="mb-2" data-i18n-html="about.points.domain"><i
-                                                                class="bi bi-check-circle-fill text-success me-2"></i>Domain
-                                                        registration and hosting setup</li>
-                                                <li class="mb-2" data-i18n-html="about.points.digital"><i
-                                                                class="bi bi-check-circle-fill text-success me-2"></i>Complete
-                                                        digital transformation for your business</li>
-                                        </ul>
-                                        <p data-i18n-html="about.final">
-                                                Whether you need a <strong>website, mobile app, or complete industrial
-                                                        system</strong> —
-                                                I have the team and expertise to deliver.
-                                        </p>
-                                </div>
-                                <div class="col-lg-4" data-aos="fade-up">
-                                        <div class="card shadow-sm p-4">
-                                                <h5 class="card-title" data-i18n="about.quickFacts.title">Quick Facts
-                                                </h5>
-                                                <ul class="list-unstyled">
-                                                        <li class="mb-3" data-i18n-html="about.quickFacts.experience"><i
-                                                                        class="bi bi-code-slash me-2 text-primary"></i>4+
-                                                                Years of Professional Experience</li>
-                                                        <li class="mb-3" data-i18n-html="about.quickFacts.projects"><i
-                                                                        class="bi bi-briefcase me-2 text-primary"></i>30+
-                                                                Successful Projects Delivered</li>
-                                                        <li class="mb-3" data-i18n-html="about.quickFacts.flutter"><i
-                                                                        class="bi bi-phone me-2 text-primary"></i>Flutter
-                                                                Team Leadership</li>
-                                                        <li class="mb-3" data-i18n-html="about.quickFacts.hosting"><i
-                                                                        class="bi bi-cloud me-2 text-primary"></i>End-to-End
-                                                                Hosting Solutions</li>
-                                                </ul>
-                                        </div>
-                                </div>
-                        </div>
+              </div>
+
+              <div class="fact">
+                <span class="fact__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 21.5s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11" />
+                    <circle cx="12" cy="10.5" r="2.6" />
+                  </svg>
+                </span>
+                <div>
+                  <div class="fact__k" data-i18n="about.facts.base.k">Based in</div>
+                  <div class="fact__v" data-i18n="about.facts.base.v">Amman, Jordan</div>
                 </div>
-        </section>
-        <!-- Services -->
-        <section class="section bg-light" id="services">
-                <div class="container">
-                        <h3 class="mb-5 text-center" data-i18n="services.heading">// Complete Digital Solutions</h3>
-                        <!-- Technology Stack Badges -->
-                        <div class="text-center mb-5" data-aos="fade-up">
-                                <span class="tech-badge bg-primary text-white me-2 mb-2">.NET / C#</span>
-                                <span class="tech-badge bg-danger text-white me-2 mb-2">Laravel / PHP</span>
-                                <span class="tech-badge bg-info text-white me-2 mb-2">Flutter</span>
-                                <span class="tech-badge bg-success text-white me-2 mb-2">ASP.NET Core</span>
-                                <span class="tech-badge bg-warning text-dark me-2 mb-2">MySQL</span>
-                                <span class="tech-badge bg-secondary text-white me-2 mb-2">SQL Server</span>
-                        </div>
-                        <div class="row g-4">
-                                <!-- Web Development (expanded with Laravel) -->
-                                <div class="col-md-4" data-aos="fade-up">
-                                        <div class="card h-100 shadow-sm p-4 text-center">
-                                                <i class="bi bi-browser-chrome service-icon"></i>
-                                                <h4 class="mb-3" data-i18n="services.web.title">Web Applications</h4>
-                                                <p class="text-muted" data-i18n-html="services.web.description">
-                                                        Custom web applications built with <strong>ASP.NET Core</strong>
-                                                        or <strong>Laravel PHP</strong>.
-                                                        From business portals to e-commerce platforms, I build what you
-                                                        need.
-                                                </p>
-                                                <div class="mt-3">
-                                                        <span class="tech-badge small">.NET</span>
-                                                        <span class="tech-badge small">Laravel</span>
-                                                        <span class="tech-badge small">Bootstrap</span>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Mobile Development (NEW) -->
-                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                                        <div class="card h-100 shadow-sm p-4 text-center border-warning">
-                                                <i class="bi bi-phone service-icon text-warning"></i>
-                                                <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3"
-                                                        data-i18n="common.new">NEW</span>
-                                                <h4 class="mb-3" data-i18n="services.mobile.title">Mobile Apps (Flutter)
-                                                </h4>
-                                                <p class="text-muted" data-i18n-html="services.mobile.description">
-                                                        I lead a dedicated Flutter team that builds beautiful,
-                                                        cross-platform mobile apps for
-                                                        <strong>iOS and Android</strong> from a single codebase.
-                                                </p>
-                                                <div class="mt-3">
-                                                        <span class="tech-badge small">Flutter</span>
-                                                        <span class="tech-badge small">Dart</span>
-                                                        <span class="tech-badge small">Firebase</span>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Hosting & Domains (NEW) -->
-                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                                        <div class="card h-100 shadow-sm p-4 text-center border-success">
-                                                <i class="bi bi-cloud-check service-icon text-success"></i>
-                                                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3"
-                                                        data-i18n="common.new">NEW</span>
-                                                <h4 class="mb-3" data-i18n="services.hosting.title">Hosting &amp;
-                                                        Domains</h4>
-                                                <p class="text-muted" data-i18n-html="services.hosting.description">
-                                                        Full hosting solutions including <strong>domain registration,
-                                                                SSL certificates,
-                                                                and server setup</strong>. I handle everything from code
-                                                        to cloud.
-                                                </p>
-                                                <div class="mt-3">
-                                                        <span class="tech-badge small">cPanel</span>
-                                                        <span class="tech-badge small">SSL</span>
-                                                        <span class="tech-badge small">Linux</span>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- E-Commerce -->
-                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                                        <div class="card h-100 shadow-sm p-4 text-center">
-                                                <i class="bi bi-cart3 service-icon"></i>
-                                                <h4 class="mb-3" data-i18n="services.ecommerce.title">E-Commerce
-                                                        Solutions</h4>
-                                                <p class="text-muted" data-i18n-html="services.ecommerce.description">
-                                                        Complete online stores with product management, payment
-                                                        integration, and order tracking.
-                                                        Built with Laravel or ASP.NET Core.
-                                                </p>
-                                                <div class="mt-3">
-                                                        <span class="tech-badge small">Payment APIs</span>
-                                                        <span class="tech-badge small">MySQL</span>
-                                                        <span class="tech-badge small">Redis</span>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Industrial Automation -->
-                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                                        <div class="card h-100 shadow-sm p-4 text-center">
-                                                <i class="bi bi-gear service-icon"></i>
-                                                <h4 class="mb-3" data-i18n="services.automation.title">Industrial
-                                                        Automation</h4>
-                                                <p class="text-muted" data-i18n-html="services.automation.description">
-                                                        Connect your factory equipment to the web. Monitor machines,
-                                                        track production,
-                                                        and control devices remotely.
-                                                </p>
-                                                <div class="mt-3">
-                                                        <span class="tech-badge small">Modbus</span>
-                                                        <span class="tech-badge small">SCADA</span>
-                                                        <span class="tech-badge small">MQTT</span>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- APIs -->
-                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-                                        <div class="card h-100 shadow-sm p-4 text-center">
-                                                <i class="bi bi-cloud-arrow-up service-icon"></i>
-                                                <h4 class="mb-3" data-i18n="services.api.title">RESTful APIs</h4>
-                                                <p class="text-muted" data-i18n-html="services.api.description">
-                                                        Powerful APIs that power your mobile apps and frontend
-                                                        applications.
-                                                        Built with best practices and documentation.
-                                                </p>
-                                                <div class="mt-3">
-                                                        <span class="tech-badge small">Web API</span>
-                                                        <span class="tech-badge small">Laravel API</span>
-                                                        <span class="tech-badge small">JWT</span>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                        <!-- Hosting Package Highlight -->
-                        <div class="row mt-5 justify-content-center gy-4" data-aos="fade-up">
-                                <div class="col-md-8">
-                                        <div class="card border-primary shadow">
-                                                <div class="card-body p-4 text-center">
-                                                        <h4 class="text-primary mb-3" data-i18n-html="package.title"><i
-                                                                        class="bi bi-stars"></i> Complete Business
-                                                                Package</h4>
-                                                        <p class="lead" data-i18n="package.subtitle">I don't just build
-                                                                your application — I get it online!</p>
-                                                        <div class="row mt-4 gy-4">
-                                                                <div class="col-md-4">
-                                                                        <h5 data-i18n-html="package.domain.title"><i
-                                                                                        class="bi bi-globe text-success"></i>
-                                                                                Domain Name</h5>
-                                                                        <p class="small"
-                                                                                data-i18n="package.domain.desc">Get your
-                                                                                custom domain (.com, .jo, etc.)</p>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                        <h5 data-i18n-html="package.hosting.title"><i
-                                                                                        class="bi bi-hdd-stack text-info"></i>
-                                                                                Hosting Setup</h5>
-                                                                        <p class="small"
-                                                                                data-i18n="package.hosting.desc">
-                                                                                Reliable hosting with SSL certificate
-                                                                        </p>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                        <h5 data-i18n-html="package.email.title"><i
-                                                                                        class="bi bi-envelope-paper text-warning"></i>
-                                                                                Business Email</h5>
-                                                                        <p class="small" data-i18n="package.email.desc">
-                                                                                Professional email accounts
-                                                                                (info@yourcompany.com)</p>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+              </div>
+
+              <div class="fact">
+                <span class="fact__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 3 1.5 8 12 13l10.5-5z" />
+                    <path d="M5.5 10.5V16c0 1.7 2.9 3 6.5 3s6.5-1.3 6.5-3v-5.5" />
+                  </svg>
+                </span>
+                <div>
+                  <div class="fact__k" data-i18n="about.facts.edu.k">Education</div>
+                  <div class="fact__v" data-i18n="about.facts.edu.v">BSc Computer Science — University of Jordan</div>
                 </div>
-        </section>
-        <!-- Skills & Technologies (Updated with Laravel & Flutter) -->
-        <section class="section" id="skills">
-                <div class="container">
-                        <h3 class="mb-5 text-center" data-i18n="skills.heading">// Technologies I Work With</h3>
-                        <!-- Backend -->
-                        <h5 class="mb-3" data-i18n-html="skills.backend"><i class="bi bi-server me-2"></i>Backend</h5>
-                        <div class="row text-center mb-4 gy-4">
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in">
-                                        <div class="tech-badge w-100 p-3">
-                                                <i class="bi bi-microsoft"></i> .NET / C#
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="50">
-                                        <div class="tech-badge w-100 p-3 bg-danger text-white">
-                                                <i class="bi bi-layers"></i> Laravel
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="tech-badge w-100 p-3">
-                                                <i class="bi bi-code-square"></i> ASP.NET Core
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="150">
-                                        <div class="tech-badge w-100 p-3 bg-warning text-dark">
-                                                <i class="bi bi-filetype-php"></i> PHP
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
-                                        <div class="tech-badge w-100 p-3">
-                                                <i class="bi bi-database"></i> SQL Server
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="250">
-                                        <div class="tech-badge w-100 p-3 bg-primary text-white">
-                                                <i class="bi bi-database"></i> MySQL
-                                        </div>
-                                </div>
-                        </div>
-                        <!-- Mobile -->
-                        <h5 class="mb-3" data-i18n-html="skills.mobile"><i class="bi bi-phone me-2"></i>Mobile
-                                Development</h5>
-                        <div class="row text-center mb-4 gy-4">
-                                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in">
-                                        <div class="tech-badge w-100 p-3 bg-info text-white">
-                                                <i class="bi bi-phone"></i> Flutter
-                                        </div>
-                                </div>
-                                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="50">
-                                        <div class="tech-badge w-100 p-3 bg-primary text-white">
-                                                <i class="bi bi-phone"></i> Dart
-                                        </div>
-                                </div>
-                                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="tech-badge w-100 p-3 bg-warning text-dark">
-                                                <i class="bi bi-android"></i> Android
-                                        </div>
-                                </div>
-                                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="150">
-                                        <div class="tech-badge w-100 p-3 bg-dark text-white">
-                                                <i class="bi bi-apple"></i> iOS
-                                        </div>
-                                </div>
-                        </div>
-                        <!-- Frontend & Other -->
-                        <h5 class="mb-3" data-i18n-html="skills.frontend"><i class="bi bi-code me-2"></i>Frontend &amp;
-                                Other</h5>
-                        <div class="row text-center gy-4">
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in">
-                                        <div class="tech-badge w-100 p-3">
-                                                <i class="bi bi-filetype-js"></i> JavaScript
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="50">
-                                        <div class="tech-badge w-100 p-3">
-                                                <i class="bi bi-bootstrap"></i> Bootstrap
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="tech-badge w-100 p-3">
-                                                <i class="bi bi-cloud"></i> REST APIs
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="150">
-                                        <div class="tech-badge w-100 p-3">
-                                                <i class="bi bi-github"></i> Git / GitHub
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
-                                        <div class="tech-badge w-100 p-3 bg-secondary text-white">
-                                                <i class="bi bi-hdd-stack"></i> cPanel
-                                        </div>
-                                </div>
-                                <div class="col-md-2 col-4 mb-3" data-aos="zoom-in" data-aos-delay="250">
-                                        <div class="tech-badge w-100 p-3 bg-success text-white">
-                                                <i class="bi bi-shield-lock"></i> SSL / Security
-                                        </div>
-                                </div>
-                        </div>
+              </div>
+
+              <div class="fact">
+                <span class="fact__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9.5" />
+                    <path d="M2.5 12h19" />
+                    <path d="M12 2.5a15 15 0 0 1 0 19 15 15 0 0 1 0-19" />
+                  </svg>
+                </span>
+                <div>
+                  <div class="fact__k" data-i18n="about.facts.lang.k">Languages</div>
+                  <div class="fact__v" data-i18n="about.facts.lang.v">Arabic (native), English (professional)</div>
                 </div>
-        </section>
-        <!-- Projects -->
-        <section class="section bg-light" id="projects">
-                <div class="container">
-                        <h3 class="mb-4 text-center" data-i18n="projects.heading">// Featured Projects</h3>
-                        <p class="text-center text-muted mb-4" data-aos="fade-up" data-i18n="projects.subtitle">
-                                Web applications, mobile apps, industrial systems, and more
-                        </p>
-                        <div class="mb-4 text-center" data-aos="fade-up">
-                                <button class="btn btn-outline-primary filter-btn active" data-filter="all"
-                                        data-i18n="projects.filters.all">All</button>
-                                <button class="btn btn-outline-primary filter-btn" data-filter="web"
-                                        data-i18n="projects.filters.web">Web Apps</button>
-                                <button class="btn btn-outline-primary filter-btn" data-filter="mobile"
-                                        data-i18n="projects.filters.mobile">Mobile Apps</button>
-                                <button class="btn btn-outline-primary filter-btn" data-filter="api"
-                                        data-i18n="projects.filters.api">APIs</button>
-                                <button class="btn btn-outline-primary filter-btn" data-filter="laravel"
-                                        data-i18n="projects.filters.laravel">Laravel</button>
-                                <button class="btn btn-outline-primary filter-btn" data-filter="industrial"
-                                        data-i18n="projects.filters.industrial">Industrial</button>
-                                <button class="btn btn-outline-primary filter-btn" data-filter="agriculture"
-                                        data-i18n="projects.filters.agriculture">Agriculture</button>
-                        </div>
-                        <div class="row g-4" id="project-gallery"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Expertise — what I build + the ecosystem I work across
+         ================================================================= -->
+    <section class="section" id="expertise">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <span class="kicker" data-i18n="capabilities.kicker">What I build</span>
+          <h2 data-i18n="capabilities.title">Complete technical systems, not just interfaces</h2>
+          <p class="lede" data-i18n="capabilities.lede">
+            Each of these is work I do end to end — specification, software, integration, database, deployment.
+          </p>
+        </header>
+
+        <div class="grid grid--3" id="capabilities"></div>
+
+        <header class="section__head" style="margin-top:clamp(3.5rem,2.5rem+3vw,5.5rem)" data-reveal>
+          <span class="kicker" data-i18n="layers.kicker">Engineering ecosystem</span>
+          <h2 data-i18n="layers.title">Seven layers, one engineer</h2>
+          <p class="lede" data-i18n="layers.lede">
+            Most software roles stop at one or two of these. The value I bring is that a problem never has to be handed
+            across a boundary — the device, the protocol, the service, the database, the screen and the server are all
+            mine to reason about.
+          </p>
+        </header>
+
+        <div class="stack-rack" id="stack-rack"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Architecture — signature interactive section
+         ================================================================= -->
+    <section class="section" id="architecture">
+      <div class="shell">
+        <header class="section__head section__head--center" data-reveal>
+          <span class="kicker" data-i18n="architecture.kicker">Signal path</span>
+          <h2 data-i18n="architecture.title">From field device to cloud</h2>
+          <p class="lede" data-i18n="architecture.lede">
+            A real deployment is a chain, and it is only as good as its weakest link. Step through each stage to see
+            what I build there.
+          </p>
+        </header>
+
+        <div class="arch">
+          <div class="arch__spine panel" id="arch-spine" role="tablist" aria-orientation="vertical"
+            data-i18n-attr="aria-label:architecture.tablist" aria-label="Architecture stages"></div>
+          <div class="arch__detail panel panel--lit" id="arch-detail" role="tabpanel" tabindex="0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Projects
+         ================================================================= -->
+    <section class="section" id="projects">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <span class="kicker" data-i18n="projects.kicker">Selected work</span>
+          <h2 data-i18n="projects.title">Systems in production</h2>
+          <p class="lede" data-i18n="projects.lede">
+            Grouped by the engineering system they form rather than by repository. Several are internal industrial
+            software whose interfaces cannot be published — those are shown as architecture diagrams.
+          </p>
+        </header>
+
+        <div class="filters" id="project-filters" role="group" data-i18n-attr="aria-label:projects.filterLabel"
+          aria-label="Filter projects by category"></div>
+
+        <div class="projects__grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Experience + education
+         ================================================================= -->
+    <section class="section" id="experience">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <span class="kicker" data-i18n="experience.kicker">Experience</span>
+          <h2 data-i18n="experience.title">Where the work happens</h2>
+        </header>
+
+        <div class="timeline" data-reveal>
+          <article class="tl-item">
+            <div class="panel xp" id="experience-body"></div>
+          </article>
+        </div>
+
+        <div class="panel edu" style="margin-top:1.4rem" data-reveal>
+          <span class="edu__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3 1.5 8 12 13l10.5-5z" />
+              <path d="M5.5 10.5V16c0 1.7 2.9 3 6.5 3s6.5-1.3 6.5-3v-5.5" />
+            </svg>
+          </span>
+          <div>
+            <h3 data-i18n="education.degree">Bachelor of Computer Science</h3>
+            <p class="tl-item__org" data-i18n="education.university">University of Jordan — Amman, Jordan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Tech stack
+         ================================================================= -->
+    <section class="section" id="stack">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <span class="kicker" data-i18n="skills.kicker">Technical stack</span>
+          <h2 data-i18n="skills.title">Tools, grouped by what they are for</h2>
+          <p class="lede" data-i18n="skills.lede">
+            Organised by the job each technology does, rather than as an undifferentiated wall of logos.
+          </p>
+        </header>
+
+        <div class="skills" id="skills"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Infrastructure
+         ================================================================= -->
+    <section class="section" id="infrastructure">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <span class="kicker" data-i18n="infra.kicker">Infrastructure</span>
+          <h2 data-i18n="infra.title">Software still has to run somewhere</h2>
+          <p class="lede" data-i18n="infra.lede">
+            Industrial deployments live on remote sites with unreliable links. Getting an application written is half
+            the job; keeping it reachable, secure and recoverable is the other half.
+          </p>
+        </header>
+
+        <div class="infra">
+          <div class="panel panel--lit infra__panel" data-reveal>
+            <span class="kicker kicker--plain" data-i18n="infra.remote.kicker">Remote support infrastructure</span>
+            <h3 data-i18n="infra.remote.title">Self-hosted remote access for field equipment</h3>
+            <p class="lede" style="font-size:0.95rem" data-i18n="infra.remote.text">
+              Industrial sites rarely allow third-party remote-desktop services onto their network. I deploy and
+              operate self-hosted remote-access infrastructure so support traffic stays on servers we control.
+            </p>
+            <ul class="ticks" style="margin-top:1.1rem" id="infra-remote-list">
+              <li data-i18n="infra.remote.points.deploy">RustDesk server deployment on a Linux VPS — self-hosted
+                rendezvous and relay services</li>
+              <li data-i18n="infra.remote.points.network">Firewall rules, port exposure and DNS records for the relay
+                endpoints</li>
+              <li data-i18n="infra.remote.points.tunnel">WireGuard tunnels and port forwarding for reaching devices on
+                private site networks</li>
+              <li data-i18n="infra.remote.points.security">TLS termination, key handling and restricted access paths
+                for support sessions</li>
+              <li data-i18n="infra.remote.points.support">Remote engineering support and commissioning without a site
+                visit</li>
+            </ul>
+            <p class="infra__note" data-i18n-html="infra.remote.note">
+              <strong>To be clear:</strong> RustDesk is open-source software I deploy and operate — not a product I
+              authored. What I contribute is the server, network and security architecture that makes it usable for
+              industrial support.
+            </p>
+          </div>
+
+          <div class="infra__ops" id="infra-ops" data-reveal style="--reveal-delay:100ms"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Contact
+         ================================================================= -->
+    <section class="section" id="contact">
+      <div class="shell">
+        <header class="section__head section__head--center" data-reveal>
+          <span class="kicker" data-i18n="contact.kicker">Contact</span>
+          <h2 data-i18n="contact.title">Let's build something that has to work in the real world</h2>
+          <p class="lede" data-i18n="contact.lede">
+            Whether it is an industrial system, a backend platform, or getting equipment talking to software that does
+            not exist yet — tell me what the system has to do and I will tell you how I would build it.
+          </p>
+        </header>
+
+        <div class="contact">
+          <div data-reveal>
+            <div class="channels" id="channels"></div>
+
+            <a class="btn btn--ghost btn--block" style="margin-top:0.75rem"
+              href="assets/Mohannad-Muhana-CV.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20.5h16" />
+              </svg>
+              <span data-i18n="contact.cv">Download CV (PDF)</span>
+            </a>
+          </div>
+
+          <div class="panel form-panel" data-reveal style="--reveal-delay:100ms">
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div class="form-grid form-grid--2">
+                  <div class="field">
+                    <label class="field__label" for="f-name" data-i18n="contact.form.name">Name</label>
+                    <input class="field__input" id="f-name" name="name" type="text" required autocomplete="name"
+                      data-i18n-attr="placeholder:contact.form.namePh" placeholder="Your name">
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="f-email" data-i18n="contact.form.email">Email</label>
+                    <input class="field__input" id="f-email" name="email" type="email" required autocomplete="email"
+                      data-i18n-attr="placeholder:contact.form.emailPh" placeholder="you@company.com">
+                  </div>
                 </div>
-        </section>
-        <!-- Experience -->
-        <section class="section" id="experience">
-                <div class="container">
-                        <h3 class="mb-4" data-i18n="experience.heading">// Experience</h3>
-                        <div class="card shadow-sm" data-aos="fade-up">
-                                <div class="card-body p-4">
-                                        <div
-                                                class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2 mb-3">
-                                                <h4 class="mb-0" data-i18n="experience.company">Israr Engineering LLC
-                                                </h4>
-                                                <span class="badge bg-primary" data-i18n="experience.period">Sep 2022 –
-                                                        Present</span>
-                                        </div>
-                                        <h5 class="text-muted mb-4" data-i18n="experience.role">Lead .NET Developer |
-                                                Amman, Jordan</h5>
-                                        <div class="row gy-4">
-                                                <div class="col-md-6">
-                                                        <h6 data-i18n-html="experience.webMobile.title"><i
-                                                                        class="bi bi-code-square text-primary me-2"></i>Web
-                                                                &amp; Mobile Development</h6>
-                                                        <ul class="mb-4">
-                                                                <li data-i18n="experience.webMobile.points.lead">Lead a
-                                                                        team of developers building web and mobile
-                                                                        applications</li>
-                                                                <li data-i18n="experience.webMobile.points.develop">
-                                                                        Develop applications using both ASP.NET Core and
-                                                                        Laravel PHP</li>
-                                                                <li data-i18n="experience.webMobile.points.coordinate">
-                                                                        Coordinate with Flutter team for cross-platform
-                                                                        mobile apps</li>
-                                                                <li data-i18n="experience.webMobile.points.manage">
-                                                                        Manage hosting, domains, and server deployments
-                                                                        for clients</li>
-                                                        </ul>
-                                                </div>
-                                                <div class="col-md-6">
-                                                        <h6 data-i18n-html="experience.industrial.title"><i
-                                                                        class="bi bi-gear text-primary me-2"></i>Industrial
-                                                                Systems</h6>
-                                                        <ul class="mb-4">
-                                                                <li data-i18n="experience.industrial.points.data">
-                                                                        Developed large-scale data collection platforms
-                                                                        for industrial equipment</li>
-                                                                <li data-i18n="experience.industrial.points.apis">Built
-                                                                        APIs connecting SCADA systems with web
-                                                                        applications</li>
-                                                                <li data-i18n="experience.industrial.points.alarms">
-                                                                        Created live alarm monitoring and machine
-                                                                        performance tracking</li>
-                                                        </ul>
-                                                </div>
-                                        </div>
-                                        <h6 class="mt-3" data-i18n-html="experience.achievements.title"><i
-                                                        class="bi bi-trophy text-primary me-2"></i>Key Achievements</h6>
-                                        <ul>
-                                                <li data-i18n="experience.achievements.points.projects">Built and
-                                                        deployed over 30 successful projects across web, mobile, and
-                                                        industrial domains</li>
-                                                <li data-i18n="experience.achievements.points.flutter">Established a
-                                                        Flutter mobile team for cross-platform app development</li>
-                                                <li data-i18n="experience.achievements.points.hosting">Provide complete
-                                                        hosting solutions including domain registration and SSL setup
-                                                </li>
-                                        </ul>
-                                </div>
-                        </div>
+
+                <div class="field">
+                  <label class="field__label" for="f-subject" data-i18n="contact.form.subject">Subject</label>
+                  <input class="field__input" id="f-subject" name="subject" type="text"
+                    data-i18n-attr="placeholder:contact.form.subjectPh" placeholder="SCADA integration, backend API…">
                 </div>
-        </section>
-        <!-- Education -->
-        <section class="section bg-light" id="education">
-                <div class="container">
-                        <h3 class="mb-4" data-i18n="education.heading">// Education</h3>
-                        <div class="card shadow-sm" data-aos="fade-up">
-                                <div class="card-body p-4">
-                                        <div class="d-flex align-items-center">
-                                                <i class="bi bi-mortarboard-fill text-primary fs-1 me-4"></i>
-                                                <div>
-                                                        <h4 class="mb-2" data-i18n="education.degree">Bachelor of
-                                                                Computer Science</h4>
-                                                        <p class="lead mb-0" data-i18n="education.university">University
-                                                                of Jordan, Amman</p>
-                                                        <p class="text-muted" data-i18n="education.graduated">Graduated:
-                                                                2022</p>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+
+                <div class="field">
+                  <label class="field__label" for="f-message" data-i18n="contact.form.message">What do you need
+                    built?</label>
+                  <textarea class="field__input" id="f-message" name="message" required
+                    data-i18n-attr="placeholder:contact.form.messagePh"
+                    placeholder="Equipment, protocols, what the system has to do…"></textarea>
                 </div>
-        </section>
-        <!-- Contact (Updated with hosting mentions) -->
-        <section class="section" id="contact">
-                <div class="container">
-                        <h3 class="d-flex flex-wrap gap-2 justify-content-center mb-4" data-i18n="contact.heading">//
-                                Let's Turn Your Idea Into a Product</h3>
-                        <p class="lead text-center mb-5" data-aos="fade-up" data-i18n="contact.subtitle">
-                                Need a website? Mobile app? Complete system with hosting?
-                                I provide end-to-end solutions for your business.
-                        </p>
-                        <div class="row justify-content-center gy-4">
-                                <div class="col-md-8">
-                                        <div class="card shadow-sm border-primary" data-aos="fade-up">
-                                                <div class="card-body p-4">
-                                                        <div class="text-center mb-4">
-                                                                <span class="badge bg-primary p-3 me-2"
-                                                                        data-i18n-html="contact.badges.flutter"><i
-                                                                                class="bi bi-phone"></i> Flutter
-                                                                        Team</span>
-                                                                <span class="badge bg-success p-3 me-2"
-                                                                        data-i18n-html="contact.badges.domains"><i
-                                                                                class="bi bi-globe"></i> Domains</span>
-                                                                <span class="badge bg-info p-3"
-                                                                        data-i18n-html="contact.badges.hosting"><i
-                                                                                class="bi bi-hdd-stack"></i>
-                                                                        Hosting</span>
-                                                        </div>
-                                                        <div class="row gy-4">
-                                                                <div class="col-md-6">
-                                                                        <h5 class="mb-4" data-i18n="contact.getInTouch">
-                                                                                Get in Touch</h5>
-                                                                        <ul class="list-unstyled">
-                                                                                <li class="mb-3">
-                                                                                        <i
-                                                                                                class="bi bi-envelope-fill text-primary me-3"></i>
-                                                                                        <a class="text-decoration-none"
-                                                                                                href="mailto:mohannad.muhana@gmail.com">mohannad.muhana@gmail.com</a>
-                                                                                </li>
-                                                                                <li class="mb-3">
-                                                                                        <i
-                                                                                                class="bi bi-telephone-fill text-primary me-3"></i>
-                                                                                        <a class="text-decoration-none"
-                                                                                                href="tel:+962780869084">+962
-                                                                                                7 8086 9084</a>
-                                                                                </li>
-                                                                                <li class="mb-3">
-                                                                                        <i
-                                                                                                class="bi bi-whatsapp text-success me-3"></i>
-                                                                                        <a class="text-decoration-none"
-                                                                                                data-i18n="contact.whatsapp"
-                                                                                                href="https://wa.me/962780869084"
-                                                                                                target="_blank">Chat on
-                                                                                                WhatsApp</a>
-                                                                                </li>
-                                                                                <li class="mb-3">
-                                                                                        <i
-                                                                                                class="bi bi-geo-alt-fill text-danger me-3"></i>
-                                                                                        <span
-                                                                                                data-i18n="contact.location">Amman,
-                                                                                                Jordan</span>
-                                                                                </li>
-                                                                        </ul>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                        <h5 class="mb-4"
-                                                                                data-i18n="contact.connectOnline">
-                                                                                Connect Online</h5>
-                                                                        <ul class="list-unstyled">
-                                                                                <li class="mb-3">
-                                                                                        <i
-                                                                                                class="bi bi-linkedin text-primary me-3"></i>
-                                                                                        <a class="text-decoration-none"
-                                                                                                href="https://www.linkedin.com/in/mohannadmuhana/"
-                                                                                                target="_blank">linkedin.com/in/mohannadmuhana</a>
-                                                                                </li>
-                                                                                <!-- <li class="mb-3">
-                    <i class="bi bi-github text-dark me-3"></i>
-                    <a href="#" target="_blank" class="text-decoration-none">github.com/mohannadmuhana</a>
-                  </li>
-                  <li class="mb-3">
-                    <i class="bi bi-twitter-x text-primary me-3"></i>
-                    <a href="#" target="_blank" class="text-decoration-none">@mohannadmuhana</a>
-                  </li> -->
-                                                                        </ul>
-                                                                </div>
-                                                        </div>
-                                                        <hr class="my-4" />
-                                                        <div class="row text-center gy-4">
-                                                                <div class="col-12 col-sm-4">
-                                                                        <h6
-                                                                                data-i18n-html="contact.services.development">
-                                                                                <i
-                                                                                        class="bi bi-check-circle text-success"></i>
-                                                                                Development</h6>
-                                                                </div>
-                                                                <div class="col-12 col-sm-4">
-                                                                        <h6 data-i18n-html="contact.services.hosting"><i
-                                                                                        class="bi bi-check-circle text-success"></i>
-                                                                                Hosting</h6>
-                                                                </div>
-                                                                <div class="col-12 col-sm-4">
-                                                                        <h6 data-i18n-html="contact.services.support"><i
-                                                                                        class="bi bi-check-circle text-success"></i>
-                                                                                Support</h6>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+
+                <!-- honeypot -->
+                <input class="hp" type="text" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <div class="form__actions">
+                  <p class="form__note" role="status" aria-live="polite"></p>
+                  <button class="btn btn--primary" type="submit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21.5 2.5 11 13M21.5 2.5 15 21.5l-4-8.5-8.5-4z" />
+                    </svg>
+                    <span data-i18n="contact.form.send">Send message</span>
+                  </button>
                 </div>
-        </section>
-        <!-- Footer -->
-        <footer>
-                <div class="container">
-                        <p class="mb-2" data-i18n="footer.copyright">
-                                © 2026 Mohannad Muhana — Full-Stack Developer | Flutter Team Lead
-                        </p>
-                        <p class="small" data-i18n="footer.subtitle">
-                                From concept to deployment — Web Applications, Mobile Apps, Hosting &amp; Business
-                                Solutions.
-                        </p>
-                </div>
-        </footer>
-        <!-- JS Libraries -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-        <!-- Custom JS -->
-        <script src="js/main.js"></script>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       Footer
+       =================================================================== -->
+  <footer class="footer">
+    <div class="shell footer__grid">
+      <div>
+        <a class="brand" href="#home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 17V7l4.5 6L12 7v10" />
+              <path d="M16 8v8M20 8v8" opacity=".55" />
+            </svg>
+          </span>
+          <span>Mohannad Muhana</span>
+        </a>
+        <p class="footer__meta" style="margin-top:0.6rem">
+          <span data-i18n="footer.role">Software Engineer / .NET Developer — Amman, Jordan</span><br>
+          © <span id="year">2026</span> · <span data-i18n="footer.built">Built without a framework</span>
+        </p>
+      </div>
+
+      <ul class="footer__links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#expertise" data-i18n="nav.expertise">Expertise</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#infrastructure" data-i18n="nav.infrastructure">Infrastructure</a></li>
+        <li><a href="https://www.linkedin.com/in/mohannadmuhana/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li><a href="assets/Mohannad-Muhana-CV.pdf" download data-i18n="footer.cv">CV</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" data-i18n-attr="aria-label:a11y.top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 20V4M6 10l6-6 6 6" />
+    </svg>
+  </button>
+
+  <dialog class="modal" id="project-modal" aria-labelledby="pd-title">
+    <div class="modal__panel"></div>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

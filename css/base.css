@@ -1,0 +1,354 @@
+/* ==========================================================================
+   base.css — design tokens, reset, typography, layout primitives
+   Mohannad Muhana — Software Engineer / .NET Developer
+   ========================================================================== */
+
+:root {
+  /* --- surface ------------------------------------------------------- */
+  --bg: #05070c;
+  --bg-elev: #080c14;
+  --panel: #0b111c;
+  --panel-2: #0e1524;
+  --glass: rgba(148, 178, 214, 0.045);
+  --glass-strong: rgba(148, 178, 214, 0.08);
+
+  /* --- lines ---------------------------------------------------------- */
+  --line: rgba(125, 160, 205, 0.14);
+  --line-soft: rgba(125, 160, 205, 0.08);
+  --line-strong: rgba(125, 160, 205, 0.3);
+
+  /* --- text ----------------------------------------------------------- */
+  --text: #e7eef8;
+  --text-2: #a9b8cc;
+  --muted: #71849c;
+
+  /* --- signal palette (industrial semantics) -------------------------- */
+  --accent: #22d3ee;          /* data / telemetry  */
+  --accent-deep: #0891b2;
+  --accent-2: #f0a63c;        /* energy / power    */
+  --ok: #3dd68c;              /* running           */
+  --warn: #f5a524;            /* warning           */
+  --alarm: #ff5c6c;           /* alarm             */
+  --violet: #8b7dfa;          /* application layer */
+
+  /* --- effects -------------------------------------------------------- */
+  --glow: 0 0 0 1px rgba(34, 211, 238, 0.28), 0 0 34px -8px rgba(34, 211, 238, 0.55);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow: 0 18px 46px -22px rgba(0, 0, 0, 0.9);
+  --shadow-lg: 0 40px 80px -32px rgba(0, 0, 0, 0.95);
+
+  /* --- geometry ------------------------------------------------------- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+
+  --nav-h: 68px;
+  --shell: 1240px;
+  --gutter: clamp(1.15rem, 4vw, 2.5rem);
+
+  /* --- type ----------------------------------------------------------- */
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: dark;
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 1.5rem);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100svh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ambient field: fixed grid + radial wash. Painted behind everything,
+   composited once, never animated — costs nothing on scroll. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(900px 620px at 78% -8%, rgba(34, 211, 238, 0.11), transparent 62%),
+    radial-gradient(760px 560px at 8% 6%, rgba(139, 125, 250, 0.09), transparent 60%),
+    radial-gradient(1100px 700px at 50% 108%, rgba(240, 166, 60, 0.06), transparent 64%),
+    var(--bg);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 20%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 20%, transparent 78%);
+  opacity: 0.75;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button { background: none; border: 0; cursor: pointer; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+a:hover { color: #67e8f9; }
+
+ul, ol { list-style: none; padding: 0; }
+
+:target { scroll-margin-top: calc(var(--nav-h) + 2rem); }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  color: #fff;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2.3rem, 1.35rem + 4.2vw, 4.3rem); font-weight: 700; letter-spacing: -0.035em; }
+h2 { font-size: clamp(1.85rem, 1.2rem + 2.6vw, 2.9rem); letter-spacing: -0.03em; }
+h3 { font-size: clamp(1.25rem, 1.05rem + 0.85vw, 1.6rem); }
+h4 { font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.2rem); }
+h5 { font-size: 0.98rem; }
+
+p { text-wrap: pretty; }
+
+.lede {
+  font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--text-2);
+}
+
+strong { color: #fff; font-weight: 600; }
+
+code, .mono { font-family: var(--font-mono); }
+
+/* Small uppercase technical label — the connective tissue of the whole UI */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.kicker::before {
+  content: "";
+  width: 1.6rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent));
+  flex: none;
+}
+
+.kicker--plain::before { display: none; }
+
+/* ==========================================================================
+   Layout primitives
+   ========================================================================== */
+
+.shell {
+  width: min(100% - (var(--gutter) * 2), var(--shell));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(4rem, 2.4rem + 6.4vw, 7.5rem);
+}
+
+.section--tight { padding-block: clamp(3rem, 2rem + 4vw, 5rem); }
+
+.section__head {
+  max-width: 62ch;
+  margin-bottom: clamp(2.2rem, 1.4rem + 2.6vw, 3.6rem);
+}
+
+.section__head > h2 { margin-block: 0.85rem 0.9rem; }
+
+.section__head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section__head--center .kicker::before { display: none; }
+
+/* Hairline that separates major bands */
+.rule {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+}
+
+.grid { display: grid; gap: clamp(1rem, 0.7rem + 1.1vw, 1.5rem); }
+
+/* Auto-fit grids: the single mechanism behind every equal-height card row.
+   min() keeps a lone card from stretching full width on narrow screens. */
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  inset-inline-start: 0.75rem;
+  z-index: 200;
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--r-sm);
+  background: var(--accent);
+  color: #04121a;
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform 0.22s var(--ease-out);
+}
+
+.skip-link:focus-visible { transform: translateY(0); }
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--r-xs);
+}
+
+.text-accent { color: var(--accent); }
+.text-muted { color: var(--muted); }
+
+/* ==========================================================================
+   Scroll reveal — driven by IntersectionObserver in js/ui/reveal.js.
+   Transform + opacity only, so it never triggers layout.
+   ========================================================================== */
+
+/* Scoped to .js (set by an inline script in <head>): without scripting there
+   is nothing to add .is-visible, so an unscoped opacity:0 would hide the
+   entire page. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* ==========================================================================
+   Reduced motion — honour the OS setting everywhere, including the
+   decorative SVG data-flow animations.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .js [data-reveal] { opacity: 1; transform: none; }
+}
+
+/* ==========================================================================
+   Selection & scrollbar
+   ========================================================================== */
+
+::selection {
+  background: rgba(34, 211, 238, 0.28);
+  color: #fff;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb {
+    background: #1b2536;
+    border: 3px solid var(--bg);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: #26344a; }
+}
+
+html { scrollbar-color: #1b2536 var(--bg); scrollbar-width: thin; }

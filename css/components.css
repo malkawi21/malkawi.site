@@ -1,0 +1,940 @@
+/* ==========================================================================
+   components.css — reusable UI: nav, buttons, cards, media frames,
+   chips, timeline, modal, lightbox, form
+   ========================================================================== */
+
+/* ==========================================================================
+   Panel — the base surface every card inherits from
+   ========================================================================== */
+
+.panel {
+  position: relative;
+  background:
+    linear-gradient(168deg, var(--glass-strong), transparent 42%),
+    var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Hairline highlight along the top edge — reads as machined metal */
+.panel::before {
+  content: "";
+  position: absolute;
+  inset-inline: 12%;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  --btn-bg: transparent;
+  --btn-fg: var(--text);
+  --btn-line: var(--line-strong);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.78rem 1.4rem;
+  min-height: 46px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border: 1px solid var(--btn-line);
+  border-radius: 99px;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 0.2s var(--ease-out),
+    background-color 0.2s var(--ease),
+    border-color 0.2s var(--ease),
+    box-shadow 0.25s var(--ease),
+    color 0.2s var(--ease);
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn svg { width: 1.05em; height: 1.05em; flex: none; }
+
+.btn--primary {
+  --btn-bg: linear-gradient(135deg, #2ee0f5, #0aa5c4);
+  --btn-fg: #041318;
+  --btn-line: transparent;
+  box-shadow: 0 10px 30px -12px rgba(34, 211, 238, 0.75);
+}
+
+.btn--primary:hover {
+  color: #041318;
+  box-shadow: 0 16px 40px -12px rgba(34, 211, 238, 0.95);
+}
+
+.btn--ghost { --btn-bg: var(--glass); }
+
+.btn--ghost:hover {
+  --btn-line: rgba(34, 211, 238, 0.5);
+  background: rgba(34, 211, 238, 0.08);
+  color: #fff;
+}
+
+.btn--quiet {
+  --btn-line: transparent;
+  padding-inline: 0.9rem;
+  color: var(--text-2);
+}
+
+.btn--quiet:hover { color: #fff; background: var(--glass); }
+
+.btn--sm { min-height: 38px; padding: 0.45rem 0.95rem; font-size: 0.84rem; }
+.btn--block { width: 100%; }
+
+/* ==========================================================================
+   Chips / tech badges
+   ========================================================================== */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.68rem;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  font-family: var(--font-mono);
+  font-size: 0.735rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+
+.chip--accent {
+  color: var(--accent);
+  border-color: rgba(34, 211, 238, 0.34);
+  background: rgba(34, 211, 238, 0.08);
+}
+
+.chip--energy {
+  color: var(--accent-2);
+  border-color: rgba(240, 166, 60, 0.34);
+  background: rgba(240, 166, 60, 0.08);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* Live status pill with a breathing dot */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.34rem 0.85rem 0.34rem 0.7rem;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-2);
+}
+
+.status__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ok);
+  box-shadow: 0 0 0 0 rgba(61, 214, 140, 0.7);
+  animation: pulse-dot 2.4s var(--ease) infinite;
+  flex: none;
+}
+
+@keyframes pulse-dot {
+  0%   { box-shadow: 0 0 0 0 rgba(61, 214, 140, 0.55); }
+  70%  { box-shadow: 0 0 0 9px rgba(61, 214, 140, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(61, 214, 140, 0); }
+}
+
+/* ==========================================================================
+   Media frame — the single unified image system.
+   Fixed aspect ratio + contained screenshot on a padded plate, so a 795px
+   utility window and a 1600px dashboard sit in identically sized cards
+   without stretching, cropping or letterbox gaps.
+   ========================================================================== */
+
+.frame {
+  /* Explicit block: .frame is used on a <span> inside the detail-view
+     screenshot buttons, and aspect-ratio does nothing on an inline box. */
+  display: block;
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(34, 211, 238, 0.09), transparent 60%),
+    linear-gradient(180deg, #0c1421, #070b12);
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
+}
+
+.frame img,
+.frame svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.55s var(--ease-out);
+}
+
+/* Screenshots get breathing room; schematics fill the plate edge to edge. */
+.frame--shot { padding: clamp(0.6rem, 2%, 1.1rem); }
+.frame--cover img { object-fit: cover; }
+.frame--cover { padding: 0; }
+
+/* Faint scanline wash + vignette so mixed-brightness screenshots read as
+   one consistent set rather than a patchwork. */
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 55%, rgba(5, 7, 12, 0.55)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 3px);
+}
+
+.frame__tag {
+  position: absolute;
+  z-index: 3;
+  inset-block-start: 0.7rem;
+  inset-inline-start: 0.7rem;
+  padding: 0.24rem 0.6rem;
+  background: rgba(5, 8, 14, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.frame__zoom {
+  position: absolute;
+  z-index: 3;
+  inset-block-end: 0.7rem;
+  inset-inline-end: 0.7rem;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: rgba(5, 8, 14, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--text-2);
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease-out), color 0.2s;
+}
+
+.frame__zoom svg { width: 15px; height: 15px; }
+.frame__zoom:hover { color: var(--accent); border-color: rgba(34, 211, 238, 0.5); }
+
+.card:hover .frame__zoom,
+.frame__zoom:focus-visible { opacity: 1; transform: scale(1); }
+
+/* Touch devices never hover, so the zoom affordance would otherwise be
+   invisible and unreachable there. Show it permanently and size it for a
+   finger rather than a cursor. */
+@media (hover: none) {
+  .frame__zoom {
+    opacity: 1;
+    transform: none;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ==========================================================================
+   Card — one geometry for every card on the site.
+   Flex column + margin-top:auto footer keeps buttons on a shared baseline
+   no matter how long a title or description runs.
+   ========================================================================== */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background:
+    linear-gradient(168deg, var(--glass-strong), transparent 45%),
+    var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  transition:
+    transform 0.35s var(--ease-out),
+    border-color 0.3s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(34, 211, 238, 0.32);
+  box-shadow: var(--shadow), 0 0 46px -20px rgba(34, 211, 238, 0.5);
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.7rem;
+  padding: clamp(1.05rem, 0.85rem + 0.6vw, 1.45rem);
+}
+
+.card__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.card__title {
+  font-size: 1.1rem;
+  line-height: 1.25;
+  /* Clamp to 2 lines: a long title can never break the grid rhythm. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__text {
+  font-size: 0.9rem;
+  line-height: 1.62;
+  color: var(--text-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.95rem;
+}
+
+.card__foot .chip-row { flex: 1; min-width: 0; }
+
+/* Mouse-follow spotlight. --mx/--my are written by js/ui/spotlight.js;
+   the layer is opacity-animated only, so the effect is composited. */
+.card::after,
+.panel--lit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+  background: radial-gradient(
+    340px circle at var(--mx, 50%) var(--my, 0%),
+    rgba(34, 211, 238, 0.1),
+    transparent 62%
+  );
+}
+
+.card:hover::after,
+.panel--lit:hover::after { opacity: 1; }
+
+.card__body,
+.card__foot { position: relative; z-index: 2; }
+
+/* --- Feature card (icon + copy), used by "What I Build" ---------------- */
+
+.fcard { padding: clamp(1.25rem, 1rem + 0.8vw, 1.65rem); gap: 0.6rem; }
+
+.fcard__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.55rem;
+  background: linear-gradient(145deg, rgba(34, 211, 238, 0.16), rgba(34, 211, 238, 0.03));
+  border: 1px solid rgba(34, 211, 238, 0.26);
+  border-radius: 12px;
+  color: var(--accent);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease);
+}
+
+.fcard__icon svg { width: 21px; height: 21px; }
+
+.card:hover .fcard__icon {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 8px 24px -10px rgba(34, 211, 238, 0.8);
+}
+
+.fcard__title { font-size: 1.02rem; }
+
+.fcard__text {
+  font-size: 0.885rem;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+/* ==========================================================================
+   Ticked list — used in project detail + experience
+   ========================================================================== */
+
+.ticks { display: grid; gap: 0.6rem; }
+
+.ticks li {
+  position: relative;
+  padding-inline-start: 1.55rem;
+  font-size: 0.905rem;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+.ticks li::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0.62em;
+  inset-inline-start: 0.15rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.65);
+}
+
+.ticks--energy li::before { background: var(--accent-2); box-shadow: 0 0 10px rgba(240, 166, 60, 0.65); }
+
+/* ==========================================================================
+   Header / navigation
+   ========================================================================== */
+
+.header {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 100;
+  transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease), backdrop-filter 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.header.is-stuck {
+  background: rgba(5, 7, 12, 0.82);
+  border-bottom-color: var(--line);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: var(--nav-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.brand:hover { color: #fff; }
+
+.brand__mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(140deg, rgba(34, 211, 238, 0.2), rgba(139, 125, 250, 0.14));
+  border: 1px solid rgba(34, 211, 238, 0.32);
+  border-radius: 9px;
+  color: var(--accent);
+  flex: none;
+}
+
+.brand__mark svg { width: 17px; height: 17px; }
+.brand__sub { color: var(--muted); }
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-inline-start: auto;
+}
+
+.nav__link {
+  position: relative;
+  padding: 0.5rem 0.72rem;
+  border-radius: var(--r-xs);
+  font-size: 0.855rem;
+  font-weight: 500;
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: color 0.2s var(--ease);
+}
+
+.nav__link:hover { color: #fff; }
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  inset-block-end: 0.15rem;
+  inset-inline-start: 50%;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  transform: translateX(-50%);
+  transition: width 0.28s var(--ease-out);
+}
+
+.nav__link.is-active { color: #fff; }
+.nav__link.is-active::after { width: 16px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: none;
+}
+
+.lang-toggle {
+  min-width: 46px;
+  min-height: 36px;
+  padding-inline: 0.7rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 99px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text-2);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.lang-toggle:hover {
+  color: var(--accent);
+  border-color: rgba(34, 211, 238, 0.45);
+  background: rgba(34, 211, 238, 0.07);
+}
+
+/* --- mobile drawer ----------------------------------------------------- */
+
+.nav__burger {
+  display: none;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.nav__burger span {
+  position: relative;
+  display: block;
+  width: 17px;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease-out), opacity 0.2s;
+}
+
+.nav__burger span::before,
+.nav__burger span::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.nav__burger span::before { top: -5.5px; }
+.nav__burger span::after { top: 5.5px; }
+
+.nav__burger[aria-expanded="true"] span { background: transparent; }
+.nav__burger[aria-expanded="true"] span::before { transform: translateY(5.5px) rotate(45deg); }
+.nav__burger[aria-expanded="true"] span::after { transform: translateY(-5.5px) rotate(-45deg); }
+
+@media (max-width: 1080px) {
+  .nav__burger { display: grid; }
+
+  .nav__links {
+    position: fixed;
+    inset-block-start: var(--nav-h);
+    inset-inline: 0;
+    inset-block-end: 0;
+    z-index: 99;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+    margin: 0;
+    padding: 1.4rem var(--gutter) 3rem;
+    /* Fully opaque, not a high-alpha translucency: at 0.97 the hero's large
+       white headline still ghosts through behind the menu items. A blur
+       buys nothing behind an opaque fill, so it is gone too. */
+    background: linear-gradient(180deg, #080c14, #05070c);
+    border-top: 1px solid var(--line);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.28s var(--ease), transform 0.28s var(--ease-out), visibility 0.28s;
+  }
+
+  .nav__links.is-open { opacity: 1; visibility: visible; transform: none; }
+
+  .nav__link {
+    padding: 0.95rem 0.4rem;
+    border-bottom: 1px solid var(--line-soft);
+    border-radius: 0;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+  }
+
+  .nav__link::after { inset-block-end: 50%; inset-inline-start: auto; inset-inline-end: 0.4rem; transform: translateY(50%); }
+  .nav__link.is-active::after { width: 6px; height: 6px; border-radius: 50%; }
+
+  .nav__links .btn { margin-top: 1.3rem; }
+}
+
+@media (max-width: 400px) {
+  .brand__sub { display: none; }
+}
+
+/* ==========================================================================
+   Timeline (experience)
+   ========================================================================== */
+
+.timeline { position: relative; display: grid; gap: 1.4rem; }
+
+.tl-item {
+  position: relative;
+  padding-inline-start: clamp(1.5rem, 1rem + 2vw, 2.6rem);
+}
+
+/* The rail: a vertical trace with a glowing node per entry */
+.tl-item::before {
+  content: "";
+  position: absolute;
+  inset-block: 0.55rem 0;
+  inset-inline-start: 5px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--accent), var(--line) 60%, transparent);
+}
+
+.tl-item:last-child::before { inset-block-end: auto; height: 1.6rem; }
+
+.tl-item::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 0.42rem;
+  inset-inline-start: 0;
+  width: 11px;
+  height: 11px;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.75);
+}
+
+.tl-item__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.9rem;
+  margin-bottom: 0.15rem;
+}
+
+.tl-item__org { color: var(--text-2); font-size: 0.94rem; }
+
+.tl-item__period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Modal (project detail)
+   ========================================================================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: grid;
+  place-items: end center;
+  /* The UA stylesheet gives <dialog> width/height: fit-content and auto
+     margins, which shrink-wraps the element and defeats the centring grid.
+     These four declarations are what make inset:0 actually take effect. */
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* Without this, the `display: grid` above beats the UA's
+   `dialog:not([open]) { display: none }` and leaves a transparent,
+   viewport-sized fixed overlay sitting over the page at all times. */
+.modal:not([open]) { display: none; }
+
+.modal::backdrop {
+  background: rgba(2, 4, 8, 0.8);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  animation: fade-in 0.3s var(--ease) both;
+}
+
+.modal[open] .modal__panel { animation: modal-in 0.42s var(--ease-out) both; }
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(26px) scale(0.985); }
+  to   { opacity: 1; transform: none; }
+}
+
+.modal__panel {
+  position: relative;
+  width: min(100vw, 1000px);
+  max-height: min(92svh, 1000px);
+  margin-block-start: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 860px) {
+  .modal { place-items: center; padding: 2rem; }
+  .modal__panel { margin-block-start: 0; border-bottom: 1px solid var(--line); border-radius: var(--r-xl); }
+}
+
+.modal__close {
+  position: sticky;
+  z-index: 6;
+  inset-block-start: 0.85rem;
+  inset-inline-start: 100%;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-inline-end: 0.85rem;
+  margin-block-end: -38px;
+  background: rgba(10, 14, 22, 0.9);
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--text-2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: color 0.2s, border-color 0.2s, transform 0.2s var(--ease-out);
+}
+
+.modal__close:hover { color: var(--alarm); border-color: var(--alarm); transform: rotate(90deg); }
+.modal__close svg { width: 15px; height: 15px; }
+
+body.is-locked { overflow: hidden; }
+
+/* ==========================================================================
+   Lightbox
+   ========================================================================== */
+
+/* A <dialog>, so it is promoted to the top layer and can sit above the
+   project modal (which is also a dialog). See js/ui/lightbox.js. */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: clamp(0.75rem, 3vw, 2.5rem);
+  border: 0;
+  overflow: hidden;
+  background: rgba(2, 4, 8, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lightbox:not([open]) { display: none; }
+
+.lightbox[open] {
+  display: grid;
+  place-items: center;
+  animation: fade-in 0.25s var(--ease) both;
+}
+
+.lightbox::backdrop { background: transparent; }
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 82svh;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-lg);
+  animation: modal-in 0.35s var(--ease-out) both;
+}
+
+.lightbox__bar {
+  position: absolute;
+  inset-block-end: clamp(0.75rem, 3vw, 2rem);
+  inset-inline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-2);
+}
+
+.lightbox__nav,
+.lightbox__x {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(12, 17, 26, 0.85);
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--text);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.lightbox__nav:hover,
+.lightbox__x:hover { color: var(--accent); border-color: rgba(34, 211, 238, 0.55); }
+
+.lightbox__nav svg,
+.lightbox__x svg { width: 16px; height: 16px; }
+
+.lightbox__x {
+  position: absolute;
+  inset-block-start: clamp(0.75rem, 3vw, 2rem);
+  inset-inline-end: clamp(0.75rem, 3vw, 2rem);
+}
+
+.lightbox__caption {
+  min-width: 0;
+  max-width: 46ch;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Form
+   ========================================================================== */
+
+.field { display: grid; gap: 0.4rem; }
+
+.field__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.field__input {
+  width: 100%;
+  padding: 0.78rem 0.95rem;
+  background: rgba(5, 8, 14, 0.65);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  color: var(--text);
+  font-size: 0.94rem;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease), background-color 0.2s;
+}
+
+.field__input::placeholder { color: #55647a; }
+
+.field__input:focus {
+  outline: none;
+  border-color: rgba(34, 211, 238, 0.55);
+  background: rgba(8, 13, 21, 0.9);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.13);
+}
+
+textarea.field__input { min-height: 128px; resize: vertical; }
+
+.form__note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  min-height: 1.4em;
+}
+
+.form__note[data-state="ok"] { color: var(--ok); }
+.form__note[data-state="error"] { color: var(--alarm); }
+
+/* Honeypot — present in the markup for bots, invisible and unreachable for
+   people. Deliberately NOT positioned off-screen with a large negative
+   offset: in RTL that extends the scrollable area to the right and gives the
+   whole document a horizontal scrollbar. Clipped in place instead. */
+.hp {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  pointer-events: none;
+}

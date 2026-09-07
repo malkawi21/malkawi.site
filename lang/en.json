@@ -1,227 +1,830 @@
 {
   "meta": {
-    "title": "Mohannad Muhana | Full-Stack Web & Mobile Development Agency"
+    "title": "Mohannad Muhana — Software Engineer | Industrial Automation, SCADA & .NET",
+    "description": "Software engineer building industrial IoT, SCADA and data-acquisition systems end to end — from Modbus and MQTT device integration through ASP.NET Core APIs and SQL/Redis to operator dashboards and production infrastructure. Based in Amman, Jordan."
   },
+
   "language": {
-    "switchToArabic": "AR",
-    "switchToEnglish": "EN"
+    "switchLabel": "Switch language"
   },
+
+  "a11y": {
+    "skip": "Skip to content",
+    "menu": "Toggle navigation menu",
+    "top": "Back to top"
+  },
+
   "nav": {
     "about": "About",
-    "services": "Services",
+    "expertise": "Expertise",
+    "architecture": "Architecture",
     "projects": "Projects",
     "experience": "Experience",
-    "education": "Education",
-    "contact": "Contact"
+    "stack": "Stack",
+    "infrastructure": "Infrastructure",
+    "cta": "Let's talk"
   },
-  "buttons": {
-    "viewWork": "View My Work",
-    "letsTalk": "Let's Talk"
-  },
-  "common": {
-    "new": "NEW"
-  },
+
   "hero": {
-    "badge": "Full-Stack Developer | Flutter Team Lead | Digital Solutions Architect",
-    "title": "Complete Digital Solutions <span class=\"text-warning\">From Code to Cloud</span>",
-    "description": "Hi, I'm <strong>Mohannad Muhana</strong> — I lead a team of developers building <span class=\"fw-bold\">web applications, mobile apps, and industrial systems</span>. From development to deployment, I provide complete solutions for your business.",
-    "features": {
-      "web": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Web Development",
-      "automation": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Industrial Real-Time Applications (Automation)",
-      "desktop": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Desktop Applications",
-      "mobile": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Mobile App Development (Flutter Team)",
-      "hosting": "<i class=\"bi bi-check-circle-fill text-warning me-2\"></i>Domain Registration & Hosting Services"
+    "status": "Israr Engineering LLC · Amman, Jordan",
+    "titleLead": "Software engineer for systems that",
+    "titleAccent": "have to run in the real world.",
+    "domains": {
+      "automation": "Industrial Automation",
+      "scada": "SCADA",
+      "iot": "IoT & Telemetry",
+      "cloud": "Cloud & APIs"
+    },
+    "lede": "I design and build the software that carries a measurement from a meter, inverter or PLC all the way to an operator's screen — protocol integration, edge acquisition, ASP.NET Core services, the databases underneath them, and the servers they run on.",
+    "cta": {
+      "projects": "View projects",
+      "experience": "Experience",
+      "cv": "Download CV",
+      "contact": "Contact"
     }
   },
+
+  "metrics": {
+    "throughput": "Data points per minute on a multi-site platform",
+    "sites": "Industrial sites synchronised",
+    "since": "Building industrial software since",
+    "layers": "Layers of the stack I work across"
+  },
+
+  "chain": {
+    "title": "Signal path",
+    "live": "Live",
+    "footLeft": "Field to operator",
+    "footRight": "End to end",
+    "field": { "name": "Field devices", "meta": "PLCs · Meters · Inverters · Sensors" },
+    "protocol": { "name": "Industrial protocols", "meta": "Register maps · Polling · Publish/subscribe" },
+    "edge": { "name": "Edge datalogger", "meta": "Acquisition · Buffering · Store & forward" },
+    "service": { "name": "Backend services", "meta": "APIs · Workers · Processing" },
+    "store": { "name": "Data layer", "meta": "Time-series · Historical · Cache" },
+    "cloud": { "name": "Cloud platform", "meta": "Authentication · Query APIs" },
+    "ui": { "name": "SCADA & dashboards", "meta": "Trends · Alarms · Control" }
+  },
+
   "about": {
-    "heading": "// About Me",
-    "intro": "I'm a <strong>.NET & Laravel developer</strong> with a unique blend of skills — I create modern web applications, lead a Flutter mobile team, AND build systems that connect to industrial equipment.",
-    "solutionsIntro": "With over 4 years of experience and a dedicated team, I offer end-to-end solutions:",
-    "points": {
-      "web": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>Full-stack web applications (ASP.NET Core & Laravel)",
-      "mobile": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>Cross-platform mobile apps with Flutter (iOS & Android)",
-      "domain": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>Domain registration and hosting setup",
-      "digital": "<i class=\"bi bi-check-circle-fill text-success me-2\"></i>Complete digital transformation for your business"
-    },
-    "final": "Whether you need a <strong>website, mobile app, or complete industrial system</strong> — I have the team and expertise to deliver.",
-    "quickFacts": {
-      "title": "Quick Facts",
-      "experience": "<i class=\"bi bi-code-slash me-2 text-primary\"></i>4+ Years of Professional Experience",
-      "projects": "<i class=\"bi bi-briefcase me-2 text-primary\"></i>30+ Successful Projects Delivered",
-      "flutter": "<i class=\"bi bi-phone me-2 text-primary\"></i>Flutter Team Leadership",
-      "hosting": "<i class=\"bi bi-cloud me-2 text-primary\"></i>End-to-End Hosting Solutions"
+    "kicker": "About",
+    "title": "One engineer across the whole signal path",
+    "p1": "I am a software engineer specialising in .NET backend development, industrial IoT, SCADA and real-time data systems. My work sits where software meets physical equipment: designing high-throughput APIs, distributed data-acquisition platforms, industrial communication integrations and the monitoring interfaces engineers actually use.",
+    "p2": "That means I am comfortable at every level of the stack — reading a register map off an inverter, writing the background service that polls it, modelling the time-series table it lands in, exposing it through an authenticated REST API, and configuring the Linux or Windows server that keeps the whole thing online at a remote site.",
+    "p3": "I work alongside electrical, automation and mechanical engineers, which shapes how I build: systems have to survive unreliable links, restarting devices and sites nobody can visit at short notice. I also lead a small development team, including Flutter developers who deliver the mobile side of client projects.",
+    "facts": {
+      "role": { "k": "Current role", "v": "Software Engineer / .NET Developer" },
+      "base": { "k": "Based in", "v": "Amman, Jordan" },
+      "edu": { "k": "Education", "v": "BSc Computer Science — University of Jordan" },
+      "lang": { "k": "Languages", "v": "Arabic (native), English (professional)" }
     }
   },
-  "services": {
-    "heading": "// Complete Digital Solutions",
-    "web": {
-      "title": "Web Applications",
-      "description": "Custom web applications built with <strong>ASP.NET Core</strong> or <strong>Laravel PHP</strong>. From business portals to e-commerce platforms, I build what you need."
+
+  "capabilities": {
+    "kicker": "What I build",
+    "title": "Complete technical systems, not just interfaces",
+    "lede": "Each of these is work I do end to end — specification, software, integration, database, deployment.",
+    "industrial": {
+      "title": "Industrial software systems",
+      "text": "Backend systems that sit between plant equipment and the people responsible for it: acquisition, processing, storage, control and reporting as one coherent application."
     },
-    "mobile": {
-      "title": "Mobile Apps (Flutter)",
-      "description": "I lead a dedicated Flutter team that builds beautiful, cross-platform mobile apps for <strong>iOS and Android</strong> from a single codebase."
+    "scada": {
+      "title": "SCADA & monitoring platforms",
+      "text": "Web-based supervisory interfaces with live equipment status, historical trends, alarm consoles and role-based operator access, fed by APIs I build behind them."
     },
-    "hosting": {
-      "title": "Hosting & Domains",
-      "description": "Full hosting solutions including <strong>domain registration, SSL certificates, and server setup</strong>. I handle everything from code to cloud."
+    "acquisition": {
+      "title": "Industrial data acquisition",
+      "text": "Polling services and dataloggers that read meters, inverters and PLCs on a fixed cycle, buffer locally when the link drops, and forward reliably once it returns."
     },
-    "ecommerce": {
-      "title": "E-Commerce Solutions",
-      "description": "Complete online stores with product management, payment integration, and order tracking. Built with Laravel or ASP.NET Core."
+    "iot": {
+      "title": "IoT & device integration",
+      "text": "Getting equipment to talk: register mapping, scaling, protocol selection, microcontroller-based nodes and the commissioning tools that make a fleet configurable."
     },
-    "automation": {
-      "title": "Industrial Automation",
-      "description": "Connect your factory equipment to the web. Monitor machines, track production, and control devices remotely."
+    "backend": {
+      "title": "Backend APIs & cloud platforms",
+      "text": "ASP.NET Core and Python services with JWT/OAuth2 authentication, background workers, caching and documented REST contracts that other systems can depend on."
+    },
+    "energy": {
+      "title": "Renewable energy monitoring & PPC",
+      "text": "Solar plant software: inverter and meter communication, active power management, tracker control, performance figures and telemetry into SCADA."
+    },
+    "protocols": {
+      "title": "Industrial protocol integration",
+      "text": "Modbus TCP and RTU, MQTT, serial and raw TCP/UDP — including the diagnostic tooling needed to prove a link works before anything is built on top of it."
+    },
+    "tools": {
+      "title": "Custom engineering tools",
+      "text": "Desktop utilities that make commissioning and troubleshooting fast: protocol testers, device configurators, port bridges and simulators built for the engineers using them."
+    },
+    "deployment": {
+      "title": "Server & infrastructure deployment",
+      "text": "Windows Server with IIS, Linux VPS with Nginx, Plesk-managed hosting, SSL certificates, reverse proxies, scheduled backups and service supervision."
+    },
+    "remote": {
+      "title": "Remote monitoring & support infrastructure",
+      "text": "Secure paths into sites that have no public address: WireGuard tunnels, port forwarding, serial-to-IP bridging and self-hosted remote-access servers."
+    }
+  },
+
+  "layers": {
+    "kicker": "Engineering ecosystem",
+    "title": "Seven layers, one engineer",
+    "lede": "Most software roles stop at one or two of these. The value I bring is that a problem never has to be handed across a boundary — the device, the protocol, the service, the database, the screen and the server are all mine to reason about.",
+    "field": {
+      "title": "Field layer",
+      "role": "The physical equipment a system exists to observe and control. I work from datasheets and register maps to decide what is readable, what is writable, and what a value actually means."
+    },
+    "comms": {
+      "title": "Communication layer",
+      "role": "How measurements physically travel. Choosing between polled and published transport, sizing scan rates, handling timeouts and retries, and reaching sites that have no public address."
+    },
+    "edge": {
+      "title": "Edge layer",
+      "role": "Software that runs at the site itself. Acquisition loops, local buffering so nothing is lost when the uplink fails, protocol translation and forwarding once connectivity returns."
+    },
+    "backend": {
+      "title": "Backend layer",
+      "role": "The services that turn a stream of raw registers into something queryable. Ingestion endpoints, background workers, parallel processing, validation, and the business rules on top."
+    },
+    "data": {
+      "title": "Data layer",
+      "role": "Schema design for high-frequency telemetry: time-series tables, retention and aggregation strategy, indexing for range queries, and caching for the values read most often."
+    },
+    "app": {
+      "title": "Application layer",
+      "role": "What the operator actually sees. Live status, historical trends, alarm handling with acknowledgement, maintenance workflows and reports — with access scoped by role."
+    },
+    "infra": {
+      "title": "Infrastructure layer",
+      "role": "Where all of it runs. Provisioning servers, deploying applications as supervised services, terminating TLS, configuring DNS and reverse proxies, and making recovery routine."
+    }
+  },
+
+  "architecture": {
+    "kicker": "Signal path",
+    "title": "From field device to cloud",
+    "lede": "A real deployment is a chain, and it is only as good as its weakest link. Step through each stage to see what I build there.",
+    "tablist": "Architecture stages",
+    "inLabel": "Input",
+    "outLabel": "Output",
+    "doingLabel": "What I do here",
+    "techLabel": "Technologies"
+  },
+
+  "stages": {
+    "device": {
+      "name": "Field devices",
+      "sub": "Inverters · Meters · PLCs · Sensors",
+      "text": "Everything begins with equipment that already exists on site and was not designed with my software in mind. The first engineering task is always the same: establish exactly which registers hold which quantity, in what unit, at what scale, and how often they are worth reading.",
+      "in": "Physical process",
+      "out": "Raw registers",
+      "doing": [
+        "Work from vendor datasheets and register maps to build an accurate point list",
+        "Determine data types, byte order, scaling factors and engineering units",
+        "Set realistic polling intervals for each quantity rather than one global rate",
+        "Verify readings against the device display before anything depends on them"
+      ]
+    },
+    "protocol": {
+      "name": "Industrial protocols",
+      "sub": "Modbus TCP/RTU · MQTT · Serial",
+      "text": "The transport layer is where most industrial integrations actually fail. Devices share an RS-485 bus, timeouts collide, gateways drop frames, and a link that behaved on the bench behaves differently on a live plant.",
+      "in": "Raw registers",
+      "out": "Framed messages",
+      "doing": [
+        "Implement Modbus TCP and RTU masters and slaves, and MQTT publish/subscribe",
+        "Tune baud rate, parity, response timeouts and delay between polls per bus",
+        "Diagnose bus contention and framing errors with purpose-built test tools",
+        "Bridge serial-only devices onto the network with serial-to-IP forwarding"
+      ]
+    },
+    "edge": {
+      "name": "Edge & datalogger",
+      "sub": "Acquisition · Buffering · Forwarding",
+      "text": "Site connectivity is not guaranteed, so acquisition has to be able to run alone. The edge layer keeps polling and keeps recording whether or not anything upstream is reachable, then reconciles when it is.",
+      "in": "Framed messages",
+      "out": "Timestamped records",
+      "doing": [
+        "Build datalogger services that poll on a schedule and timestamp at the source",
+        "Buffer to a local database so an outage costs no data, then forward on recovery",
+        "Run acquisition as a supervised background service that survives restarts",
+        "Normalise readings from different vendors into one internal representation"
+      ]
+    },
+    "service": {
+      "name": "Backend services",
+      "sub": "ASP.NET Core · Python · Workers",
+      "text": "This is where a stream of numbers becomes a system. Ingestion has to keep up with every site at once, which means asynchronous processing, parallelism and back-pressure rather than a request-per-reading design.",
+      "in": "Timestamped records",
+      "out": "Validated, processed data",
+      "doing": [
+        "Write ingestion endpoints and background workers in ASP.NET Core and Python",
+        "Use async processing, multithreading and parallelism for high-throughput loads",
+        "Apply validation, derived calculations and business rules on the way in",
+        "Cache hot values in Redis so dashboards never hit the historical tables"
+      ]
+    },
+    "store": {
+      "name": "Data layer",
+      "sub": "SQL Server · MySQL · Redis",
+      "text": "High-frequency telemetry punishes naive schemas quickly. The storage design decides whether a year of history stays queryable or becomes something nobody dares to open.",
+      "in": "Validated data",
+      "out": "Queryable history",
+      "doing": [
+        "Design schemas for high-frequency time-series, configuration and reporting",
+        "Index and optimise queries for range scans over long historical windows",
+        "Separate live state, historical records and configuration into distinct concerns",
+        "Use Redis for current values, counters and expensive intermediate results"
+      ]
     },
     "api": {
-      "title": "RESTful APIs",
-      "description": "Powerful APIs that power your mobile apps and frontend applications. Built with best practices and documentation."
+      "name": "Cloud API",
+      "sub": "REST · JWT / OAuth2 · RBAC",
+      "text": "Once data is stored it has to be reachable — by dashboards, by mobile apps, by other companies' systems — without exposing the database or every site's internals to whoever asks.",
+      "in": "Queryable history",
+      "out": "Authenticated endpoints",
+      "doing": [
+        "Build documented REST APIs with Swagger/OpenAPI contracts",
+        "Secure them with JWT and OAuth2, scoped by role-based authorisation",
+        "Expose discovery, query and telemetry endpoints across multiple projects",
+        "Version and shape responses so client applications are not tied to the schema"
+      ]
+    },
+    "ui": {
+      "name": "SCADA & dashboards",
+      "sub": "Angular · Trends · Alarms",
+      "text": "The last stage is the only one most people ever see. An operator interface has to answer 'is it running, and if not, why' in seconds — not present a beautiful chart of something nobody asked about.",
+      "in": "Authenticated endpoints",
+      "out": "Operator decisions",
+      "doing": [
+        "Build Angular and web front-ends for live status, trends and equipment detail",
+        "Deliver alarm consoles with acknowledgement, priority and event history",
+        "Push live updates over SignalR/WebSockets instead of polling from the browser",
+        "Scope every view and control action to the signed-in user's role"
+      ]
     }
   },
-  "package": {
-    "title": "<i class=\"bi bi-stars\"></i> Complete Business Package",
-    "subtitle": "I don't just build your application — I get it online!",
-    "domain": {
-      "title": "<i class=\"bi bi-globe text-success\"></i> Domain Name",
-      "desc": "Get your custom domain (.com, .jo, etc.)"
-    },
-    "hosting": {
-      "title": "<i class=\"bi bi-hdd-stack text-info\"></i> Hosting Setup",
-      "desc": "Reliable hosting with SSL certificate"
-    },
-    "email": {
-      "title": "<i class=\"bi bi-envelope-paper text-warning\"></i> Business Email",
-      "desc": "Professional email accounts (info@yourcompany.com)"
-    }
-  },
-  "skills": {
-    "heading": "// Technologies I Work With",
-    "backend": "<i class=\"bi bi-server me-2\"></i>Backend",
-    "mobile": "<i class=\"bi bi-phone me-2\"></i>Mobile Development",
-    "frontend": "<i class=\"bi bi-code me-2\"></i>Frontend & Other"
-  },
+
   "projects": {
-    "heading": "// Featured Projects",
-    "subtitle": "Web applications, mobile apps, industrial systems, and more",
-    "empty": "No projects found in this category",
+    "kicker": "Selected work",
+    "title": "Systems in production",
+    "lede": "Grouped by the engineering system they form rather than by repository. Several are internal industrial software whose interfaces cannot be published — those are shown as architecture diagrams.",
+    "filterLabel": "Filter projects by category",
+    "empty": "No projects in this category",
+    "details": "Details",
+    "close": "Close project details",
+    "enlarge": "Enlarge screenshot",
+    "flagship": "Flagship",
     "filters": {
       "all": "All",
-      "web": "Web Apps",
-      "mobile": "Mobile Apps",
-      "api": "APIs",
-      "laravel": "Laravel",
-      "industrial": "Industrial",
-      "agriculture": "Agriculture"
+      "cloud": "Cloud & APIs",
+      "industrial": "Industrial / SCADA",
+      "data": "Data acquisition",
+      "energy": "Energy",
+      "tools": "Engineering tools",
+      "embedded": "Embedded / IoT",
+      "apps": "Applications"
     },
-    "types": {
-      "web": "web",
-      "api": "api",
-      "scada": "scada",
-      "energy": "energy",
-      "tools": "tools",
-      "agriculture": "agriculture"
+    "categories": {
+      "cloud": "Cloud & APIs",
+      "industrial": "Industrial / SCADA",
+      "data": "Data acquisition",
+      "energy": "Renewable energy",
+      "tools": "Engineering tools",
+      "embedded": "Embedded / IoT",
+      "apps": "Applications"
     },
+    "detail": {
+      "overview": "Overview",
+      "problem": "Problem",
+      "solution": "Solution",
+      "architecture": "System architecture",
+      "features": "Key features",
+      "challenges": "Engineering challenges",
+      "role": "My responsibilities",
+      "capabilities": "Capabilities delivered",
+      "screenshots": "Screenshots"
+    },
+
     "items": {
-      "ecommerce": {
-        "title": "E-Commerce Platform",
-        "desc": "Full-featured online store with product management, shopping cart, payment integration (Stripe/PayPal), and order tracking system built with ASP.NET Core."
+      "israr-cloud": {
+        "title": "Israr Cloud Platform",
+        "tagline": "A centralised ASP.NET Core platform that makes historical data from many separate industrial projects reachable through one authenticated API and one web client.",
+        "overview": "Industrial projects tend to accumulate as islands: each site ends up with its own database, its own table naming and its own way of being queried. This platform puts a single addressable layer over all of them, so a dashboard, a report or an external system can ask for data without knowing which project it lives in or how that project happens to be structured.",
+        "problem": "Every new site meant another database with a different schema, and every new client application meant writing bespoke query code against it. Onboarding a project was a development task rather than a configuration task, and nothing could be queried across sites.",
+        "solution": "I built an ASP.NET Core Web API that discovers the projects and tables available to it at runtime instead of hard-coding them, and exposes their historical and live data through a consistent, documented set of endpoints. Access is authenticated with JWT and scoped per role, MySQL holds the data, Redis caches the values requested most often, and an Angular client consumes the same public API as any other consumer.",
+        "features": [
+          "Dynamic project and table discovery, so a new site is configured rather than coded",
+          "Consistent query endpoints for historical, aggregated and latest-value data",
+          "JWT authentication with role-based authorisation over projects and endpoints",
+          "Telemetry ingestion endpoints shared by dataloggers and edge services",
+          "Redis caching for frequently requested values and expensive aggregations",
+          "Angular front-end built against the same documented API as external consumers"
+        ],
+        "challenges": [
+          "Keeping a generic query layer efficient — a discovery-driven API can easily produce queries that a purpose-built one would never issue",
+          "Designing one response shape flexible enough for differing project schemas without becoming untyped and unusable",
+          "Enforcing authorisation across projects that were never designed with a shared permission model",
+          "Keeping response times acceptable for long historical ranges as sites accumulate"
+        ],
+        "role": [
+          "Designed the platform architecture and the API contract",
+          "Implemented the ASP.NET Core services, discovery layer and authentication",
+          "Modelled and optimised the MySQL schema and its query paths",
+          "Integrated the Angular client and supported other consuming applications"
+        ],
+        "capabilities": [
+          "One integration point for every industrial project",
+          "New sites onboarded without new API code",
+          "Authenticated, role-scoped access to historical data"
+        ]
       },
-      "hotel": {
-        "title": "Hotel Booking System",
-        "desc": "Complete reservation system with room availability calendar, online payments, admin dashboard, automated email confirmations, and customer management."
+
+      "datalogger": {
+        "title": "Industrial Data Acquisition & Synchronisation Platform",
+        "tagline": "The acquisition backbone: edge dataloggers, local buffering, synchronisation services and format converters that move plant data from field devices to central databases without losing records.",
+        "overview": "This is one platform made of several cooperating services rather than a single application — acquisition at the edge, local persistence, synchronisation to the centre, and the conversion utilities that bridge legacy formats. Together they handle a distributed multi-site workload processing over 60,000 data points per minute across more than ten industrial sites.",
+        "problem": "Remote industrial sites do not have reliable connectivity. An acquisition design that writes straight to a central database loses everything the moment a link drops — and on a plant, gaps in historical data are not a cosmetic problem: they invalidate performance reporting and availability figures.",
+        "solution": "I built acquisition as an edge-first system. Dataloggers poll devices on a fixed cycle and timestamp at the source, writing to a local database so the site keeps recording regardless of the uplink. Separate synchronisation services reconcile local records with the central database once connectivity returns, deduplicating rather than overwriting. Parallel processing, caching and resilient retry handling let the central side absorb every site at once, and converters translate between XML and database representations where legacy equipment requires it.",
+        "features": [
+          "Scheduled polling of Modbus TCP/RTU and MQTT devices with source timestamping",
+          "Local buffering (MySQL and SQLite variants) so link outages cost no data",
+          "Synchronisation services that reconcile and deduplicate on reconnection",
+          "Parallel processing and caching to absorb concurrent load from every site",
+          "XML and database format conversion for legacy equipment and exports",
+          "A simulator for developing and testing without occupying real plant hardware"
+        ],
+        "challenges": [
+          "Sustaining a very high aggregate ingestion rate without falling behind the poll cycle",
+          "Making synchronisation idempotent, so a retried batch never duplicates history",
+          "Reconciling clock differences between edge devices and the central system",
+          "Detecting a stalled device — one that answers but returns stale values — not just a disconnected one",
+          "Keeping memory and disk bounded on edge hardware during a long outage"
+        ],
+        "role": [
+          "Designed the edge-first acquisition and synchronisation architecture",
+          "Implemented the datalogger services, buffering and forwarding logic",
+          "Built the synchronisation, conversion and simulation components",
+          "Tuned database schemas and the ingestion path for sustained throughput"
+        ],
+        "capabilities": [
+          "60,000+ data points per minute across the platform",
+          "10+ industrial sites synchronised centrally",
+          "Continuous recording through connectivity outages"
+        ]
       },
-      "portal": {
-        "title": "Employee Portal",
-        "desc": "Internal company portal with leave management, attendance tracking, performance reviews, and company announcements."
+
+      "ppc": {
+        "title": "Power Plant Controller & Solar Plant Integration",
+        "tagline": "Plant-level control software for solar sites: reading grid metering, computing setpoints, distributing them to inverters, and feeding the resulting telemetry back into SCADA.",
+        "overview": "A power plant controller sits between the grid connection point and the inverters, holding the plant to whatever the grid operator requires. It is a closed loop with a hard real-time character — measure at the point of common coupling, compute, command, verify, repeat — running continuously and unattended.",
+        "problem": "Solar plants must respect active power limits and operating conditions imposed at the grid connection point, but the inverters producing that power are individually addressed devices with their own communication behaviour. Something has to translate a plant-level requirement into per-device commands and confirm they took effect.",
+        "solution": "I developed the controller service in C#/.NET as a continuously running background service. It reads power meters and inverters over Modbus TCP, computes plant-level setpoints from measured conditions, distributes commands across the inverter fleet, and reads status back to verify each command was applied. Every cycle — measurements, computed values, commands and device responses — is recorded for telemetry and performance analysis, and the same data feeds the SCADA layer.",
+        "features": [
+          "Continuous measurement of grid meters and inverters over Modbus TCP",
+          "Active power management: plant setpoints distributed across the inverter fleet",
+          "Command verification through status readback rather than fire-and-forget writes",
+          "Performance and availability calculations from measured plant data",
+          "Telemetry recorded per control cycle for analysis and reporting",
+          "Integration with SCADA for plant status, trends and operator visibility"
+        ],
+        "challenges": [
+          "Maintaining a stable control loop when device response times vary across the fleet",
+          "Handling inverters that drop off mid-cycle without destabilising the plant setpoint",
+          "Keeping computation deterministic and bounded so a cycle never overruns its period",
+          "Distinguishing a device that rejected a command from one that never received it"
+        ],
+        "role": [
+          "Developed the controller service and its control-cycle logic",
+          "Implemented inverter and meter communication over Modbus TCP",
+          "Designed the telemetry and performance-calculation data model",
+          "Integrated plant data with the SCADA and monitoring layer"
+        ],
+        "capabilities": [
+          "Plant-level active power management",
+          "Verified command delivery to the inverter fleet",
+          "Continuous performance telemetry for the site"
+        ]
       },
-      "realtime": {
-        "title": "Real-Time Multi-Site Data Sync & Alarm Management",
-        "desc": "High-performance ASP.NET Core API for ingesting industrial data streams from multiple locations with real-time synchronization."
+
+      "alarm-engine": {
+        "title": "Industrial Alarm & Event Management Engine",
+        "tagline": "A real-time alarm backend with configurable rules, full event lifecycle tracking, acknowledgement and history — delivering equipment and process alarms to SCADA and web dashboards.",
+        "overview": "Alarming is deceptively hard: the mechanical part — comparing a value to a threshold — is trivial, and everything that makes an alarm system usable is the part around it. State transitions, acknowledgement, priority, suppression of chatter, and a history that can be audited afterwards. This engine handles that lifecycle for equipment and process alarms across the plant.",
+        "problem": "Alarm behaviour was effectively fixed: changing what constituted an alarm meant changing code, there was no consistent record of who acknowledged what and when, and an operator facing a genuine fault could be buried under repeated notifications from a single flapping signal.",
+        "solution": "I built an ASP.NET Core backend that evaluates configurable rules against incoming tag values and drives each alarm through an explicit state machine — raised, active, acknowledged, cleared — rather than treating alarms as instantaneous notifications. Every transition is persisted as an event with its timestamp and originating condition, giving a complete audit history. Live alarm state is pushed to SCADA and web dashboards through real-time channels, and priority determines what an operator sees first. In production this reduced operational issue response time by roughly 40%.",
+        "features": [
+          "Alarm rules configured at runtime instead of compiled into the application",
+          "Explicit lifecycle: raised, active, acknowledged and cleared states",
+          "Operator acknowledgement recorded with user and timestamp",
+          "Priority levels so a genuine fault is not buried under routine warnings",
+          "Complete historical event record for auditing and post-incident review",
+          "Real-time delivery to SCADA and web dashboards, plus REST access to history"
+        ],
+        "challenges": [
+          "Suppressing chatter from a signal oscillating around its threshold without hiding a real fault",
+          "Guaranteeing no alarm is lost or duplicated when a client reconnects mid-event",
+          "Evaluating rules across many tags fast enough to stay genuinely real-time",
+          "Modelling event history so long-running alarms and their acknowledgements stay reconstructable"
+        ],
+        "role": [
+          "Designed the alarm state machine and event data model",
+          "Implemented the rule evaluation engine and configuration layer",
+          "Built the REST and real-time delivery channels to SCADA and web clients",
+          "Tuned evaluation and storage for sustained tag throughput"
+        ],
+        "capabilities": [
+          "Operational response time improved by approximately 40%",
+          "Auditable history of every alarm and acknowledgement",
+          "Alarm behaviour reconfigurable without a deployment"
+        ]
       },
-      "scada": {
-        "title": "SCADA Systems Integration",
-        "desc": "Web-based SCADA systems for monitoring and controlling industrial processes with real-time data visualization."
-      },
-      "tracker": {
+
+      "solar-tracker": {
         "title": "Solar Tracker Controller",
-        "desc": "A control and monitoring application for solar tracking systems — manages panel positioning, real-time status updates, and performance optimization for solar farms."
+        "tagline": "Control and monitoring software for solar tracking systems — solar position computation, backtracking, per-tracker positioning over RS-485, and live status across a zone of trackers.",
+        "overview": "A tracking array only pays for itself if every tracker is actually where it should be. This application manages a hierarchy of project, zone, gateway, serial port and individual tracker, computes where each one ought to point from solar geometry, issues positioning commands over Modbus RTU, and shows the resulting angles and alarms for the whole zone at once.",
+        "problem": "Trackers are individually addressed devices on shared RS-485 buses, and their correct target angle is not a fixed value — it depends on time, date, site latitude and longitude, array geometry and whether neighbouring rows would shade each other. Commissioning and operating them by hand does not scale past a handful of units.",
+        "solution": "I developed a C#/.NET application that computes solar position and derives the correct tracker angle, including backtracking to avoid row-to-row shading at low sun elevations. Results are cross-checked against the NREL solar position algorithm. The tool addresses trackers through a configurable project/zone/gateway/port hierarchy over Modbus RTU on RS-485, supports manual, automatic-local, automatic-remote, calibration, programming, emergency and parking modes, and monitors angle feedback, limit switches, wind conditions and digital I/O with an acknowledgeable alarm list.",
+        "features": [
+          "Solar position and true/target angle computation with backtracking support",
+          "Cross-checked against the NREL solar position algorithm",
+          "Project → zone → gateway → serial port → tracker configuration hierarchy",
+          "Modbus RTU addressing over RS-485 with configurable serial parameters",
+          "Operating modes: manual, auto-local, auto-remote, calibration, programming, emergency and parking",
+          "Live monitoring of target vs. current angle, limit switches and digital I/O",
+          "Wind speed limits with configurable timeouts for protective positioning",
+          "NTP and RTC time synchronisation across plant, gateway and tracker",
+          "Alarm list with acknowledgement covering communication, position, movement and data validation"
+        ],
+        "challenges": [
+          "Getting solar geometry right — an error of a degree is invisible in testing and costly in yield",
+          "Implementing backtracking so rows stop shading each other at low sun angles",
+          "Sharing one RS-485 bus across many trackers without response collisions",
+          "Distinguishing a tracker that is not moving from one that is not reporting",
+          "Keeping time consistent between the PC, the gateway and each tracker's RTC"
+        ],
+        "role": [
+          "Developed the controller application and its solar position computation",
+          "Implemented Modbus RTU device communication and the addressing hierarchy",
+          "Built the positioning, calibration, parking and emergency mode logic",
+          "Designed the monitoring, alarm and telemetry views used during commissioning"
+        ],
+        "capabilities": [
+          "Whole-zone tracker control from one interface",
+          "Backtracking-aware positioning",
+          "Commissioning and fault diagnosis without site-by-site manual work"
+        ],
+        "shots": [
+          "Tracker detail: angle configuration, runtime control, operating modes and live position gauge",
+          "Project level: site coordinates, solar geometry results and NREL cross-check",
+          "Zone level: zone configuration, group control and calculated tracking results",
+          "Port level: RS-485 serial parameters and live status of eight trackers at once"
+        ]
       },
-      "portforwarder": {
-        "title": "PMM Port Forwarder",
-        "desc": "Serial-to-UDP forwarding utility for PMM systems — enables remote access to serial devices over network."
+
+      "protocol-toolkit": {
+        "title": "Industrial Protocol & Device Integration Toolkit",
+        "tagline": "The diagnostic tools commissioning actually depends on: a Modbus master, a Modbus slave simulator and a serial-to-IP port forwarder, used to prove a link before anything is built on top of it.",
+        "overview": "Before a datalogger or a controller can be trusted, someone has to establish that the device really answers, that the register you think holds active power actually does, and that the bus stays stable under continuous polling. These tools exist to answer those questions on site, quickly, without a debugger attached to production software.",
+        "problem": "When an integration fails on a live plant, the failure is ambiguous: it might be the cabling, the serial parameters, the slave address, the function code, the register offset, the byte order, or the application. General-purpose utilities do not carry the site's register naming and scaling, so every diagnosis restarts from raw numbers.",
+        "solution": "I built a set of C#/.NET engineering tools that isolate each layer. The Modbus master polls multiple devices simultaneously in separate monitoring windows, each with its own slave ID, function code, address range and scan rate, showing raw, ordered and scaled values side by side along with live Tx/Rx counters and per-transaction frames. The slave simulator presents a configurable device so the other side of an integration can be developed and tested without hardware present. The port forwarder bridges serial devices to the network, letting a physically remote device be reached as though it were local.",
+        "features": [
+          "Modbus master over TCP and RTU, with several devices polled concurrently",
+          "Per-window slave ID, function code, start address, quantity and scan rate",
+          "Raw, byte-ordered and engineering-scaled values displayed together",
+          "Live Tx/Rx counters and per-transaction frame inspection for diagnosis",
+          "Read and write function support for testing commands, not just reads",
+          "Modbus slave simulator for developing against a device that is not present",
+          "Serial-to-IP port forwarder with independent source and destination settings",
+          "Configurable serial parameters: baud rate, data bits, parity, stop bits, flow control",
+          "Named register maps saved per device so diagnosis starts from meaning, not offsets"
+        ],
+        "challenges": [
+          "Presenting byte order and scaling clearly enough that a wrong reading is obvious at a glance",
+          "Polling several devices concurrently without the UI thread stalling on a slow response",
+          "Making timeout and inter-poll delay behaviour explicit, since these cause most field failures",
+          "Bridging serial to IP transparently enough that Modbus timing still holds"
+        ],
+        "role": [
+          "Designed and built the master, slave simulator and port forwarder",
+          "Implemented the Modbus TCP and RTU communication layers",
+          "Built the diagnostic views: value scaling, frame inspection and counters",
+          "Used the tools throughout commissioning and troubleshooting on live sites"
+        ],
+        "capabilities": [
+          "Communication faults isolated to a specific layer in minutes",
+          "Integrations developed before hardware is available",
+          "Serial-only devices reachable over the network"
+        ],
+        "shots": [
+          "Modbus master: several devices polled concurrently, each with its own scan rate and register view",
+          "Read/write definition: function code, slave ID, address range, quantity and scan rate",
+          "Connection setup: RTU/ASCII mode, serial parameters, response timeout and poll delay",
+          "Modbus slave simulator presenting a configurable device to the system under test",
+          "Slave connection configuration for serial and TCP operation",
+          "Port forwarder: independent source and destination port configuration",
+          "Port forwarder documentation and virtual serial port setup"
+        ]
       },
-      "modbus": {
-        "title": "Modbus Tester (Master & Slave)",
-        "desc": "Diagnostic and simulation utility for Modbus networks, supporting both master and slave modes with live data monitoring and command testing."
+
+      "device-configurator": {
+        "title": "Device Configuration & Commissioning Suite",
+        "tagline": "One tool to configure an entire hardware product family — interfaces, protocol stacks, I/O expansion and RTC — write it to the device over USB or Ethernet, and generate the matching firmware project.",
+        "overview": "A hardware product line accumulates variants: different microcontroller boards, different fitted options, different protocol requirements per customer. This application holds the whole device database in one place, so configuring a unit is a structured task against a known model rather than a hand-edited settings file.",
+        "problem": "Every device variant had its own combination of fitted hardware, enabled interfaces and supported protocols. Without a single tool, commissioning meant remembering which options a given board actually had, editing configuration by hand, and rediscovering the correct values on the next unit.",
+        "solution": "I built a C#/.NET configurator organised around a device database, with each device broken into communication, protocols, monitoring, calibration and general-purpose sections. It configures Ethernet and RS-485 serial interfaces independently, selects which protocol stacks each interface exposes, manages I²C extension boards and their I/O expanders, and handles RTC synchronisation against PC time. Configuration is written to the device over USB virtual COM or HTTP, live register and bit-level I/O state can be read back to verify the result, and the tool generates matching Arduino or PlatformIO firmware projects from the configured device definition.",
+        "features": [
+          "Device database covering multiple hardware variants and firmware versions",
+          "Per-device sections: communication, protocols, monitoring, calibration, general purpose",
+          "Independent Ethernet (IP, DNS, gateway, MAC, UDP ports) and RS-485 serial configuration",
+          "Protocol stack selection per interface: Modbus master/slave, HTTP client, BACnet, OPC, Profibus/ProfiNet, M-Bus, CAN, DLMS",
+          "Fitted-option management: Ethernet switch, external EEPROM/flash, LoRa, Zigbee, GSM, GPS, fibre, web server",
+          "I²C extension boards with I/O expander addressing",
+          "Live register view with bit-level control and cyclic polling for verification",
+          "RTC synchronisation between PC, internal MCU RTC and external RTC",
+          "Arduino and PlatformIO firmware project generation from the device definition"
+        ],
+        "challenges": [
+          "Modelling a product family whose variants differ in fitted hardware, not just settings",
+          "Preventing invalid combinations — an interface configured for a protocol the board cannot serve",
+          "Verifying that a written configuration actually took effect on the device",
+          "Keeping the generated firmware project consistent with the configuration that produced it"
+        ],
+        "role": [
+          "Designed the device model and the configuration data structure",
+          "Implemented USB virtual COM and HTTP communication with the devices",
+          "Built the register/bit-level monitoring and verification views",
+          "Implemented Arduino and PlatformIO project generation"
+        ],
+        "capabilities": [
+          "One tool for the whole device family",
+          "Configuration verified against live device state",
+          "Firmware projects generated from the same definition"
+        ],
+        "shots": [
+          "Device database with per-device options, fitted hardware, I²C extensions and MCU timers",
+          "Communication: Ethernet and RS-485 settings with per-interface protocol stack selection",
+          "Live register view with bit-level control and cyclic polling for verification",
+          "Environment: PC connection settings and Arduino/PlatformIO firmware project generation"
+        ]
       },
-      "configurator": {
-        "title": "PMM Product Configurator",
-        "desc": "Unified configuration tool for PMM hardware — allows control, installation, and parameter management of all company devices from a single interface."
+
+      "breaker-control": {
+        "title": "Remote Breaker Control & Switchgear Interface",
+        "tagline": "Remote operation of switchgear with validated commands, verified status readback and a full audit trail — for equipment on sites that cannot be attended at short notice.",
+        "overview": "Remote control of switchgear is one of the few places where industrial software can cause a physical consequence. That shapes every design decision: a command is not simply sent, it is validated against current state, confirmed against readback, and recorded so it is always clear what was operated, when, and by whom.",
+        "problem": "Operating a breaker required someone on site. But an unconditional remote write is not an acceptable alternative — a command issued against stale state, or one that silently fails, is worse than no remote control at all.",
+        "solution": "I built a control service that treats every operation as a transaction. The request is validated against the equipment's current reported state before anything is written, the command is issued over Modbus TCP across the site link, and the resulting state is read back and compared against what was intended. Communication health is monitored continuously so operations are refused rather than attempted over a degraded link, and every request, outcome and originating user is persisted as an audit record.",
+        "features": [
+          "Validated commands checked against current equipment state before dispatch",
+          "Status readback and comparison to confirm the operation actually took effect",
+          "Continuous communication monitoring, with commands refused on a degraded link",
+          "Full audit trail: who requested what, when, and what the device reported",
+          "Modbus TCP integration with switchgear over VPN-connected site networks",
+          "Clear separation between a failed command and an unconfirmed one"
+        ],
+        "challenges": [
+          "Guaranteeing a command is never applied twice when a response is lost in transit",
+          "Deciding what a timeout means when the operation may or may not have completed",
+          "Keeping reported state current enough that validation is meaningful, not decorative",
+          "Failing safe: refusing operation is always preferable to acting on stale information"
+        ],
+        "role": [
+          "Designed the command validation and confirmation model",
+          "Implemented the control service and switchgear communication",
+          "Built communication health monitoring and the audit trail",
+          "Integrated remote operation with monitoring and access control"
+        ],
+        "capabilities": [
+          "Switchgear operated without a site visit",
+          "Every operation confirmed and auditable",
+          "Safe refusal when communication is degraded"
+        ]
       },
+
+      "api-integrations": {
+        "title": "External System & Vendor API Integrations",
+        "tagline": "Integration services that pull data from vendor cloud platforms and third-party systems into internal databases and APIs on a reliable schedule.",
+        "overview": "Not every measurement comes off a device we own. Equipment vendors expose their own cloud platforms, partners publish their own APIs, and each does it differently — different authentication, different rate limits, different units, different ideas of what a timestamp means. These services absorb that variation so the rest of the platform sees one consistent shape.",
+        "problem": "Each external integration written directly against its provider became a separate small system with its own failure modes. When a token expired or a provider rate-limited a request, the failure surfaced somewhere unrelated and often silently.",
+        "solution": "I built integration clients in Python and C# that share a common structure: authentication and token refresh handled in one place, scheduled retrieval rather than on-demand fetching, normalisation into internal units and naming conventions, and persistence into the internal database. FastAPI services expose the results downstream, so consumers depend on our contract rather than the vendor's. Failures are contained to their own integration and logged where they can actually be seen.",
+        "features": [
+          "Vendor cloud API clients for equipment platforms and third-party systems",
+          "Authentication and token lifecycle handled centrally per provider",
+          "Scheduled retrieval with retry and backoff instead of on-demand fetching",
+          "Normalisation of units, naming and timestamps into internal conventions",
+          "JSON and XML handling for providers with differing payload formats",
+          "FastAPI and REST services exposing the normalised data downstream"
+        ],
+        "challenges": [
+          "Respecting rate limits while still keeping data current enough to be useful",
+          "Handling providers that change response shape without notice or versioning",
+          "Reconciling timestamp and timezone conventions across sources",
+          "Making a failed integration visible immediately rather than as missing data later"
+        ],
+        "role": [
+          "Built the integration clients in Python and C#",
+          "Designed the normalisation layer and internal data contracts",
+          "Implemented scheduling, retry and error-reporting behaviour",
+          "Exposed the results through internal REST/FastAPI services"
+        ],
+        "capabilities": [
+          "External systems integrated behind one internal contract",
+          "Vendor changes absorbed in one place",
+          "Scheduled, monitored data retrieval"
+        ]
+      },
+
+      "cmms": {
+        "title": "CMMS — Maintenance & Asset Management Platform",
+        "tagline": "A web platform for industrial asset management: equipment registers, maintenance planning, work orders and equipment history, with access scoped by role.",
+        "overview": "Monitoring tells you what equipment is doing now; a CMMS tells you what has been done to it and what is due. This platform holds the asset register, the maintenance plans built on it, and the work orders those plans generate — so maintenance history lives with the equipment rather than in someone's spreadsheet.",
+        "problem": "Maintenance activity was recorded separately from the equipment it applied to. Scheduled work depended on individual memory, and when a machine failed there was no straightforward way to see what had recently been done to it.",
+        "solution": "I built an ASP.NET Core web platform around a structured asset register, with maintenance plans attached to equipment and work orders generated from them. Technicians record completion against the work order, which accumulates into per-equipment history. Role-based access separates what an operator, a technician and a supervisor can each see and do, and reporting views summarise outstanding and completed work.",
+        "features": [
+          "Structured equipment and asset register",
+          "Maintenance plans and schedules attached to specific equipment",
+          "Work order creation, assignment and completion tracking",
+          "Per-equipment maintenance history built from completed work",
+          "Role-based access for operators, technicians and supervisors",
+          "Reporting views for outstanding, overdue and completed maintenance"
+        ],
+        "challenges": [
+          "Modelling an asset hierarchy that fits real plant structure without becoming rigid",
+          "Keeping data entry fast enough that technicians actually complete it",
+          "Handling equipment that is replaced or relocated without breaking its history",
+          "Balancing role restrictions against the need to see enough context to act"
+        ],
+        "role": [
+          "Designed the asset, maintenance plan and work order data model",
+          "Built the ASP.NET Core application and its REST endpoints",
+          "Implemented role-based access control and reporting views",
+          "Deployed and maintained the platform in production"
+        ],
+        "capabilities": [
+          "Maintenance history held against the equipment itself",
+          "Scheduled work tracked rather than remembered",
+          "Role-appropriate access for each type of user"
+        ]
+      },
+
       "cowrmat": {
-        "title": "COWRMAT - Crop Optimization Tool",
-        "desc": "A professional decision-support system designed to optimize crop planning, improve irrigation efficiency, and support sustainable treated wastewater allocation for agricultural management."
+        "title": "COWRMAT — Crop Optimisation & Water Reuse Allocation",
+        "tagline": "A decision-support platform that models crop water demand from evapotranspiration data and treated wastewater availability, so allocation decisions can be compared as scenarios rather than estimated.",
+        "overview": "COWRMAT helps plan which crops to grow, and how to allocate treated wastewater to them, using an established agronomic water-balance method rather than rules of thumb. A user selects crops, planting dates and a treatment plant, and the platform computes the monthly water demand that follows — with results exportable and comparable across scenarios.",
+        "problem": "Allocating treated wastewater to agriculture involves crop water demand that changes month by month with the crop, its growth stage and local climate. Doing that by hand for several crops across several treatment plants is slow and hard to revisit, so decisions tend to rely on approximations that cannot easily be compared.",
+        "solution": "I built a web platform that computes reference evapotranspiration (ETo), applies crop coefficients (Kc) per crop and month, and derives crop evapotranspiration (ETc) as the basis for water demand — the standard FAO-56 approach. Treatment plant flow data is imported from CSV, irrigation efficiency is applied as a configurable factor, and results are presented as monthly tables and charts exportable to Excel and PDF. An administrative dashboard tracks usage across users, plants and crop combinations, and access is separated by role.",
+        "features": [
+          "Monthly ETo, Kc and ETc computation per crop and treatment plant",
+          "Multi-crop scenarios with configurable planting dates",
+          "Treated wastewater flow configuration with CSV import",
+          "Irrigation efficiency applied as a configurable factor",
+          "Result tables and charts exportable to Excel and PDF",
+          "Administrative dashboard: usage, crop popularity, water use per crop and per station",
+          "User accounts with role separation between administrators and users"
+        ],
+        "challenges": [
+          "Implementing the evapotranspiration model correctly and keeping results reproducible",
+          "Validating imported flow data without rejecting legitimately irregular records",
+          "Presenting a multi-crop, multi-month result set so it stays readable",
+          "Making scenarios comparable rather than a series of one-off calculations"
+        ],
+        "role": [
+          "Implemented the ETo/Kc/ETc calculation model and allocation logic",
+          "Built the web application, data model and reporting exports",
+          "Developed the administrative dashboard and usage analytics",
+          "Implemented authentication and role separation"
+        ],
+        "capabilities": [
+          "Water demand computed from an established agronomic model",
+          "Scenarios comparable and exportable",
+          "Allocation supported across multiple treatment plants"
+        ],
+        "shots": [
+          "Sign-in to the crop optimisation and water reuse platform",
+          "Administrative dashboard: usage statistics, crop popularity and water use by crop and station",
+          "Scenario setup: crop selection, planting dates, treatment plant and irrigation efficiency",
+          "Results: monthly ETo, Kc and ETc tables and charts, exportable to Excel and PDF"
+        ]
       }
     }
   },
+
   "experience": {
-    "heading": "// Experience",
-    "company": "Israr Engineering LLC",
-    "period": "Sep 2022 – Present",
-    "role": "Lead .NET Developer | Amman, Jordan",
-    "webMobile": {
-      "title": "<i class=\"bi bi-code-square text-primary me-2\"></i>Web & Mobile Development",
-      "points": {
-        "lead": "Lead a team of developers building web and mobile applications",
-        "develop": "Develop applications using both ASP.NET Core and Laravel PHP",
-        "coordinate": "Coordinate with Flutter team for cross-platform mobile apps",
-        "manage": "Manage hosting, domains, and server deployments for clients"
-      }
+    "kicker": "Experience",
+    "title": "Where the work happens",
+    "role": "Software Engineer / .NET Developer",
+    "company": "Israr Engineering LLC — Amman, Jordan",
+    "period": "Sep 2022 — Present",
+    "groups": {
+      "systems": "Systems & backend",
+      "integration": "Industrial integration",
+      "platform": "Infrastructure & delivery"
     },
-    "industrial": {
-      "title": "<i class=\"bi bi-gear text-primary me-2\"></i>Industrial Systems",
-      "points": {
-        "data": "Developed large-scale data collection platforms for industrial equipment",
-        "apis": "Built APIs connecting SCADA systems with web applications",
-        "alarms": "Created live alarm monitoring and machine performance tracking"
-      }
-    },
-    "achievements": {
-      "title": "<i class=\"bi bi-trophy text-primary me-2\"></i>Key Achievements",
-      "points": {
-        "projects": "Built and deployed over 30 successful projects across web, mobile, and industrial domains",
-        "flutter": "Established a Flutter mobile team for cross-platform app development",
-        "hosting": "Provide complete hosting solutions including domain registration and SSL setup"
-      }
-    }
+    "systems": [
+      "Architect and develop industrial IoT, SCADA, PPC and data acquisition systems using ASP.NET Core, C#, SQL and industrial communication protocols",
+      "Designed a distributed multi-site data synchronisation platform processing 60,000+ data points per minute across 10+ industrial sites, with parallel processing, caching and resilient data handling",
+      "Develop high-performance REST APIs and background services for real-time telemetry, monitoring, control and historical data — using asynchronous processing, multithreading, message queues and Redis caching for high-throughput workloads",
+      "Built real-time alarm and event management systems with configurable rules, lifecycle tracking and instant notifications, reducing operational response time by approximately 40%",
+      "Design and optimise SQL Server and MySQL databases for high-frequency industrial telemetry, historical data, configuration and reporting"
+    ],
+    "integration": [
+      "Integrate PLCs, power meters, inverters, sensors, dataloggers and solar tracking systems using Modbus TCP/RTU, MQTT, serial communication, TCP/UDP and HTTP APIs",
+      "Develop secure Angular and web applications and SCADA dashboards for monitoring, historical trends, alarms and equipment status",
+      "Integrate ASP.NET Core APIs with JWT/OAuth2 authentication and role-based authorisation",
+      "Collaborate with electrical, automation and mechanical engineers to deliver end-to-end industrial solutions from device integration through backend software to operator interfaces",
+      "Build engineering tools for device commissioning, protocol testing and field troubleshooting"
+    ],
+    "platform": [
+      "Manage production infrastructure across Windows Server/IIS and Linux, including deployments, Plesk, SSL, reverse proxies, backups and performance monitoring",
+      "Establish remote-site connectivity using VPN, WireGuard and port forwarding, including self-hosted remote-access infrastructure",
+      "Lead a small development team, including Flutter developers delivering the mobile side of client projects",
+      "Manage hosting, domains and server deployments for client-facing applications"
+    ]
   },
+
   "education": {
-    "heading": "// Education",
     "degree": "Bachelor of Computer Science",
-    "university": "University of Jordan, Amman",
-    "graduated": "Graduated: 2022"
+    "university": "University of Jordan — Amman, Jordan"
   },
-  "contact": {
-    "heading": "// Let's Turn Your Idea Into a Product",
-    "subtitle": "Need a website? Mobile app? Complete system with hosting? I provide end-to-end solutions for your business.",
-    "badges": {
-      "flutter": "<i class=\"bi bi-phone\"></i> Flutter Team",
-      "domains": "<i class=\"bi bi-globe\"></i> Domains",
-      "hosting": "<i class=\"bi bi-hdd-stack\"></i> Hosting"
-    },
-    "getInTouch": "Get in Touch",
-    "connectOnline": "Connect Online",
-    "whatsapp": "Chat on WhatsApp",
-    "location": "Amman, Jordan",
-    "services": {
-      "development": "<i class=\"bi bi-check-circle text-success\"></i> Development",
-      "hosting": "<i class=\"bi bi-check-circle text-success\"></i> Hosting",
-      "support": "<i class=\"bi bi-check-circle text-success\"></i> Support"
+
+  "skills": {
+    "kicker": "Technical stack",
+    "title": "Tools, grouped by what they are for",
+    "lede": "Organised by the job each technology does, rather than as an undifferentiated wall of logos.",
+    "groups": {
+      "software": "Software engineering",
+      "frontend": "Frontend & interfaces",
+      "backend": "Backend & APIs",
+      "data": "Databases & data",
+      "industrial": "Industrial automation",
+      "embedded": "Embedded & IoT",
+      "infra": "Infrastructure",
+      "network": "Networking",
+      "practice": "Tools & practice"
     }
   },
+
+  "infra": {
+    "kicker": "Infrastructure",
+    "title": "Software still has to run somewhere",
+    "lede": "Industrial deployments live on remote sites with unreliable links. Getting an application written is half the job; keeping it reachable, secure and recoverable is the other half.",
+    "stateLabel": "Operated",
+    "remote": {
+      "kicker": "Remote support infrastructure",
+      "title": "Self-hosted remote access for field equipment",
+      "text": "Industrial sites rarely allow third-party remote-desktop services onto their network. I deploy and operate self-hosted remote-access infrastructure so support traffic stays on servers we control.",
+      "points": {
+        "deploy": "RustDesk server deployment on a Linux VPS — self-hosted rendezvous and relay services",
+        "network": "Firewall rules, port exposure and DNS records for the relay endpoints",
+        "tunnel": "WireGuard tunnels and port forwarding for reaching devices on private site networks",
+        "security": "TLS termination, key handling and restricted access paths for support sessions",
+        "support": "Remote engineering support and commissioning without a site visit"
+      },
+      "note": "<strong>To be clear:</strong> RustDesk is open-source software I deploy and operate — not a product I authored. What I contribute is the server, network and security architecture that makes it usable for industrial support."
+    },
+    "ops": {
+      "windows": "Windows Server deployments and IIS application hosting",
+      "linux": "Linux VPS provisioning, services and Nginx reverse proxying",
+      "panels": "Panel-managed hosting, domains and mail configuration",
+      "tunnels": "Site-to-site tunnels and remote device reachability",
+      "tls": "Certificates, DNS records and secure request routing",
+      "backup": "Scheduled backups, recovery testing and performance monitoring"
+    }
+  },
+
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let's build something that has to work in the real world",
+    "lede": "Whether it is an industrial system, a backend platform, or getting equipment talking to software that does not exist yet — tell me what the system has to do and I will tell you how I would build it.",
+    "cv": "Download CV (PDF)",
+    "channels": {
+      "email": { "label": "Email" },
+      "whatsapp": { "label": "WhatsApp" },
+      "phone": { "label": "Phone" },
+      "linkedin": { "label": "LinkedIn" },
+      "location": { "label": "Location", "value": "Amman, Jordan" }
+    },
+    "form": {
+      "name": "Name",
+      "namePh": "Your name",
+      "email": "Email",
+      "emailPh": "you@company.com",
+      "subject": "Subject",
+      "subjectPh": "SCADA integration, backend API…",
+      "message": "What do you need built?",
+      "messagePh": "Equipment, protocols, what the system has to do…",
+      "send": "Send message",
+      "sending": "Sending…",
+      "sent": "Message sent — I'll get back to you shortly.",
+      "failed": "Something went wrong. Please email me directly instead.",
+      "mailto": "Opening your email client…"
+    }
+  },
+
   "footer": {
-    "copyright": "© 2026 Mohannad Muhana — Full-Stack Developer | Flutter Team Lead",
-    "subtitle": "From concept to deployment — Web Applications, Mobile Apps, Hosting & Business Solutions."
+    "role": "Software Engineer / .NET Developer — Amman, Jordan",
+    "built": "Built without a framework",
+    "cv": "CV"
   }
 }
