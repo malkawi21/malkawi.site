@@ -4,19 +4,18 @@
  * The site is static (GitHub Pages), so the form posts to Web3Forms, which
  * relays the message to the configured inbox without a backend.
  *
- * ---------------------------------------------------------------------------
- * TO ACTIVATE: put your free access key in ACCESS_KEY below.
- * Get one in 30 seconds at https://web3forms.com — enter the destination
- * email, and the key arrives by mail. Nothing else needs to change.
- * ---------------------------------------------------------------------------
+ * The access key below is not a secret. A Web3Forms access key is designed to
+ * ship in client-side code: it only identifies which inbox to deliver to, and
+ * cannot be used to read submissions or change the account. Rotate it at
+ * web3forms.com if it ever attracts spam.
  *
- * Until a key is set, the form degrades gracefully: it composes the same
- * message as a mailto: link so no visitor ever hits a dead end.
+ * If the key is ever cleared, the form degrades rather than breaking: it
+ * composes the same message as a mailto: link so no visitor hits a dead end.
  */
 
 import { t } from '../i18n.js';
 
-const ACCESS_KEY = 'YOUR-WEB3FORMS-ACCESS-KEY';
+const ACCESS_KEY = 'bff8deff-d882-4e6d-8dd6-bee17677acb5';
 const ENDPOINT = 'https://api.web3forms.com/submit';
 const MAILTO = 'mohannad.muhana@gmail.com';
 
@@ -70,11 +69,14 @@ export function initForm() {
       const res = await fetch(ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        // The form fields go in first and the computed values override them.
+        // The other order lets an empty `subject` field blank out the
+        // prefixed subject line, and a filled one drop the prefix entirely.
         body: JSON.stringify({
-          access_key: ACCESS_KEY,
-          subject: `[malkawi.site] ${data.subject || 'Project enquiry'}`,
-          from_name: data.name,
           ...data,
+          access_key: ACCESS_KEY,
+          from_name: data.name,
+          subject: `[malkawi.site] ${data.subject || 'Project enquiry'}`,
         }),
       });
 
