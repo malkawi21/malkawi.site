@@ -183,6 +183,16 @@ export const PROJECTS = [
     pipeline: ['Availability Search', 'Rate & Room Calendar', 'Reservation Service', 'Payment Gateway', 'Confirmation Email', 'Admin Dashboard'],
   },
 
+  /* ---------------------------------------------------------------- */
+  {
+    id: 'exams',
+    category: 'apps',
+    schematic: 'tree',
+    tag: 'Education',
+    tech: ['Laravel', 'PHP', 'MySQL', 'REST API', 'Role-Based Access'],
+    pipeline: ['Teacher Authors Exam', 'Published to Class', 'Student Session', 'Answer Submission', 'Marking', 'Results & Reports'],
+  },
+
 ];
 
 /** Resolve a category's accent colour, falling back to the primary accent. */

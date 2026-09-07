@@ -780,6 +780,38 @@
           "A calendar that always reflects real reservations",
           "Front-desk operations handled from one dashboard"
         ]
+      },
+      "exams": {
+        "title": "School E-Exam Platform",
+        "tagline": "A Laravel platform where a teacher builds an exam, publishes it to their class, and students sit it online — with marking and results handled by the system rather than by hand.",
+        "overview": "The system exists to take a teacher from “I want to examine this class” to a set of results without paper in between. A teacher authors the exam and its questions, publishes it to the students it applies to, and each student sits it in their own session. Submissions are marked and results are made available to the teacher.",
+        "problem": "An exam is not an ordinary web form. It is taken by many students at the same moment, it has to record exactly what each one submitted, and a lost or duplicated answer is not a cosmetic bug — it is a disputed grade. It also has to behave predictably when a student's connection drops mid-exam, which on school networks is routine rather than exceptional.",
+        "solution": "I built the platform on Laravel with MySQL. Each sitting is modelled as a session belonging to one student and one exam, so answers are always attributed to a specific attempt rather than written loosely against a student record — which is what makes a submission reconstructable afterwards. Roles separate what a teacher can do from what a student can see, so a student can only reach the exams published to them, and only their own results.",
+        "features": [
+          "Teacher-authored exams and questions, published to a specific class",
+          "Per-student exam sessions with answers recorded against the attempt",
+          "Marking and result generation handled by the system",
+          "Results visible to the teacher, and to each student for their own attempt",
+          "Role-based access separating teacher and student capabilities",
+          "MySQL schema covering exams, questions, sessions, answers and results"
+        ],
+        "challenges": [
+          "Many students sitting the same exam simultaneously without submissions interfering",
+          "Recording answers so a submitted attempt can be reconstructed exactly if a grade is disputed",
+          "Handling a connection dropping mid-exam without losing what was already answered",
+          "Scoping access so a student can reach only their own exams and their own results"
+        ],
+        "role": [
+          "Designed the exam, session, answer and result data model",
+          "Built the Laravel application and its access control",
+          "Implemented the authoring, sitting and marking flows",
+          "Deployed and maintained the platform"
+        ],
+        "capabilities": [
+          "Exams set and sat without paper",
+          "Results produced without manual marking",
+          "Each attempt individually attributable"
+        ]
       }
     }
   },
