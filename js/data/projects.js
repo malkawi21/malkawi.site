@@ -187,10 +187,18 @@ export const PROJECTS = [
   {
     id: 'exams',
     category: 'apps',
-    schematic: 'tree',
     tag: 'Education',
     tech: ['Laravel', 'PHP', 'MySQL', 'REST API', 'Role-Based Access'],
     pipeline: ['Teacher Authors Exam', 'Published to Class', 'Student Session', 'Answer Submission', 'Marking', 'Results & Reports'],
+    /* Student names, phone numbers and the instructor IP are replaced with
+       placeholders in these screenshots — see images/exam*.webp. */
+    shots: [
+      'images/exam1.webp',
+      'images/exam2.webp',
+      'images/exam3.webp',
+      'images/exam4.webp',
+      'images/exam5.webp',
+    ],
   },
 
 ];
