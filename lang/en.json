@@ -811,6 +811,13 @@
           "Exams set and sat without paper",
           "Results produced without manual marking",
           "Each attempt individually attributable"
+        ],
+        "shots": [
+          "Exam-day dashboard: sitting progress, mark distribution and question-bank readiness at a glance — student names and numbers shown as placeholders",
+          "Attempt detail: every answer against the key, with the per-attempt activity trail alongside",
+          "Question bank: searchable by question ID, text or code and filterable by topic, difficulty and status",
+          "Exam settings: duration, question count, pass mark, availability window and student sign-in",
+          "Activity log: an audit trail of every administrative action taken on the exam — identifiers shown as placeholders"
         ]
       }
     }
