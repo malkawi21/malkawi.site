@@ -3,17 +3,14 @@
     "title": "Mohannad Muhana — Software Engineer | Industrial Automation, SCADA & .NET",
     "description": "Software engineer building industrial IoT, SCADA and data-acquisition systems end to end — from Modbus and MQTT device integration through ASP.NET Core APIs and SQL/Redis to operator dashboards and production infrastructure. Based in Amman, Jordan."
   },
-
   "language": {
     "switchLabel": "Switch language"
   },
-
   "a11y": {
     "skip": "Skip to content",
     "menu": "Toggle navigation menu",
     "top": "Back to top"
   },
-
   "nav": {
     "about": "About",
     "expertise": "Expertise",
@@ -24,7 +21,6 @@
     "infrastructure": "Infrastructure",
     "cta": "Let's talk"
   },
-
   "hero": {
     "status": "Israr Engineering LLC · Amman, Jordan",
     "titleLead": "Software engineer for systems that",
@@ -43,28 +39,46 @@
       "contact": "Contact"
     }
   },
-
   "metrics": {
     "throughput": "Data points per minute on a multi-site platform",
     "sites": "Industrial sites synchronised",
     "since": "Building industrial software since",
     "layers": "Layers of the stack I work across"
   },
-
   "chain": {
     "title": "Signal path",
     "live": "Live",
     "footLeft": "Field to operator",
     "footRight": "End to end",
-    "field": { "name": "Field devices", "meta": "PLCs · Meters · Inverters · Sensors" },
-    "protocol": { "name": "Industrial protocols", "meta": "Register maps · Polling · Publish/subscribe" },
-    "edge": { "name": "Edge datalogger", "meta": "Acquisition · Buffering · Store & forward" },
-    "service": { "name": "Backend services", "meta": "APIs · Workers · Processing" },
-    "store": { "name": "Data layer", "meta": "Time-series · Historical · Cache" },
-    "cloud": { "name": "Cloud platform", "meta": "Authentication · Query APIs" },
-    "ui": { "name": "SCADA & dashboards", "meta": "Trends · Alarms · Control" }
+    "field": {
+      "name": "Field devices",
+      "meta": "PLCs · Meters · Inverters · Sensors"
+    },
+    "protocol": {
+      "name": "Industrial protocols",
+      "meta": "Register maps · Polling · Publish/subscribe"
+    },
+    "edge": {
+      "name": "Edge datalogger",
+      "meta": "Acquisition · Buffering · Store & forward"
+    },
+    "service": {
+      "name": "Backend services",
+      "meta": "APIs · Workers · Processing"
+    },
+    "store": {
+      "name": "Data layer",
+      "meta": "Time-series · Historical · Cache"
+    },
+    "cloud": {
+      "name": "Cloud platform",
+      "meta": "Authentication · Query APIs"
+    },
+    "ui": {
+      "name": "SCADA & dashboards",
+      "meta": "Trends · Alarms · Control"
+    }
   },
-
   "about": {
     "kicker": "About",
     "title": "One engineer across the whole signal path",
@@ -72,13 +86,24 @@
     "p2": "That means I am comfortable at every level of the stack — reading a register map off an inverter, writing the background service that polls it, modelling the time-series table it lands in, exposing it through an authenticated REST API, and configuring the Linux or Windows server that keeps the whole thing online at a remote site.",
     "p3": "I work alongside electrical, automation and mechanical engineers, which shapes how I build: systems have to survive unreliable links, restarting devices and sites nobody can visit at short notice. I also lead a small development team, including Flutter developers who deliver the mobile side of client projects.",
     "facts": {
-      "role": { "k": "Current role", "v": "Software Engineer / .NET Developer" },
-      "base": { "k": "Based in", "v": "Amman, Jordan" },
-      "edu": { "k": "Education", "v": "BSc Computer Science — University of Jordan" },
-      "lang": { "k": "Languages", "v": "Arabic (native), English (professional)" }
+      "role": {
+        "k": "Current role",
+        "v": "Software Engineer / .NET Developer"
+      },
+      "base": {
+        "k": "Based in",
+        "v": "Amman, Jordan"
+      },
+      "edu": {
+        "k": "Education",
+        "v": "BSc Computer Science — University of Jordan"
+      },
+      "lang": {
+        "k": "Languages",
+        "v": "Arabic (native), English (professional)"
+      }
     }
   },
-
   "capabilities": {
     "kicker": "What I build",
     "title": "Complete technical systems, not just interfaces",
@@ -124,7 +149,6 @@
       "text": "Secure paths into sites that have no public address: WireGuard tunnels, port forwarding, serial-to-IP bridging and self-hosted remote-access servers."
     }
   },
-
   "layers": {
     "kicker": "Engineering ecosystem",
     "title": "Seven layers, one engineer",
@@ -158,7 +182,6 @@
       "role": "Where all of it runs. Provisioning servers, deploying applications as supervised services, terminating TLS, configuring DNS and reverse proxies, and making recovery routine."
     }
   },
-
   "architecture": {
     "kicker": "Signal path",
     "title": "From field device to cloud",
@@ -169,7 +192,6 @@
     "doingLabel": "What I do here",
     "techLabel": "Technologies"
   },
-
   "stages": {
     "device": {
       "name": "Field devices",
@@ -263,7 +285,6 @@
       ]
     }
   },
-
   "projects": {
     "kicker": "Selected work",
     "title": "Systems in production",
@@ -304,7 +325,6 @@
       "capabilities": "Capabilities delivered",
       "screenshots": "Screenshots"
     },
-
     "items": {
       "israr-cloud": {
         "title": "Israr Cloud Platform",
@@ -338,7 +358,6 @@
           "Authenticated, role-scoped access to historical data"
         ]
       },
-
       "datalogger": {
         "title": "Industrial Data Acquisition & Synchronisation Platform",
         "tagline": "The acquisition backbone: edge dataloggers, local buffering, synchronisation services and format converters that move plant data from field devices to central databases without losing records.",
@@ -372,7 +391,6 @@
           "Continuous recording through connectivity outages"
         ]
       },
-
       "ppc": {
         "title": "Power Plant Controller & Solar Plant Integration",
         "tagline": "Plant-level control software for solar sites: reading grid metering, computing setpoints, distributing them to inverters, and feeding the resulting telemetry back into SCADA.",
@@ -405,7 +423,6 @@
           "Continuous performance telemetry for the site"
         ]
       },
-
       "alarm-engine": {
         "title": "Industrial Alarm & Event Management Engine",
         "tagline": "A real-time alarm backend with configurable rules, full event lifecycle tracking, acknowledgement and history — delivering equipment and process alarms to SCADA and web dashboards.",
@@ -438,7 +455,6 @@
           "Alarm behaviour reconfigurable without a deployment"
         ]
       },
-
       "solar-tracker": {
         "title": "Solar Tracker Controller",
         "tagline": "Control and monitoring software for solar tracking systems — solar position computation, backtracking, per-tracker positioning over RS-485, and live status across a zone of trackers.",
@@ -481,7 +497,6 @@
           "Port level: RS-485 serial parameters and live status of eight trackers at once"
         ]
       },
-
       "protocol-toolkit": {
         "title": "Industrial Protocol & Device Integration Toolkit",
         "tagline": "The diagnostic tools commissioning actually depends on: a Modbus master, a Modbus slave simulator and a serial-to-IP port forwarder, used to prove a link before anything is built on top of it.",
@@ -526,7 +541,6 @@
           "Port forwarder documentation and virtual serial port setup"
         ]
       },
-
       "device-configurator": {
         "title": "Device Configuration & Commissioning Suite",
         "tagline": "One tool to configure an entire hardware product family — interfaces, protocol stacks, I/O expansion and RTC — write it to the device over USB or Ethernet, and generate the matching firmware project.",
@@ -568,7 +582,6 @@
           "Environment: PC connection settings and Arduino/PlatformIO firmware project generation"
         ]
       },
-
       "breaker-control": {
         "title": "Remote Breaker Control & Switchgear Interface",
         "tagline": "Remote operation of switchgear with validated commands, verified status readback and a full audit trail — for equipment on sites that cannot be attended at short notice.",
@@ -601,7 +614,6 @@
           "Safe refusal when communication is degraded"
         ]
       },
-
       "api-integrations": {
         "title": "External System & Vendor API Integrations",
         "tagline": "Integration services that pull data from vendor cloud platforms and third-party systems into internal databases and APIs on a reliable schedule.",
@@ -634,7 +646,6 @@
           "Scheduled, monitored data retrieval"
         ]
       },
-
       "cmms": {
         "title": "CMMS — Maintenance & Asset Management Platform",
         "tagline": "A web platform for industrial asset management: equipment registers, maintenance planning, work orders and equipment history, with access scoped by role.",
@@ -667,7 +678,6 @@
           "Role-appropriate access for each type of user"
         ]
       },
-
       "cowrmat": {
         "title": "COWRMAT — Crop Optimisation & Water Reuse Allocation",
         "tagline": "A decision-support platform that models crop water demand from evapotranspiration data and treated wastewater availability, so allocation decisions can be compared as scenarios rather than estimated.",
@@ -706,10 +716,73 @@
           "Scenario setup: crop selection, planting dates, treatment plant and irrigation efficiency",
           "Results: monthly ETo, Kc and ETc tables and charts, exportable to Excel and PDF"
         ]
+      },
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "tagline": "A full online store built on ASP.NET Core: product catalogue, cart, payment integration and order tracking, with an admin side for the people running it.",
+        "overview": "A complete storefront and the back office behind it. Customers browse a catalogue, build a cart and pay; staff manage products, stock and orders from an admin dashboard. The interesting engineering is not the shop front — it is keeping catalogue, stock and orders consistent while payment happens on someone else's server.",
+        "problem": "A store is only useful if its state stays correct under concurrency. Two customers can reach the last item at the same moment, a payment can succeed while the browser never comes back, and a provider can confirm a charge minutes after the request. Handling those honestly is what separates a working store from a demo.",
+        "solution": "I built the platform on ASP.NET Core with MySQL, structured around the order as explicit state rather than a flag on a row. An order moves through pending, paid, fulfilled and cancelled, and the payment provider's confirmation — not the browser's return trip — is what advances it. Stock is decremented against a reservation so a cart cannot oversell, and Redis caches catalogue reads so browsing never contends with checkout.",
+        "features": [
+          "Product catalogue with categories, variants, media and stock levels",
+          "Cart and checkout with server-side price and stock revalidation",
+          "Payment provider integration with confirmation-driven order state",
+          "Order lifecycle tracking from placement through fulfilment",
+          "Admin dashboard for products, stock, orders and customers",
+          "Role-based access separating storefront customers from staff"
+        ],
+        "challenges": [
+          "Preventing overselling when several customers reach the last unit at once",
+          "Reconciling an order whose payment succeeded but whose customer never returned to the site",
+          "Never trusting a price or total that came back from the client",
+          "Keeping catalogue reads fast without serving stale stock at checkout"
+        ],
+        "role": [
+          "Designed the catalogue, cart and order data model",
+          "Built the ASP.NET Core application and its REST endpoints",
+          "Integrated the payment provider and its confirmation handling",
+          "Deployed and maintained the platform in production"
+        ],
+        "capabilities": [
+          "Orders that stay consistent with payment reality",
+          "Stock that cannot be oversold",
+          "Store operations handled without developer involvement"
+        ]
+      },
+      "hotel": {
+        "title": "Hotel Reservation & Booking Platform",
+        "tagline": "A reservation system with a live availability calendar, online payment, automated confirmations and an admin dashboard for rooms, rates and guests.",
+        "overview": "Booking is a scheduling problem wearing a web interface. A room is not a quantity in stock, it is a resource occupied over a date range, and the whole system follows from modelling that correctly. Guests search dates and pay; staff manage rooms, rates, arrivals and guest records.",
+        "problem": "Availability cannot be answered by counting rows. A room is free for a requested stay only if no existing reservation overlaps it, and two guests searching the same dates at the same moment must not both be able to confirm. Getting that wrong produces double bookings, which cost far more to resolve than to prevent.",
+        "solution": "I modelled reservations as date intervals against a room and resolved availability by overlap rather than by a count, so the calendar is derived from the reservations themselves and cannot drift out of sync with them. Confirmation is guarded so a room cannot be committed twice for overlapping dates. Payment goes through an external provider, confirmations are sent automatically on state changes, and staff work from an admin dashboard covering rooms, rates, arrivals and guests.",
+        "features": [
+          "Availability search resolved by date-range overlap, not stock counts",
+          "Room and rate calendar derived directly from live reservations",
+          "Reservation lifecycle: held, confirmed, checked in, completed, cancelled",
+          "Online payment through an external provider",
+          "Automated confirmation and status emails on state changes",
+          "Admin dashboard for rooms, rates, arrivals and guest records"
+        ],
+        "challenges": [
+          "Answering availability by interval overlap rather than by counting inventory",
+          "Preventing two concurrent bookings from committing the same room for overlapping dates",
+          "Keeping the calendar a projection of reservations so the two can never disagree",
+          "Handling cancellations and date changes without leaving a room falsely occupied"
+        ],
+        "role": [
+          "Designed the reservation and availability model",
+          "Built the ASP.NET Core application, admin dashboard and REST endpoints",
+          "Integrated payment and the automated notification flow",
+          "Deployed and maintained the platform in production"
+        ],
+        "capabilities": [
+          "Availability that cannot double-book",
+          "A calendar that always reflects real reservations",
+          "Front-desk operations handled from one dashboard"
+        ]
       }
     }
   },
-
   "experience": {
     "kicker": "Experience",
     "title": "Where the work happens",
@@ -742,12 +815,10 @@
       "Manage hosting, domains and server deployments for client-facing applications"
     ]
   },
-
   "education": {
     "degree": "Bachelor of Computer Science",
     "university": "University of Jordan — Amman, Jordan"
   },
-
   "skills": {
     "kicker": "Technical stack",
     "title": "Tools, grouped by what they are for",
@@ -764,7 +835,6 @@
       "practice": "Tools & practice"
     }
   },
-
   "infra": {
     "kicker": "Infrastructure",
     "title": "Software still has to run somewhere",
@@ -792,18 +862,28 @@
       "backup": "Scheduled backups, recovery testing and performance monitoring"
     }
   },
-
   "contact": {
     "kicker": "Contact",
     "title": "Let's build something that has to work in the real world",
     "lede": "Whether it is an industrial system, a backend platform, or getting equipment talking to software that does not exist yet — tell me what the system has to do and I will tell you how I would build it.",
     "cv": "Download CV (PDF)",
     "channels": {
-      "email": { "label": "Email" },
-      "whatsapp": { "label": "WhatsApp" },
-      "phone": { "label": "Phone" },
-      "linkedin": { "label": "LinkedIn" },
-      "location": { "label": "Location", "value": "Amman, Jordan" }
+      "email": {
+        "label": "Email"
+      },
+      "whatsapp": {
+        "label": "WhatsApp"
+      },
+      "phone": {
+        "label": "Phone"
+      },
+      "linkedin": {
+        "label": "LinkedIn"
+      },
+      "location": {
+        "label": "Location",
+        "value": "Amman, Jordan"
+      }
     },
     "form": {
       "name": "Name",
@@ -821,7 +901,6 @@
       "mailto": "Opening your email client…"
     }
   },
-
   "footer": {
     "role": "Software Engineer / .NET Developer — Amman, Jordan",
     "built": "Built without a framework",

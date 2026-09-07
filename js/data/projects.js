@@ -163,6 +163,26 @@ export const PROJECTS = [
     ],
   },
 
+  /* ---------------------------------------------------------------- */
+  {
+    id: 'ecommerce',
+    category: 'apps',
+    schematic: 'tree',
+    tag: 'E-Commerce',
+    tech: ['ASP.NET Core', 'C#', 'MySQL', 'Payment APIs', 'REST API', 'Redis'],
+    pipeline: ['Storefront', 'Catalogue & Cart', 'Order Service', 'Payment Gateway', 'Order Tracking', 'Admin Dashboard'],
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    id: 'hotel',
+    category: 'apps',
+    schematic: 'hub',
+    tag: 'Reservations',
+    tech: ['ASP.NET Core', 'C#', 'MySQL', 'Payment APIs', 'Email Notifications', 'REST API'],
+    pipeline: ['Availability Search', 'Rate & Room Calendar', 'Reservation Service', 'Payment Gateway', 'Confirmation Email', 'Admin Dashboard'],
+  },
+
 ];
 
 /** Resolve a category's accent colour, falling back to the primary accent. */
